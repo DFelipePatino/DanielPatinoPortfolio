@@ -1,6 +1,7 @@
 import React from "react";
 import "./MainView.css";
 import { useState } from "react";
+import "./mediaqueries.css";
 
 function MainView() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -9,15 +10,41 @@ function MainView() {
     setMenuOpen(!menuOpen);
   };
 
-  const openLink = (link) => {
-    window.open(link);
-  };
-
   return (
-    <div>
+    <div id="top">
       <nav id="desktop-nav">
         <div className="logo">Daniel Patino</div>
-        <div class="hamburger-menu">
+        <div>
+          <ul class="nav-links">
+            <li>
+              <a href="#about">About</a>
+            </li>
+            <li>
+              <a href="#experience">Experience</a>
+            </li>
+            <li>
+              <a href="#projects">Projects</a>
+            </li>
+            <li>
+              <a href="#contact">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+      {/* <nav id="mobile-nav">
+          <div className="logo">Daniel Patino</div>
+          <div class="hamburger-menu">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </nav> */}
+
+
+      <nav id="mobile-nav">
+        <div className="logo">Daniel Patino</div>
+        <div className="hamburger-menu">
           <div
             className={`hamburger-icon  ${menuOpen ? "open" : ""}`}
             onClick={toggleMenu}
@@ -51,64 +78,74 @@ function MainView() {
         </div>
       </nav>
       <section id="profile">
-        <div class="section__pic-container">
+        <div className="section__pic-container">
           <img
             src="./assets/profile-pic.png"
             alt="Daniel Patino profile picture"
           />
         </div>
-        <div class="section__text">
-          <p class="section__text__p1">Hello, I'm</p>
-          <h1 class="title">Daniel Patino</h1>
-          <p class="section__text__p2">Full Stack Developer</p>
-          <div class="btn-container">
-            <button
-              class="btn btn-color-2"
-              onclick="window.open('https://drive.google.com/file/d/1m37yXdt4oxPGLhmOLQafUPwFOp_yxKBH/view?usp=drive_link')"
+        <div className="section__text">
+          <p className="section__text__p1">Hello, I'm</p>
+          <h1 className="title">Daniel Patino</h1>
+          <p className="section__text__p2">Full Stack Developer</p>
+          <div className="btn-container">
+            <a
+              href="https://drive.google.com/file/d/1m37yXdt4oxPGLhmOLQafUPwFOp_yxKBH/view?usp=drive_link"
+              target="_blank"
+              rel="noopener noreferrer"
             >
-              Download CV
-            </button>
-            <button
-              class="btn btn-color-1"
-              onclick="location.href='./#contact'"
-            >
-              Contact Info
-            </button>
+              <button className="btn btn-color-2">Download CV</button>
+            </a>
+            <a href="#contact">
+              <button className="btn btn-color-1">Contact Info</button>
+            </a>
           </div>
           <div id="socials-container">
-            <img
-              src="./assets/linkedin.png"
-              alt="My LinkedIn profile"
-              class="icon"
-              onclick="location.href='https://www.linkedin.com/in/daniel-patino-207156208/'"
-            />
-            <img
-              src="./assets/github.png"
-              alt="My Github profile"
-              class="icon"
-              onclick="location.href='https://github.com/DFelipePatino'"
-            />
+            <a
+              href="https://www.linkedin.com/in/daniel-patino-207156208/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              {" "}
+              <img
+                src="./assets/linkedin.png"
+                alt="My LinkedIn profile"
+                className="icon"
+              />
+            </a>
+            <a
+              href="https://github.com/DFelipePatino"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              {" "}
+              <img
+                src="./assets/github.png"
+                alt="My Github profile"
+                className="icon"
+              />
+            </a>
           </div>
         </div>
       </section>
       <section id="about">
-        <p class="section__text__p1">Get To Know More</p>
-        <h1 class="title">About Me</h1>
-        <div class="section-container">
-          <div class="section__pic-container">
+        <p className="section__text__p1">Get To Know More</p>
+        <h1 className="title">About Me</h1>
+        <div className="section-container">
+          <div className="section__pic-container">
             <img
               src="./assets/about-pic.png"
               alt="Profile picture"
-              class="about-pic"
+              className="about-pic"
             />
           </div>
-          <div class="about-details-container">
-            <div class="about-containers">
-              <div class="details-container">
+          <div className="about-details-container">
+            <div className="about-containers">
+              <div className="details-container">
                 <img
                   src="./assets/experience.png"
                   alt="Experience icon"
-                  class="icon"
+                  className="icon"
                 />
                 <h3>Experience</h3>
                 <p>
@@ -116,11 +153,11 @@ function MainView() {
                   Full Stack Development
                 </p>
               </div>
-              <div class="details-container">
+              <div className="details-container">
                 <img
                   src="./assets/education.png"
                   alt="Education icon"
-                  class="icon"
+                  className="icon"
                 />
                 <h3>Education</h3>
                 <p>
@@ -129,7 +166,7 @@ function MainView() {
                 </p>
               </div>
             </div>
-            <div class="text-container">
+            <div className="text-container">
               <p>
                 I am a Full Stack developer with experience in JavaScript,
                 React, Redux, HTML, and CSS. I am recognized for my commitment
@@ -141,26 +178,27 @@ function MainView() {
             </div>
           </div>
         </div>
-        <img
-          src="./assets/arrow.png"
-          alt="Arrow icon"
-          class="icon arrow"
-          onclick="location.href='./#experience'"
-        />
+        <a href="./#experience">
+          <img
+            src="./assets/arrow.png"
+            alt="Arrow icon"
+            className="icon arrow"
+          />
+        </a>
       </section>
       <section id="experience">
-        <p class="section__text__p1">Explore My</p>
-        <h1 class="title">Experience</h1>
-        <div class="experience-details-container">
-          <div class="about-containers">
-            <div class="details-container">
-              <h2 class="experience-sub-title">Frontend Development</h2>
-              <div class="article-container">
+        <p className="section__text__p1">Explore My</p>
+        <h1 className="title">Experience</h1>
+        <div className="experience-details-container">
+          <div className="about-containers">
+            <div className="details-container">
+              <h2 className="experience-sub-title">Frontend Development</h2>
+              <div className="article-container">
                 <article>
                   <img
                     src="./assets/checkmark.png"
                     alt="Experience icon"
-                    class="icon"
+                    className="icon"
                   />
                   <div>
                     <h3>HTML</h3>
@@ -171,7 +209,7 @@ function MainView() {
                   <img
                     src="./assets/checkmark.png"
                     alt="Experience icon"
-                    class="icon"
+                    className="icon"
                   />
                   <div>
                     <h3>CSS</h3>
@@ -182,7 +220,7 @@ function MainView() {
                   <img
                     src="./assets/checkmark.png"
                     alt="Experience icon"
-                    class="icon"
+                    className="icon"
                   />
                   <div>
                     <h3>React</h3>
@@ -193,7 +231,7 @@ function MainView() {
                   <img
                     src="./assets/checkmark.png"
                     alt="Experience icon"
-                    class="icon"
+                    className="icon"
                   />
                   <div>
                     <h3>JavaScript</h3>
@@ -204,7 +242,7 @@ function MainView() {
                   <img
                     src="./assets/checkmark.png"
                     alt="Experience icon"
-                    class="icon"
+                    className="icon"
                   />
                   <div>
                     <h3>Redux</h3>
@@ -213,14 +251,14 @@ function MainView() {
                 </article>
               </div>
             </div>
-            <div class="details-container">
-              <h2 class="experience-sub-title">Backend Development</h2>
-              <div class="article-container">
+            <div className="details-container">
+              <h2 className="experience-sub-title">Backend Development</h2>
+              <div className="article-container">
                 <article>
                   <img
                     src="./assets/checkmark.png"
                     alt="Experience icon"
-                    class="icon"
+                    className="icon"
                   />
                   <div>
                     <h3>PostgreSQL</h3>
@@ -231,7 +269,7 @@ function MainView() {
                   <img
                     src="./assets/checkmark.png"
                     alt="Experience icon"
-                    class="icon"
+                    className="icon"
                   />
                   <div>
                     <h3>Sequelize</h3>
@@ -242,7 +280,7 @@ function MainView() {
                   <img
                     src="./assets/checkmark.png"
                     alt="Experience icon"
-                    class="icon"
+                    className="icon"
                   />
                   <div>
                     <h3>Node JS</h3>
@@ -253,7 +291,7 @@ function MainView() {
                   <img
                     src="./assets/checkmark.png"
                     alt="Experience icon"
-                    class="icon"
+                    className="icon"
                   />
                   <div>
                     <h3>Express JS</h3>
@@ -264,7 +302,7 @@ function MainView() {
                   <img
                     src="./assets/checkmark.png"
                     alt="Experience icon"
-                    class="icon"
+                    className="icon"
                   />
                   <div>
                     <h3>Git</h3>
@@ -275,132 +313,102 @@ function MainView() {
             </div>
           </div>
         </div>
-        <img
-          src="./assets/arrow.png"
-          alt="Arrow icon"
-          class="icon arrow"
-          onclick="location.href='./#projects'"
-        />
+        <a href="/#projects">
+          <img
+            src="./assets/arrow.png"
+            alt="Arrow icon"
+            className="icon arrow"
+          />
+        </a>
       </section>
       <section id="projects">
-        <p class="section__text__p1">Browse My Recent</p>
-        <h1 class="title">Projects</h1>
-        <div class="experience-details-container">
-          <div class="about-containers">
-            <div class="details-container color-container">
-              <div class="article-container">
+        <p className="section__text__p1">Browse My Recent</p>
+        <h1 className="title">Projects</h1>
+        <div className="experience-details-container">
+          <div className="about-containers">
+            <div className="details-container color-container">
+              <div className="article-container">
                 <img
                   src="./assets/project-1.png"
                   alt="Project 1"
-                  class="project-img"
+                  className="project-img"
                 />
               </div>
-              <h2 class="experience-sub-title project-title">Dogs Api</h2>
-              <div class="btn-container">
-                <button
-                  class="btn btn-color-2 project-btn"
-                  onclick="location.href='https://github.com/DFelipePatino/Dogs-Project.git'"
+              <h2 className="experience-sub-title project-title">Dogs Api</h2>
+              <div className="btn-container">
+                <a
+                  href="https://github.com/DFelipePatino/Dogs-Project.git"
+                  target="_blank"
+                  rel="noopener noreferrer"
                 >
-                  Github
-                </button>
-                <button
-                  class="btn btn-color-2 project-btn"
-                  onclick="location.href='https://github.com/DFelipePatino'"
+                  <button className="btn btn-color-2 project-btn">
+                    Github
+                  </button>
+                </a>
+                <a
+                  href="https://github.com/DFelipePatino"
+                  target="_blank"
+                  rel="noopener noreferrer"
                 >
-                  Live Demo
-                </button>
+                  <button className="btn btn-color-2 project-btn">
+                    Live Demo
+                  </button>
+                </a>
               </div>
             </div>
-            <div class="details-container color-container">
-              <div class="article-container">
+            <div className="details-container color-container">
+              <div className="article-container">
                 <img
                   src="./assets/project-2.png"
                   alt="Project 2"
-                  class="project-img"
+                  className="project-img"
                 />
               </div>
-              <h2 class="experience-sub-title project-title">Charlie App</h2>
-              <div class="btn-container">
-                <button
-                  class="btn btn-color-2 project-btn"
-                  onclick="location.href='https://youtu.be/LbkMOQ-xVGk'"
+              <h2 className="experience-sub-title project-title">
+                Charlie App
+              </h2>
+              <div className="btn-container">
+                <a
+                  href="https://youtu.be/LbkMOQ-xVGk"
+                  target="_blank"
+                  rel="noopener noreferrer"
                 >
-                  Video-Demo
-                </button>
-                <button
-                  class="btn btn-color-2 project-btn"
-                  onclick="location.href='https://charlie-fawk.onrender.com/pruebabrian/login'"
+                  <button className="btn btn-color-2 project-btn">
+                    Video-Demo
+                  </button>
+                </a>
+                <a
+                  href="https://charlie-fawk.onrender.com/pruebabrian/login"
+                  target="_blank"
+                  rel="noopener noreferrer"
                 >
-                  Live Demo
-                </button>
+                  <button className="btn btn-color-2 project-btn">
+                    Live Demo
+                  </button>
+                </a>
               </div>
             </div>
-            {/* <!-- <div class="details-container color-container">
-            <div class="article-container">
-              <img
-                src="./assets/project-3.png"
-                alt="Project 3"
-                class="project-img"
-              />
-            </div>
-            <h2 class="experience-sub-title project-title">Project Three</h2>
-            <div class="btn-container">
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/DFelipePatino'"
-              >
-                Github
-              </button>
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/DFelipePatino'"
-              >
-                Live Demo
-              </button>
-            </div>
-          </div>
-          <div class="details-container color-container">
-            <div class="article-container">
-              <img
-                src="./assets/project-3.png"
-                alt="Project 4"
-                class="project-img"
-              />
-            </div>
-            <h2 class="experience-sub-title project-title">Project Four</h2>
-            <div class="btn-container">
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/DFelipePatino'"
-              >
-                Github
-              </button>
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/DFelipePatino'"
-              >
-                Live Demo
-              </button>
-            </div>
-          </div> --> */}
           </div>
         </div>
-        <img
-          src="./assets/arrow.png"
-          alt="Arrow icon"
-          class="icon arrow"
-          onclick="location.href='./#contact'"
-        />
+        <a href="/#contact">
+          <img
+            src="./assets/arrow.png"
+            alt="Arrow icon"
+            className="icon arrow"
+          />
+        </a>
       </section>
       <section id="contact">
-        <p class="section__text__p1">Get in Touch</p>
-        <h1 class="title">Contact Me</h1>
-        <div class="contact-info-upper-container">
-          <div class="contact-info-container">
+        <p className="section__text__p1">Get in Touch</p>
+        <h1 className="title">Contact Me</h1>
+
+
+        <div className="contact-info-upper-container">
+          <div className="contact-info-container">
             <img
               src="./assets/email.png"
               alt="Email icon"
-              class="icon contact-icon email-icon"
+              className="icon contact-icon email-icon"
             />
             <p>
               <a href="mailto:daniel.patino.work@gmail.com">
@@ -408,24 +416,35 @@ function MainView() {
               </a>
             </p>
           </div>
-          <div class="contact-info-container">
+          <div className="contact-info-container">
             <img
               src="./assets/linkedin.png"
               alt="LinkedIn icon"
-              class="icon contact-icon"
+              className="icon contact-icon"
             />
             <p>
-              <a href="https://www.linkedin.com/in/daniel-patino-207156208/">
+              <a
+                href="https://www.linkedin.com/in/daniel-patino-207156208/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 LinkedIn
               </a>
             </p>
           </div>
         </div>
       </section>
+      <a href="/#top">
+        <img
+          src="./assets/arrowup.png"
+          alt="Arrow icon"
+          className="icon arrowup"
+        />
+      </a>
       <footer>
         <nav>
-          <div class="nav-links-container">
-            <ul class="nav-links">
+          <div className="nav-links-container">
+            <ul className="nav-links">
               <li>
                 <a href="#about">About</a>
               </li>
@@ -441,6 +460,7 @@ function MainView() {
             </ul>
           </div>
         </nav>
+
         <p>Copyright &#169; 2024 Daniel Patino. All Rights Reserved.</p>
       </footer>
     </div>

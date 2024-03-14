@@ -7,6 +7,20 @@
   padding: 0;
 }
 
+#mobile-nav {
+  display: none;
+}
+
+@media screen and (max-width: 1199px) {
+  #desktop-nav {
+    display: none;
+  }
+
+  #mobile-nav {
+    display: flex;
+  }
+}
+
 body {
   font-family: "Poppins", sans-serif;
 }
@@ -60,6 +74,15 @@ a:hover {
 
 .logo {
   font-size: 2rem;
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
 }
 
 .logo:hover {
@@ -291,6 +314,14 @@ section {
   position: absolute;
   right: -5rem;
   bottom: 2.5rem;
+}
+
+.arrowup {
+  position: relative;
+  right: -34rem;
+  bottom: 2.5rem;
+  width: 34px;
+  height: auto;
 }
 
 .details-container {
