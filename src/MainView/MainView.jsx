@@ -120,7 +120,7 @@ function MainView() {
             >
               {" "}
               <img
-                src="./assets/github.png"
+                src="/images/github.png"
                 alt="My Github profile"
                 className="icon"
               />
@@ -134,7 +134,7 @@ function MainView() {
         <div className="section-container">
           <div className="section__pic-container">
             <img
-              src="./assets/about-pic.png"
+              src="/images/about-pic.png"
               alt="Profile picture"
               className="about-pic"
             />
@@ -143,7 +143,7 @@ function MainView() {
             <div className="about-containers">
               <div className="details-container">
                 <img
-                  src="./assets/experience.png"
+                  src="/images/experience.png"
                   alt="Experience icon"
                   className="icon"
                 />
@@ -155,7 +155,7 @@ function MainView() {
               </div>
               <div className="details-container">
                 <img
-                  src="./assets/education.png"
+                  src="/images/education.png"
                   alt="Education icon"
                   className="icon"
                 />
@@ -180,7 +180,7 @@ function MainView() {
         </div>
         <a href="./#experience">
           <img
-            src="./assets/arrow.png"
+            src="/images/arrow.png"
             alt="Arrow icon"
             className="icon arrow"
           />
@@ -196,7 +196,7 @@ function MainView() {
               <div className="article-container">
                 <article>
                   <img
-                    src="./assets/checkmark.png"
+                    src="/images/checkmark.png"
                     alt="Experience icon"
                     className="icon"
                   />
@@ -207,7 +207,7 @@ function MainView() {
                 </article>
                 <article>
                   <img
-                    src="./assets/checkmark.png"
+                    src="/images/checkmark.png"
                     alt="Experience icon"
                     className="icon"
                   />
@@ -218,7 +218,7 @@ function MainView() {
                 </article>
                 <article>
                   <img
-                    src="./assets/checkmark.png"
+                    src="/images/checkmark.png"
                     alt="Experience icon"
                     className="icon"
                   />
@@ -229,7 +229,7 @@ function MainView() {
                 </article>
                 <article>
                   <img
-                    src="./assets/checkmark.png"
+                    src="/images/checkmark.png"
                     alt="Experience icon"
                     className="icon"
                   />
@@ -240,7 +240,7 @@ function MainView() {
                 </article>
                 <article>
                   <img
-                    src="./assets/checkmark.png"
+                    src="/images/checkmark.png"
                     alt="Experience icon"
                     className="icon"
                   />
@@ -256,7 +256,7 @@ function MainView() {
               <div className="article-container">
                 <article>
                   <img
-                    src="./assets/checkmark.png"
+                    src="/images/checkmark.png"
                     alt="Experience icon"
                     className="icon"
                   />
@@ -267,7 +267,7 @@ function MainView() {
                 </article>
                 <article>
                   <img
-                    src="./assets/checkmark.png"
+                    src="/images/checkmark.png"
                     alt="Experience icon"
                     className="icon"
                   />
@@ -278,7 +278,7 @@ function MainView() {
                 </article>
                 <article>
                   <img
-                    src="./assets/checkmark.png"
+                    src="/images/checkmark.png"
                     alt="Experience icon"
                     className="icon"
                   />
@@ -289,7 +289,7 @@ function MainView() {
                 </article>
                 <article>
                   <img
-                    src="./assets/checkmark.png"
+                    src="/images/checkmark.png"
                     alt="Experience icon"
                     className="icon"
                   />
@@ -300,7 +300,7 @@ function MainView() {
                 </article>
                 <article>
                   <img
-                    src="./assets/checkmark.png"
+                    src="/images/checkmark.png"
                     alt="Experience icon"
                     className="icon"
                   />
@@ -315,7 +315,7 @@ function MainView() {
         </div>
         <a href="/#projects">
           <img
-            src="./assets/arrow.png"
+            src="/images/arrow.png"
             alt="Arrow icon"
             className="icon arrow"
           />
@@ -329,7 +329,7 @@ function MainView() {
             <div className="details-container color-container">
               <div className="article-container">
                 <img
-                  src="./assets/project-1.png"
+                  src="/images/project-1.png"
                   alt="Project 1"
                   className="project-img"
                 />
@@ -359,7 +359,7 @@ function MainView() {
             <div className="details-container color-container">
               <div className="article-container">
                 <img
-                  src="./assets/project-2.png"
+                  src="/images/project-2.png"
                   alt="Project 2"
                   className="project-img"
                 />
@@ -392,7 +392,7 @@ function MainView() {
         </div>
         <a href="/#contact">
           <img
-            src="./assets/arrow.png"
+            src="/images/arrow.png"
             alt="Arrow icon"
             className="icon arrow"
           />
@@ -406,7 +406,7 @@ function MainView() {
         <div className="contact-info-upper-container">
           <div className="contact-info-container">
             <img
-              src="./assets/email.png"
+              src="/images/email.png"
               alt="Email icon"
               className="icon contact-icon email-icon"
             />
@@ -418,7 +418,7 @@ function MainView() {
           </div>
           <div className="contact-info-container">
             <img
-              src="./assets/linkedin.png"
+              src="/images/linkedin.png"
               alt="LinkedIn icon"
               className="icon contact-icon"
             />
@@ -436,7 +436,7 @@ function MainView() {
       </section>
       <a href="/#top">
         <img
-          src="./assets/arrowup.png"
+          src="/images/arrowup.png"
           alt="Arrow icon"
           className="icon arrowup"
         />
