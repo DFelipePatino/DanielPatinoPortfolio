@@ -80,7 +80,7 @@ function MainView() {
       <section id="profile">
         <div className="section__pic-container">
           <img
-            src="./assets/profile-pic.png"
+            src="/images/profile-pic.png"
             alt="Daniel Patino profile picture"
           />
         </div>
@@ -108,7 +108,7 @@ function MainView() {
             >
               {" "}
               <img
-                src="./assets/linkedin.png"
+                src="/images/linkedin.png"
                 alt="My LinkedIn profile"
                 className="icon"
               />
