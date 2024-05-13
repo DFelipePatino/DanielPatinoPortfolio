@@ -356,6 +356,7 @@ function MainView() {
                 </a>
               </div>
             </div>
+
             <div className="details-container color-container">
               <div className="article-container">
                 <img
@@ -388,6 +389,38 @@ function MainView() {
                 </a>
               </div>
             </div>
+
+            <div className="details-container color-container">
+              <div className="article-container">
+                <img
+                  src="/images/project-3.png"
+                  alt="Project 1"
+                  className="project-img"
+                />
+              </div>
+              <h2 className="experience-sub-title project-title">Gym App</h2>
+              <div className="btn-container">
+                <a
+                  href="https://github.com/DFelipePatino/GymApp"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <button className="btn btn-color-2 project-btn">
+                    Github
+                  </button>
+                </a>
+                <a
+                  href="https://gymapp-c8w7.onrender.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <button className="btn btn-color-2 project-btn">
+                    Live Demo
+                  </button>
+                </a>
+              </div>
+            </div>
+
           </div>
         </div>
         <a href="/#contact">
