@@ -90,7 +90,7 @@ function MainView() {
           <p className="section__text__p2">Full Stack Developer</p>
           <div className="btn-container">
             <a
-              href="https://drive.google.com/file/d/1jf14HLQcOCmbRqQrDMYdmvpB2fcs4Zjy/view?usp=sharing"
+              href="https://drive.google.com/file/d/1eSe0ithksBbqMOO6JoLzwPMJqCci7wOY/view?usp=sharing"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -170,12 +170,9 @@ function MainView() {
             </div>
             <div className="text-container">
               <p>
-                I am a Full Stack developer with experience in JavaScript,
-                React, Redux, HTML, and CSS. I am recognized for my commitment
-                to continuous learning and constant improvement. I have worked
-                on individual and group projects using agile methodologies such
-                as SCRUM, enhancing skills in teamwork, effective communication,
-                and problem-solving.
+                I'm a Full Stack Developer with expertise in JavaScript, React, Redux, HTML, CSS, and Express. I specialize in creating modern, responsive UIs with Material UI and building robust backends with Django. With a strong commitment to continuous learning and agile methodologies like SCRUM, I excel in both individual and team environments, delivering high-quality solutions efficiently.
+                <br />
+                Let's connect and explore how I can bring value to your next project!
               </p>
             </div>
           </div>
