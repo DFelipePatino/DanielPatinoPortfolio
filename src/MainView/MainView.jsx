@@ -423,6 +423,49 @@ function MainView() {
             <div className="details-container color-container">
               <div className="article-container">
                 <img
+                  src="/images/project-4.png"
+                  alt="Project 2"
+                  className="project-img"
+                />
+              </div>
+              <h2 className="experience-sub-title project-title">
+                E-Commerce Portfolio
+              </h2>
+              <div className="btn-container">
+                <a
+                  href="https://github.com/DFelipePatino/inventario_simba_front"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <button className="btn btn-color-2 project-btn">
+                    Github Front
+                  </button>
+                </a>
+                <a
+                  href="https://github.com/DFelipePatino/inventario_simba_back"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <button className="btn btn-color-2 project-btn">
+                    Github Back
+                  </button>
+                </a>
+                <a
+                  href="https://inventario-simba-front.onrender.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <button className="btn btn-color-2 project-btn">
+                    Live Demo
+                  </button>
+                </a>
+              </div>
+            </div>
+
+
+            <div className="details-container color-container">
+              <div className="article-container">
+                <img
                   src="/images/project-1.png"
                   alt="Project 1"
                   className="project-img"
@@ -485,7 +528,7 @@ function MainView() {
               </div>
             </div>
 
-
+       
           </div>
         </div>
 
