@@ -90,7 +90,7 @@ function MainView() {
           <p className="section__text__p2">Full Stack Developer</p>
           <div className="btn-container">
             <a
-              href="https://drive.google.com/file/d/1eSe0ithksBbqMOO6JoLzwPMJqCci7wOY/view?usp=sharing"
+              href="https://drive.google.com/file/d/1BHugi3D8GWWHpCXGzd_xkfVgW5Vk77Ka/view?usp=sharing"
               target="_blank"
               rel="noopener noreferrer"
             >
