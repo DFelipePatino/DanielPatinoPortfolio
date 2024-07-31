@@ -170,7 +170,7 @@ function MainView() {
             </div>
             <div className="text-container">
               <p>
-                I'm a Full Stack Developer with expertise in JavaScript, React, Redux, HTML, CSS, and Express. I specialize in creating modern, responsive UIs with Material UI and building robust backends with Django. With a strong commitment to continuous learning and agile methodologies like SCRUM, I excel in both individual and team environments, delivering high-quality solutions efficiently.
+                I'm a Full Stack Developer with expertise in JavaScript, React, Redux, HTML, CSS, Django and Express. I specialize in creating modern, responsive UIs with Material UI. With a strong commitment to continuous learning and agile methodologies like SCRUM, I excel in both individual and team environments, delivering high-quality solutions efficiently.
                 <br />
                 Let's connect and explore how I can bring value to your next project!
               </p>
@@ -528,7 +528,7 @@ function MainView() {
               </div>
             </div>
 
-       
+
           </div>
         </div>
 
