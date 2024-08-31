@@ -90,7 +90,7 @@ function MainView() {
           <p className="section__text__p2">Full Stack Developer</p>
           <div className="btn-container">
             <a
-              href="https://drive.google.com/file/d/1BHugi3D8GWWHpCXGzd_xkfVgW5Vk77Ka/view?usp=sharing"
+              href="https://drive.google.com/file/d/1Vru1kMt5rnal1v2vv7dx5WVvB57Qtn0z/view?usp=sharing"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -390,11 +390,17 @@ function MainView() {
 
             <div className="details-container color-container">
               <div className="article-container">
-                <img
-                  src="/images/project-3.png"
-                  alt="Project 1"
-                  className="project-img"
-                />
+                <a
+                  href="https://gymapp-c8w7.onrender.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <img
+                    src="/images/project-3.png"
+                    alt="Project 1"
+                    className="project-img"
+                  />
+                </a>
               </div>
               <h2 className="experience-sub-title project-title">Gym App</h2>
               <div className="btn-container">
@@ -422,11 +428,17 @@ function MainView() {
 
             <div className="details-container color-container">
               <div className="article-container">
-                <img
-                  src="/images/project-4.png"
-                  alt="Project 2"
-                  className="project-img"
-                />
+                <a
+                  href="https://inventario-simba-front.onrender.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <img
+                    src="/images/project-4.png"
+                    alt="Project 2"
+                    className="project-img"
+                  />
+                </a>
               </div>
               <h2 className="experience-sub-title project-title">
                 E-Commerce Portfolio
@@ -465,11 +477,17 @@ function MainView() {
 
             <div className="details-container color-container">
               <div className="article-container">
-                <img
-                  src="/images/project-1.png"
-                  alt="Project 1"
-                  className="project-img"
-                />
+                <a
+                  href="https://dogsproject-rr4u.onrender.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <img
+                    src="/images/project-1.png"
+                    alt="Project 1"
+                    className="project-img"
+                  />
+                </a>
               </div>
               <h2 className="experience-sub-title project-title">Dogs Api</h2>
               <div className="btn-container">
@@ -497,11 +515,17 @@ function MainView() {
 
             <div className="details-container color-container">
               <div className="article-container">
-                <img
-                  src="/images/project-2.png"
-                  alt="Project 2"
-                  className="project-img"
-                />
+                <a
+                  href="https://charlie-fawk.onrender.com/pruebabrian/login"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <img
+                    src="/images/project-2.png"
+                    alt="Project 2"
+                    className="project-img"
+                  />
+                </a>
               </div>
               <h2 className="experience-sub-title project-title">
                 Charlie App
