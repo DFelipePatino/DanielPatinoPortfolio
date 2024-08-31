@@ -408,7 +408,7 @@ function MainView() {
                   </button>
                 </a>
                 <a
-                  href="https://gymapp-c8w7.onrender.com/"
+                  href="https://www.onetrainingteam.com/"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
