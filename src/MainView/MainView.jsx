@@ -90,7 +90,7 @@ function MainView() {
           <p className="section__text__p2">Full Stack Developer</p>
           <div className="btn-container">
             <a
-              href="https://drive.google.com/file/d/1jf14HLQcOCmbRqQrDMYdmvpB2fcs4Zjy/view?usp=sharing"
+              href="https://drive.google.com/file/d/1Vru1kMt5rnal1v2vv7dx5WVvB57Qtn0z/view?usp=sharing"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -170,12 +170,9 @@ function MainView() {
             </div>
             <div className="text-container">
               <p>
-                I am a Full Stack developer with experience in JavaScript,
-                React, Redux, HTML, and CSS. I am recognized for my commitment
-                to continuous learning and constant improvement. I have worked
-                on individual and group projects using agile methodologies such
-                as SCRUM, enhancing skills in teamwork, effective communication,
-                and problem-solving.
+                I'm a Full Stack Developer with expertise in JavaScript, React, Redux, HTML, CSS, Django and Express. I specialize in creating modern, responsive UIs with Material UI. With a strong commitment to continuous learning and agile methodologies like SCRUM, I excel in both individual and team environments, delivering high-quality solutions efficiently.
+                <br />
+                Let's connect and explore how I can bring value to your next project!
               </p>
             </div>
           </div>
@@ -381,18 +378,116 @@ function MainView() {
           />
         </a>
       </section>
+
+
       <section id="projects">
         <p className="section__text__p1">Browse My Recent</p>
         <h1 className="title">Projects</h1>
+
         <div className="experience-details-container">
           <div className="about-containers">
+
+
             <div className="details-container color-container">
               <div className="article-container">
-                <img
-                  src="/images/project-1.png"
-                  alt="Project 1"
-                  className="project-img"
-                />
+                <a
+                  href="https://gymapp-c8w7.onrender.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <img
+                    src="/images/project-3.png"
+                    alt="Project 1"
+                    className="project-img"
+                  />
+                </a>
+              </div>
+              <h2 className="experience-sub-title project-title">Gym App</h2>
+              <div className="btn-container">
+                <a
+                  href="https://github.com/DFelipePatino/GymApp"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <button className="btn btn-color-2 project-btn">
+                    Github
+                  </button>
+                </a>
+                <a
+                  href="https://www.onetrainingteam.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <button className="btn btn-color-2 project-btn">
+                    Live Demo
+                  </button>
+                </a>
+              </div>
+            </div>
+
+
+            <div className="details-container color-container">
+              <div className="article-container">
+                <a
+                  href="https://inventario-simba-front.onrender.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <img
+                    src="/images/project-4.png"
+                    alt="Project 2"
+                    className="project-img"
+                  />
+                </a>
+              </div>
+              <h2 className="experience-sub-title project-title">
+                E-Commerce Portfolio
+              </h2>
+              <div className="btn-container">
+                <a
+                  href="https://github.com/DFelipePatino/inventario_simba_front"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <button className="btn btn-color-2 project-btn">
+                    Github Front
+                  </button>
+                </a>
+                <a
+                  href="https://github.com/DFelipePatino/inventario_simba_back"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <button className="btn btn-color-2 project-btn">
+                    Github Back
+                  </button>
+                </a>
+                <a
+                  href="https://inventario-simba-front.onrender.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <button className="btn btn-color-2 project-btn">
+                    Live Demo
+                  </button>
+                </a>
+              </div>
+            </div>
+
+
+            <div className="details-container color-container">
+              <div className="article-container">
+                <a
+                  href="https://dogsproject-rr4u.onrender.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <img
+                    src="/images/project-1.png"
+                    alt="Project 1"
+                    className="project-img"
+                  />
+                </a>
               </div>
               <h2 className="experience-sub-title project-title">Dogs Api</h2>
               <div className="btn-container">
@@ -406,7 +501,7 @@ function MainView() {
                   </button>
                 </a>
                 <a
-                  href="https://github.com/DFelipePatino"
+                  href="https://dogsproject-rr4u.onrender.com/"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -416,13 +511,21 @@ function MainView() {
                 </a>
               </div>
             </div>
+
+
             <div className="details-container color-container">
               <div className="article-container">
-                <img
-                  src="/images/project-2.png"
-                  alt="Project 2"
-                  className="project-img"
-                />
+                <a
+                  href="https://charlie-fawk.onrender.com/pruebabrian/login"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <img
+                    src="/images/project-2.png"
+                    alt="Project 2"
+                    className="project-img"
+                  />
+                </a>
               </div>
               <h2 className="experience-sub-title project-title">
                 Charlie App
@@ -448,8 +551,12 @@ function MainView() {
                 </a>
               </div>
             </div>
+
+
           </div>
         </div>
+
+
         <a href="/#contact">
           <img
             src="/images/arrow.png"
@@ -458,6 +565,9 @@ function MainView() {
           />
         </a>
       </section>
+
+
+
       <section id="contact">
         <p className="section__text__p1">Get in Touch</p>
         <h1 className="title">Contact Me</h1>
@@ -494,6 +604,8 @@ function MainView() {
           </div>
         </div>
       </section>
+
+
       <a href="/#top">
         <img
           src="/images/arrowup.png"
@@ -501,6 +613,9 @@ function MainView() {
           className="icon arrowup"
         />
       </a>
+
+
+
       <footer>
         <nav>
           <div className="nav-links-container">
@@ -523,6 +638,8 @@ function MainView() {
 
         <p>Copyright &#169; 2024 Daniel Patino. All Rights Reserved.</p>
       </footer>
+
+
     </div>
   );
 }
