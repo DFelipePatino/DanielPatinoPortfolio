@@ -301,6 +301,11 @@ section {
   flex-direction: column;
 }
 
+.about-details-container2 {
+  justify-content: center;
+  flex-direction: column;
+}
+
 .about-containers,
 .about-details-container {
   display: flex;
