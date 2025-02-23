@@ -335,6 +335,17 @@ function MainView() {
                     <p>Intermediate</p>
                   </div>
                 </article>
+                <article>
+                  <img
+                    src="/images/checkmark.png"
+                    alt="Experience icon"
+                    className="icon"
+                  />
+                  <div>
+                    <h3>AWS</h3>
+                    <p>Essentials</p>
+                  </div>
+                </article>
               </div>
             </div>
 
@@ -415,6 +426,55 @@ function MainView() {
                 </a>
                 <a
                   href="https://www.onetrainingteam.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <button className="btn btn-color-2 project-btn">
+                    Live Demo
+                  </button>
+                </a>
+              </div>
+            </div>
+
+
+            <div className="details-container color-container">
+              <div className="article-container">
+                <a
+                  href="https://inventario-simba-front.onrender.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <img
+                    src="/images/project-5.png"
+                    alt="Project 2"
+                    className="project-img"
+                  />
+                </a>
+              </div>
+              <h2 className="experience-sub-title project-title">
+                Daniel P Store
+              </h2>
+              <div className="btn-container">
+                <a
+                  href="https://github.com/DFelipePatino/DanielStore-Front.git"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <button className="btn btn-color-2 project-btn">
+                    Github Front
+                  </button>
+                </a>
+                {/* <a
+                  href="https://github.com/DFelipePatino/inventario_simba_back"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <button className="btn btn-color-2 project-btn">
+                    Github Back
+                  </button>
+                </a> */}
+                <a
+                  href="https://danielstore-front.onrender.com/"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
