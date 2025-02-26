@@ -292,8 +292,7 @@ function MainView() {
             </div>
             <div className="text-container">
               <p>
-                I'm a Full Stack Developer with expertise in JavaScript, React, Redux, HTML, CSS, Django and Express. I specialize in creating modern, responsive UIs with Material UI. With a strong commitment to continuous learning and agile methodologies like SCRUM, I excel in both individual and team environments, delivering high-quality solutions efficiently.
-                <br />
+                I'm a Full Stack Developer with expertise in JavaScript, React, Redux, HTML, CSS, Django, Express, and AWS services. I specialize in creating modern, responsive UIs with Material UI and leveraging AWS for scalable and reliable applications. With a strong commitment to continuous learning and agile methodologies like SCRUM, I excel in both individual and team environments, delivering high-quality solutions efficiently.
                 Let's connect and explore how I can bring value to your next project!
               </p>
             </div>
@@ -548,7 +547,7 @@ function MainView() {
                     <div className="details-container color-container">
                       <div className="article-container">
                         <a
-                          href="https://inventario-simba-front.onrender.com/"
+                          href="https://danielstore-front.onrender.com/"
                           target="_blank"
                           rel="noopener noreferrer"
                         >
