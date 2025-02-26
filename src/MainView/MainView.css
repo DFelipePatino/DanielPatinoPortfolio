@@ -252,6 +252,23 @@ section {
   border-radius: 2rem;
 }
 
+.btn2 {
+  font-weight: 600;
+  transition: all 300ms ease;
+  padding: 1rem;
+  width: 10rem;
+  border-radius: 2rem;
+}
+
+.btn3 {
+  font-weight: 400;
+  transition: all 300ms ease;
+  width: 6rem;
+  height: 2rem;
+  border-radius: 1rem;
+  margin-bottom: 1rem;
+}
+
 .btn-color-1,
 .btn-color-2 {
   border: rgb(53, 53, 53) 0.1rem solid;
@@ -416,6 +433,22 @@ article .icon {
   border-color: rgb(163, 163, 163);
 }
 
+
+.descriptionBox {
+  margin-bottom: 1rem;
+  opacity: 0; /* Start hidden */
+  transition: opacity 0.5s ease; /* Transition for opacity */
+  visibility: hidden; /* Prevent interaction when hidden */
+  height: 0; /* Start with height 0 for smooth transition */
+  overflow: hidden; /* Prevent overflow when hidden */
+}
+
+.descriptionBox.show {
+  opacity: 1; /* Fully visible */
+  visibility: visible; /* Allow interaction when shown */
+  height: auto; /* Allow height to adjust */
+}
+
 /* CONTACT */
 
 #contact {
@@ -465,4 +498,46 @@ footer {
 
 footer p {
   text-align: center;
+}
+
+
+.dropdown2-menu {
+  max-height: 0; 
+  overflow: hidden; 
+  transition: max-height 1.5s ease;
+}
+
+.dropdown2-menu.open {
+  max-height: 3500px; 
+}
+
+.dropdown2-menu.closing {
+  max-height: 0; 
+  transition: max-height 1.5s ease; 
+}
+
+.dropdown3-menu {
+  max-height: 0; 
+  overflow: hidden; 
+  transition: max-height 1s ease;
+}
+
+.dropdown3-menu.open {
+  max-height: 500px;
+}
+
+.dropdown3-menu.closing {
+  max-height: 0;
+  transition: max-height 1s ease; 
+}
+
+
+
+.shining-effect:hover {
+  filter: brightness(1.2) saturate(1.5); 
+}
+
+
+.section__pic-container img {
+  transition: transform 0.1s ease; 
 }
