@@ -603,7 +603,7 @@ function MainView() {
                     <div className="details-container color-container">
                       <div className="article-container">
                         <a
-                          href="https://gymapp-c8w7.onrender.com/"
+                          href="https://www.onetrainingteam.com/"
                           target="_blank"
                           rel="noopener noreferrer"
                         >
