@@ -9,5 +9,5 @@ export const FOOTER_NAV_LINKS = [
 ];
 
 export const FOOTER = {
-    copyright: "Copyright © 2025 Daniel Patino. All Rights Reserved.",
+    copyright: "Copyright © 2026 Daniel Patino. All Rights Reserved.",
 };
