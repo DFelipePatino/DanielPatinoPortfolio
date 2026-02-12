@@ -4,6 +4,7 @@ import React from "react";
    Projects Section Data
 ======================= */
 export const PROJECTS = [
+
     {
         id: 1,
         title: "Daniel P Store",
@@ -25,6 +26,26 @@ export const PROJECTS = [
         ],
     },
     {
+        id: 6,
+        title: "Sticky Notes",
+        image: "/images/StickyNotes.png",
+        imageAlt: "Sticky Notes",
+        demoLink: "https://fictional-university.onrender.com/",
+        description: "Sticky Notes App is a lightweight mobile application built with React Native that allows users to quickly create, view, and manage notes. The app features a simple and intuitive interface, persistent storage using AsyncStorage, and smooth navigation for an efficient note-taking experience.",
+        buttons: [
+            {
+                label: "Github",
+                href: "https://github.com/DFelipePatino/Notes-App",
+                external: true,
+            },
+            {
+                label: "Live Demo",
+                href: "https://fictional-university.onrender.com/",
+                external: true,
+            },
+        ],
+    },
+    {
         id: 2,
         title: "Gym App",
         image: "/images/project-3.png",
@@ -40,6 +61,26 @@ export const PROJECTS = [
             {
                 label: "Live Demo",
                 href: "https://www.onetrainingteam.com/",
+                external: true,
+            },
+        ],
+    },
+    {
+        id: 4,
+        title: "Dogs Api",
+        image: "/images/project-1.png",
+        imageAlt: "Project 1",
+        demoLink: "https://dogsproject-rr4u.onrender.com/",
+        description: "This web app allows you to explore a wide variety of dog breeds using an external API while also letting you create and save your own custom dogs. Built with React, Material UI, and PostgreSQL, it offers a modern and intuitive experience for dog lovers.\n\nFeatures: • Browse and discover detailed information on different dog breeds. • Create and customize your own unique dogs. • Save your favorite breeds in a PostgreSQL-powered database. • Enjoy a sleek and responsive interface powered by Material UI.\n\nWith a clean design and smooth user experience, this app makes exploring and personalizing your dog collection easy and fun!",
+        buttons: [
+            {
+                label: "Github",
+                href: "https://github.com/DFelipePatino/Dogs-Project.git",
+                external: true,
+            },
+            {
+                label: "Live Demo",
+                href: "https://dogsproject-rr4u.onrender.com/",
                 external: true,
             },
         ],
@@ -69,26 +110,7 @@ export const PROJECTS = [
             },
         ],
     },
-    {
-        id: 4,
-        title: "Dogs Api",
-        image: "/images/project-1.png",
-        imageAlt: "Project 1",
-        demoLink: "https://dogsproject-rr4u.onrender.com/",
-        description: "This web app allows you to explore a wide variety of dog breeds using an external API while also letting you create and save your own custom dogs. Built with React, Material UI, and PostgreSQL, it offers a modern and intuitive experience for dog lovers.\n\nFeatures: • Browse and discover detailed information on different dog breeds. • Create and customize your own unique dogs. • Save your favorite breeds in a PostgreSQL-powered database. • Enjoy a sleek and responsive interface powered by Material UI.\n\nWith a clean design and smooth user experience, this app makes exploring and personalizing your dog collection easy and fun!",
-        buttons: [
-            {
-                label: "Github",
-                href: "https://github.com/DFelipePatino/Dogs-Project.git",
-                external: true,
-            },
-            {
-                label: "Live Demo",
-                href: "https://dogsproject-rr4u.onrender.com/",
-                external: true,
-            },
-        ],
-    },
+
     {
         id: 5,
         title: "Charlie App",
@@ -109,26 +131,7 @@ export const PROJECTS = [
             },
         ],
     },
-    {
-        id: 6,
-        title: "Sticky Notes",
-        image: "/images/StickyNotes.png",
-        imageAlt: "Sticky Notes",
-        demoLink: "https://fictional-university.onrender.com/",
-        description: "Sticky Notes App is a lightweight mobile application built with React Native that allows users to quickly create, view, and manage notes. The app features a simple and intuitive interface, persistent storage using AsyncStorage, and smooth navigation for an efficient note-taking experience.",
-        buttons: [
-            {
-                label: "Github",
-                href: "https://github.com/DFelipePatino/Notes-App",
-                external: true,
-            },
-            {
-                label: "Live Demo",
-                href: "https://fictional-university.onrender.com/",
-                external: true,
-            },
-        ],
-    },
+
 ];
 
 export const PROJECTS_SECTION = {

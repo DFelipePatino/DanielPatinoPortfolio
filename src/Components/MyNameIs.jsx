@@ -21,8 +21,8 @@ const MyNameIs = ({ tiltX, tiltY, setTiltX, setTiltY }) => {
     return (
         <section id="profile" onMouseMove={handleMouseMove} onMouseLeave={handleMouseLeave}>
             <div className="section__pic-container">
-                <img 
-                    src={PROFILE.image} 
+                <img
+                    src={PROFILE.image}
                     alt={`${PROFILE.name} profile picture`}
                     style={{ transform: `rotateY(${tiltX}deg) rotateX(${tiltY}deg)` }}
                 />

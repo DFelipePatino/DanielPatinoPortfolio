@@ -7,7 +7,7 @@ const Experience = ({ menuOpen2, isClosing2, toggleMenu2 }) => {
             <h1 className="title">Experience</h1>
 
             <div className="dropdown2">
-                <button className="btn btn-color-2" onClick={toggleMenu2}>
+                <button className="btn2 btn-color-2" onClick={toggleMenu2}>
                     {menuOpen2 ? "Hide Experience" : "View Experience"}
                 </button>
                 <div className={`dropdown2-menu ${menuOpen2 ? "open" : ""} ${isClosing2 ? "closing" : ""}`}>

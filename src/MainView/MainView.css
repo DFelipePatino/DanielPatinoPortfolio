@@ -2,13 +2,55 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
 
+/* CSS Variables for Theme */
+:root {
+  --bg-color: #ffffff;
+  --text-color: #000000;
+  --text-secondary: rgb(85, 85, 85);
+  --text-hover: grey;
+  --border-color: rgb(163, 163, 163);
+  --border-dark: rgb(53, 53, 53);
+  --bg-secondary: rgb(250, 250, 250);
+  --bg-card: white;
+  --accent-color: rgb(53, 53, 53);
+  --hover-bg: rgba(0, 0, 0, 0.05);
+  --menu-bg: white;
+  --underline-color: rgb(181, 181, 181);
+}
+
+.dark-mode {
+  --bg-color: #1a1a1a;
+  --text-color: #e0e0e0;
+  --text-secondary: #b0b0b0;
+  --text-hover: #d0d0d0;
+  --border-color: #4a4a4a;
+  --border-dark: #6a6a6a;
+  --bg-secondary: #2a2a2a;
+  --bg-card: #252525;
+  --accent-color: #8a8a8a;
+  --hover-bg: rgba(255, 255, 255, 0.1);
+  --menu-bg: #252525;
+  --underline-color: #6a6a6a;
+}
+
 * {
   margin: 0;
   padding: 0;
 }
 
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: background-color 300ms ease, color 300ms ease;
+}
+
 #mobile-nav {
   display: none;
+  position: relative;
+  /* needed for z-index to work */
+  z-index: 2;
+  /* lower layer */
 }
 
 @media screen and (max-width: 1199px) {
@@ -21,16 +63,12 @@
   }
 }
 
-body {
-  font-family: "Poppins", sans-serif;
-}
-
 html {
   scroll-behavior: smooth;
 }
 
 p {
-  color: rgb(85, 85, 85);
+  color: var(--text-secondary);
 }
 
 /* TRANSITION */
@@ -60,16 +98,17 @@ nav {
 }
 
 a {
-  color: black;
+  color: var(--text-color);
   text-decoration: none;
-  text-decoration-color: white;
+  text-decoration-color: var(--bg-color);
+  transition: color 300ms ease;
 }
 
 a:hover {
-  color: grey;
+  color: var(--text-hover);
   text-decoration: underline;
   text-underline-offset: 1rem;
-  text-decoration-color: rgb(181, 181, 181);
+  text-decoration-color: var(--underline-color);
 }
 
 .logo {
@@ -112,7 +151,7 @@ a:hover {
 .hamburger-icon span {
   width: 100%;
   height: 2px;
-  background-color: black;
+  background-color: var(--text-color);
   transition: all 300ms ease-in-out;
 }
 
@@ -120,11 +159,13 @@ a:hover {
   position: absolute;
   top: 100%;
   right: 0;
-  background-color: white;
+  background-color: var(--menu-bg);
   width: fit-content;
   max-height: 0;
   overflow: hidden;
   transition: all 300ms ease-in-out;
+  /* border: 1px solid var(--border-color); */
+  border-radius: 0.5rem;
 }
 
 .menu-links a {
@@ -132,7 +173,7 @@ a:hover {
   padding: 10px;
   text-align: center;
   font-size: 1.5rem;
-  color: black;
+  color: var(--text-color);
   text-decoration: none;
   transition: all 0.3 ease-in-out;
 }
@@ -169,6 +210,11 @@ a:hover {
   transform: none;
 }
 
+.centered-item {
+  margin: 100 auto;
+
+}
+
 /* SECTIONS */
 
 section {
@@ -190,6 +236,10 @@ section {
   justify-content: center;
   gap: 5rem;
   height: 80vh;
+  position: relative;
+  /* needed for z-index to work */
+  z-index: 1;
+  /* lower layer */
 }
 
 .section__pic-container {
@@ -197,7 +247,13 @@ section {
   height: 400px;
   width: 400px;
   margin: auto 0;
+
+  position: relative;
+  /* needed for z-index to work */
+  z-index: 1;
+  /* lower layer */
 }
+
 
 .section__text {
   align-self: center;
@@ -220,6 +276,7 @@ section {
 .title {
   font-size: 3rem;
   text-align: center;
+  color: var(--text-color);
 }
 
 #socials-container {
@@ -271,7 +328,9 @@ section {
 
 .btn-color-1,
 .btn-color-2 {
-  border: rgb(53, 53, 53) 0.1rem solid;
+  border: var(--border-dark) 0.1rem solid;
+  color: var(--text-color);
+  background: var(--bg-color);
 }
 
 .btn-color-1:hover,
@@ -281,21 +340,21 @@ section {
 
 .btn-color-1,
 .btn-color-2:hover {
-  background: rgb(53, 53, 53);
-  color: white;
+  background: var(--accent-color);
+  color: var(--bg-color);
 }
 
 .btn-color-1:hover {
-  background: rgb(0, 0, 0);
+  background: var(--text-color);
 }
 
 .btn-color-2 {
-  background: none;
+  background: transparent;
   /* width: fit-content; */
 }
 
 .btn-color-2:hover {
-  border: rgb(255, 255, 255) 0.1rem solid;
+  border: var(--text-color) 0.1rem solid;
 }
 
 .btn-container {
@@ -350,11 +409,12 @@ section {
 .details-container {
   padding: 1.5rem;
   flex: 1;
-  background: white;
+  background: var(--bg-card);
   border-radius: 2rem;
-  border: rgb(53, 53, 53) 0.1rem solid;
-  border-color: rgb(163, 163, 163);
+  border: var(--border-dark) 0.1rem solid;
+  border-color: var(--border-color);
   text-align: center;
+  transition: background-color 300ms ease, border-color 300ms ease;
 }
 
 .section-container {
@@ -375,7 +435,7 @@ section {
 }
 
 .experience-sub-title {
-  color: rgb(85, 85, 85);
+  color: var(--text-secondary);
   font-weight: 600;
   font-size: 1.75rem;
   margin-bottom: 2rem;
@@ -414,8 +474,9 @@ article .icon {
 }
 
 .color-container {
-  border-color: rgb(163, 163, 163);
-  background: rgb(250, 250, 250);
+  border-color: var(--border-color);
+  background: var(--bg-secondary);
+  transition: background-color 300ms ease, border-color 300ms ease;
 }
 
 .project-img {
@@ -426,12 +487,12 @@ article .icon {
 
 .project-title {
   margin: 1rem;
-  color: black;
+  color: var(--text-color);
 }
 
 .project-btn {
-  color: black;
-  border-color: rgb(163, 163, 163);
+  color: var(--text-color);
+  border-color: var(--border-color);
 }
 
 
@@ -471,11 +532,12 @@ article .icon {
   display: flex;
   justify-content: center;
   border-radius: 2rem;
-  border: rgb(53, 53, 53) 0.1rem solid;
-  border-color: rgb(163, 163, 163);
-  background: (250, 250, 250);
+  border: var(--border-dark) 0.1rem solid;
+  border-color: var(--border-color);
+  background: var(--bg-secondary);
   margin: 2rem auto;
   padding: 0.5rem;
+  transition: background-color 300ms ease, border-color 300ms ease;
 }
 
 .contact-info-container {
