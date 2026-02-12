@@ -1,4 +1,5 @@
 import ThemeToggle from './ThemeToggle'
+import PropTypes from 'prop-types';
 
 const Nav = ({ toggleMenu, menuOpen, toggleMenu2b, toggleMenu3b }) => {
     return (
@@ -71,7 +72,17 @@ const Nav = ({ toggleMenu, menuOpen, toggleMenu2b, toggleMenu3b }) => {
                 </div>
             </nav>
         </>
-    )
+
+    );
 }
 
+// ← Add propTypes here, outside the function
+Nav.propTypes = {
+    toggleMenu: PropTypes.func.isRequired,
+    menuOpen: PropTypes.bool.isRequired,
+    toggleMenu2b: PropTypes.func.isRequired,
+    toggleMenu3b: PropTypes.func.isRequired,
+};
+
 export default Nav
+

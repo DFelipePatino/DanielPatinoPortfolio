@@ -1,5 +1,5 @@
 import "./MainView.css";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import "./mediaqueries.css";
 import Nav from "../Components/Nav"
 import MyNameIs from "../Components/MyNameIs"
@@ -8,8 +8,16 @@ import Experience from "../Components/Experience"
 import Projects from "../Components/Projects"
 import Contact from "../Components/Contact"
 import Footer from "../Components/Footer"
+import { dogsWakeUp } from "../ProjectsWakeUp/GetRequests"
 
 function MainView() {
+
+  useEffect(() => {
+    dogsWakeUp()
+    console.log('dogsWakeUp just ran')
+    return
+  }, [])
+
 
   const [menuOpen, setMenuOpen] = useState(false);
   const [menuOpen2, setMenuOpen2] = useState(false);
@@ -63,14 +71,14 @@ function MainView() {
 
   return (
     <div id="top">
-      <Nav 
-        toggleMenu={toggleMenu} 
-        menuOpen={menuOpen} 
+      <Nav
+        toggleMenu={toggleMenu}
+        menuOpen={menuOpen}
         toggleMenu2b={toggleMenu2b}
         toggleMenu3b={toggleMenu3b}
       />
 
-      <MyNameIs 
+      <MyNameIs
         tiltX={tiltX}
         tiltY={tiltY}
         setTiltX={setTiltX}
@@ -79,13 +87,13 @@ function MainView() {
 
       <About />
 
-      <Experience 
+      <Experience
         menuOpen2={menuOpen2}
         isClosing2={isClosing2}
         toggleMenu2={toggleMenu2}
       />
 
-      <Projects 
+      <Projects
         menuOpen3={menuOpen3}
         isClosing3={isClosing3}
         toggleMenu3={toggleMenu3}
@@ -93,7 +101,7 @@ function MainView() {
 
       <Contact />
 
-      <Footer 
+      <Footer
         toggleMenu2b={toggleMenu2b}
         toggleMenu3b={toggleMenu3b}
       />
