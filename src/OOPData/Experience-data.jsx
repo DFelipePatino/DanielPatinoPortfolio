@@ -28,7 +28,7 @@ export const PROGRAMMING_LANGUAGES = [
 
 export const EXPERIENCE = {
     checkmarkIcon: "/images/checkmark.png",
-    arrowLink: "/#projects",
+    arrowLink: "/#contact",
     arrowIcon: "/images/arrow.png",
 };
 

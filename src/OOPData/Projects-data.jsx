@@ -1,4 +1,6 @@
 import React from "react";
+import PropTypes from "prop-types";
+
 
 /* =======================
    Projects Section Data
@@ -26,27 +28,48 @@ export const PROJECTS = [
         ],
     },
     {
-        id: 6,
-        title: "Sticky Notes",
-        image: "/images/StickyNotes.png",
-        imageAlt: "Sticky Notes",
-        demoLink: "https://fictional-university.onrender.com/",
-        description: "Sticky Notes App is a lightweight mobile application built with React Native that allows users to quickly create, view, and manage notes. The app features a simple and intuitive interface, persistent storage using AsyncStorage, and smooth navigation for an efficient note-taking experience.",
+        id: 7,
+        title: "Bill Splitter",
+        image: "/images/BillSplitter.png",
+        imageAlt: "Project 2",
+        demoLink: "https://money-app-js18.onrender.com",
+        description: "A smart and easy way to split expenses with friends. Track shared charges, see who owes what, and settle balances effortlessly, it let's you download a PDF to share with your friends. Perfect for trips, events, or everyday spending.",
         buttons: [
             {
                 label: "Github",
-                href: "https://github.com/DFelipePatino/Notes-App",
+                href: "https://github.com/DFelipePatino/Money-App.git",
                 external: true,
             },
             {
                 label: "Live Demo",
-                href: "https://fictional-university.onrender.com/",
+                href: "https://money-app-js18.onrender.com",
                 external: true,
             },
         ],
     },
     {
-        id: 2,
+        id: 6,
+        title: "Visuals App",
+        image: "/images/VisualsApp.png",
+        imageAlt: "Project 2",
+        demoLink: "https://visualapp.onrender.com",
+        description: "Modern, neon-infused visualizer that captures the device camera, extracts the user's outline, and redraws it as a glowing holographic silhouette in real time. Built for installations, live streams, and futuristic UI experiments.",
+        buttons: [
+            {
+                label: "Github",
+                href: "https://github.com/DFelipePatino/VisualApp",
+                external: true,
+            },
+            {
+                label: "Live Demo",
+                href: "https://visualapp.onrender.com",
+                external: true,
+            },
+        ],
+    },
+
+    {
+        id: 3,
         title: "Gym App",
         image: "/images/project-3.png",
         imageAlt: "Project 1",
@@ -86,7 +109,7 @@ export const PROJECTS = [
         ],
     },
     {
-        id: 3,
+        id: 5,
         title: "E-Commerce Portfolio",
         image: "/images/project-4.png",
         imageAlt: "Project 2",
@@ -110,9 +133,28 @@ export const PROJECTS = [
             },
         ],
     },
-
     {
-        id: 5,
+        id: 2,
+        title: "Sticky Notes",
+        image: "/images/StickyNotes.png",
+        imageAlt: "Sticky Notes",
+        demoLink: "https://fictional-university.onrender.com/",
+        description: "Sticky Notes App is a lightweight mobile application built with React Native that allows users to quickly create, view, and manage notes. The app features a simple and intuitive interface, persistent storage using AsyncStorage, and smooth navigation for an efficient note-taking experience.",
+        buttons: [
+            {
+                label: "Github",
+                href: "https://github.com/DFelipePatino/Notes-App",
+                external: true,
+            },
+            {
+                label: "Live Demo",
+                href: "https://fictional-university.onrender.com/",
+                external: true,
+            },
+        ],
+    },
+    {
+        id: 8,
         title: "Charlie App",
         image: "/images/project-2.png",
         imageAlt: "Project 2",
@@ -135,7 +177,7 @@ export const PROJECTS = [
 ];
 
 export const PROJECTS_SECTION = {
-    arrowLink: "/#contact",
+    arrowLink: "/#experience",
     arrowIcon: "/images/arrow.png",
 };
 
@@ -189,3 +231,18 @@ export const ArrowLink = ({ href, icon, alt, className }) => (
         <img src={icon} alt={alt} className={className} />
     </a>
 );
+
+
+ProjectCard.propTypes = {
+    project: PropTypes.object.isRequired,
+    showDescription: PropTypes.bool.isRequired,
+    closingDescription: PropTypes.bool.isRequired,
+    onToggleDescription: PropTypes.func.isRequired,
+};
+
+ArrowLink.propTypes = {
+    href: PropTypes.string.isRequired,
+    icon: PropTypes.string.isRequired,
+    alt: PropTypes.string.isRequired,
+    className: PropTypes.string,
+};

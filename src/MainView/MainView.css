@@ -371,6 +371,8 @@ section {
   gap: 2rem;
   margin-bottom: 2rem;
   margin-top: 2rem;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .about-details-container {
@@ -395,8 +397,36 @@ section {
 .arrow {
   position: absolute;
   right: -5rem;
-  bottom: 2.5rem;
+  top: 50%;
+  transform: translateY(-50%);
 }
+
+.arrow-hover {
+  position: relative;
+  cursor: pointer;
+}
+
+.arrow-hover::after {
+  content: "Next section";
+  position: absolute;
+  bottom: 120%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #333;
+  color: #fff;
+  font-size: 12px;
+  padding: 4px 8px;
+  border-radius: 4px;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease;
+}
+
+.arrow-hover:hover::after {
+  opacity: 1;
+}
+
 
 .arrowup {
   position: relative;
@@ -471,6 +501,8 @@ article .icon {
 
 #projects {
   position: relative;
+  height: auto;
+  min-height: fit-content;
 }
 
 .color-container {
@@ -572,14 +604,20 @@ footer p {
 }
 
 
+.dropdown2 {
+  margin-bottom: 0;
+}
+
 .dropdown2-menu {
   max-height: 0;
   overflow: hidden;
   transition: max-height 1.5s ease;
+  margin: 0;
+  padding: 0;
 }
 
 .dropdown2-menu.open {
-  max-height: 3500px;
+  max-height: 10000px;
 }
 
 .dropdown2-menu.closing {

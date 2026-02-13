@@ -1,7 +1,10 @@
 import { useState } from "react";
 import { PROJECTS, PROJECTS_SECTION, ProjectCard, ArrowLink } from "../OOPData/Projects-data";
+import PropTypes from "prop-types";
 
-const Projects = ({ menuOpen3, isClosing3, toggleMenu3 }) => {
+
+
+const Projects = ({ menuOpen3, isClosing3, toggleMenu3, dogsWakeUp }) => {
     const [showDescriptions, setShowDescriptions] = useState({});
     const [closingDescriptions, setClosingDescriptions] = useState({});
 
@@ -26,13 +29,20 @@ const Projects = ({ menuOpen3, isClosing3, toggleMenu3 }) => {
         }
     };
 
+    function handleClick() {
+        toggleMenu3();
+        dogsWakeUp();
+    }
+
     return (
         <section id="projects">
             <p className="section__text__p1">Browse My Recent</p>
             <h1 className="title">Projects</h1>
 
             <div className="dropdown2">
-                <button className="btn btn-color-2" onClick={toggleMenu3}>
+                <button className="btn btn-color-2" onClick={() => {
+                    handleClick();
+                }}>
                     {menuOpen3 ? "Hide Projects" : "View Projects"}
                 </button>
 
@@ -48,6 +58,7 @@ const Projects = ({ menuOpen3, isClosing3, toggleMenu3 }) => {
                                             showDescription={showDescriptions[project.id]}
                                             closingDescription={closingDescriptions[project.id]}
                                             onToggleDescription={() => toggleDescription(project.id)}
+                                            dogsWakeUp={dogsWakeUp}
                                         />
                                     ))}
                                 </div>
@@ -63,3 +74,10 @@ const Projects = ({ menuOpen3, isClosing3, toggleMenu3 }) => {
 };
 
 export default Projects;
+
+Projects.propTypes = {
+    menuOpen3: PropTypes.bool,
+    isClosing3: PropTypes.bool.isRequired,
+    toggleMenu3: PropTypes.func.isRequired,
+    dogsWakeUp: PropTypes.func.isRequired,
+};

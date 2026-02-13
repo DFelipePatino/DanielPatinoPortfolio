@@ -12,11 +12,12 @@ const Nav = ({ toggleMenu, menuOpen, toggleMenu2b, toggleMenu3b }) => {
                             <a href="#about">About</a>
                         </li>
                         <li>
-                            <a href="#experience" onClick={toggleMenu2b}>Experience</a>
-                        </li>
-                        <li>
                             <a href="#projects" onClick={toggleMenu3b}>Projects</a>
                         </li>
+                        <li>
+                            <a href="#experience" onClick={toggleMenu2b}>Experience</a>
+                        </li>
+
                         <li>
                             <a href="#contact">Contact</a>
                         </li>
@@ -48,13 +49,13 @@ const Nav = ({ toggleMenu, menuOpen, toggleMenu2b, toggleMenu3b }) => {
                                 </a>
                             </li>
                             <li>
-                                <a href="#experience" onClick={() => { toggleMenu(); toggleMenu2b(); }}>
-                                    Experience
+                                <a href="#projects" onClick={() => { toggleMenu(); toggleMenu3b(); }}>
+                                    Projects
                                 </a>
                             </li>
                             <li>
-                                <a href="#projects" onClick={() => { toggleMenu(); toggleMenu3b(); }}>
-                                    Projects
+                                <a href="#experience" onClick={() => { toggleMenu(); toggleMenu2b(); }}>
+                                    Experience
                                 </a>
                             </li>
                             <li>

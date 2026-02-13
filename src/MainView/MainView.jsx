@@ -87,16 +87,17 @@ function MainView() {
 
       <About />
 
-      <Experience
-        menuOpen2={menuOpen2}
-        isClosing2={isClosing2}
-        toggleMenu2={toggleMenu2}
-      />
-
       <Projects
         menuOpen3={menuOpen3}
         isClosing3={isClosing3}
         toggleMenu3={toggleMenu3}
+        dogsWakeUp={dogsWakeUp}
+      />
+
+      <Experience
+        menuOpen2={menuOpen2}
+        isClosing2={isClosing2}
+        toggleMenu2={toggleMenu2}
       />
 
       <Contact />
