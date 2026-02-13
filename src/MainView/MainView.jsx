@@ -14,7 +14,7 @@ function MainView() {
 
   useEffect(() => {
     dogsWakeUp()
-    console.log('dogsWakeUp just ran')
+    // console.log('dogsWakeUp just ran')
     return
   }, [])
 
@@ -51,12 +51,13 @@ function MainView() {
   }
 
   const toggleMenu3 = () => {
+    dogsWakeUp();
     if (menuOpen3) {
       setIsClosing3(true);
       setTimeout(() => {
         setMenuOpen3(false);
         setIsClosing3(false);
-      }, 1500); // Match this duration with your CSS transition duration
+      }, 1500);
     } else {
       setMenuOpen3(true);
     }

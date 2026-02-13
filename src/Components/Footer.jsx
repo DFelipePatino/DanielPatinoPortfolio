@@ -5,12 +5,13 @@ const Footer = ({ toggleMenu2b, toggleMenu3b }) => {
         if (link.onClick) {
             link.onClick();
         }
-        if (link.label === "Experience" && toggleMenu2b) {
-            toggleMenu2b();
-        }
         if (link.label === "Projects" && toggleMenu3b) {
             toggleMenu3b();
         }
+        if (link.label === "Experience" && toggleMenu2b) {
+            toggleMenu2b();
+        }
+
     };
 
     return (
@@ -20,8 +21,8 @@ const Footer = ({ toggleMenu2b, toggleMenu3b }) => {
                     <ul className="nav-links">
                         {FOOTER_NAV_LINKS.map((link, index) => (
                             <li key={index}>
-                                <a 
-                                    href={link.href} 
+                                <a
+                                    href={link.href}
                                     onClick={() => handleLinkClick(link)}
                                 >
                                     {link.label}
