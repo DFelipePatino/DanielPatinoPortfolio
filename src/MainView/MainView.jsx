@@ -1,4 +1,5 @@
 import "./MainView.css";
+import { Grow } from '@mui/material';
 import { useEffect, useState } from "react";
 import "./mediaqueries.css";
 import Nav from "../Components/Nav"
@@ -8,15 +9,10 @@ import Experience from "../Components/Experience"
 import Projects from "../Components/Projects"
 import Contact from "../Components/Contact"
 import Footer from "../Components/Footer"
+import LandingPage from "../Components/LandingPage"
 import { dogsWakeUp } from "../ProjectsWakeUp/GetRequests"
 
 function MainView() {
-
-  useEffect(() => {
-    dogsWakeUp()
-    // console.log('dogsWakeUp just ran')
-    return
-  }, [])
 
 
   const [menuOpen, setMenuOpen] = useState(false);
@@ -70,43 +66,103 @@ function MainView() {
     }, 800);
   }
 
+  const [showLanding, setShowLanding] = useState(false);
+  const [showOtherElemts, setShowOtherElemts] = useState(false);
+
+  const showOtherElemtsCountDown = 5400
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setShowLanding(true);
+    }, 800);
+    setTimeout(() => {
+      setShowLanding(false)
+    }, 4000)
+    setTimeout(() => {
+      setShowOtherElemts(true)
+    }, showOtherElemtsCountDown)
+
+    return () => clearTimeout(timer);
+  }, []);
+
+  useEffect(() => {
+    dogsWakeUp()
+    document.body.style.overflow = !showOtherElemts ? "hidden" : "auto";
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: "auto", // instant (use "smooth" if you want)
+    });
+    return () => {
+      document.body.style.overflow = "auto"; // cleanup
+    };
+  }, [showOtherElemts]);
+
+  const loadingShown = true;
+
   return (
     <div id="top">
       <Nav
+        showOtherElemtsCountDown={showOtherElemtsCountDown}
         toggleMenu={toggleMenu}
         menuOpen={menuOpen}
         toggleMenu2b={toggleMenu2b}
         toggleMenu3b={toggleMenu3b}
       />
 
-      <MyNameIs
-        tiltX={tiltX}
-        tiltY={tiltY}
-        setTiltX={setTiltX}
-        setTiltY={setTiltY}
-      />
+      {!showOtherElemts ?
+        <Grow in={showLanding}
+          {...(loadingShown ? { timeout: 1500 } : {})}
+        >
+          <div>
+            <LandingPage />
+          </div>
+        </Grow>
+        : null}
 
-      <About />
 
-      <Projects
-        menuOpen3={menuOpen3}
-        isClosing3={isClosing3}
-        toggleMenu3={toggleMenu3}
-        dogsWakeUp={dogsWakeUp}
-      />
+      <Grow in={showOtherElemts}
+        {...(loadingShown ? { timeout: 1500 } : {})}
+      >
+        <div>
+          <MyNameIs
+            tiltX={tiltX}
+            tiltY={tiltY}
+            setTiltX={setTiltX}
+            setTiltY={setTiltY}
+          />
+        </div>
+      </Grow>
 
-      <Experience
-        menuOpen2={menuOpen2}
-        isClosing2={isClosing2}
-        toggleMenu2={toggleMenu2}
-      />
+      <Grow in={showOtherElemts}
+        {...(loadingShown ? { timeout: 1500 } : {})}
+      >
+        <div>
+          <About />
 
-      <Contact />
+          <Projects
+            menuOpen3={menuOpen3}
+            isClosing3={isClosing3}
+            toggleMenu3={toggleMenu3}
+            dogsWakeUp={dogsWakeUp}
+          />
 
-      <Footer
-        toggleMenu2b={toggleMenu2b}
-        toggleMenu3b={toggleMenu3b}
-      />
+          <Experience
+            menuOpen2={menuOpen2}
+            isClosing2={isClosing2}
+            toggleMenu2={toggleMenu2}
+          />
+
+          <Contact />
+
+          <Footer
+            toggleMenu2b={toggleMenu2b}
+            toggleMenu3b={toggleMenu3b}
+          />
+        </div>
+      </Grow>
+
+
     </div>
   );
 }
