@@ -67,10 +67,21 @@ function MainView() {
     }, 800);
   }
 
+  function handleSkip() {
+    setShowLanding(false);
+    setShowOtherElemts(true);
+    setTimeout(() => {
+      setShowNav(true);
+    }, 1000);
+
+  }
+
   const [showLanding, setShowLanding] = useState(false);
   const [showOtherElemts, setShowOtherElemts] = useState(false);
+  const [showNav, setShowNav] = useState(false)
 
-  const showOtherElemtsCountDown = 5400
+  const showOtherElemtsCountDown = 6200
+  const showLandingCountDown = showOtherElemtsCountDown - 1400
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -78,7 +89,7 @@ function MainView() {
     }, 800);
     setTimeout(() => {
       setShowLanding(false)
-    }, 4000)
+    }, showLandingCountDown)
     setTimeout(() => {
       setShowOtherElemts(true)
     }, showOtherElemtsCountDown)
@@ -109,6 +120,8 @@ function MainView() {
         menuOpen={menuOpen}
         toggleMenu2b={toggleMenu2b}
         toggleMenu3b={toggleMenu3b}
+        showNav={showNav}
+        setShowNav={setShowNav}
       />
 
       {!showOtherElemts ?
@@ -116,7 +129,7 @@ function MainView() {
           {...(loadingShown ? { timeout: 1500 } : {})}
         >
           <div>
-            <LandingPage />
+            <LandingPage handleSkip={handleSkip} />
           </div>
         </Fade>
         : null}

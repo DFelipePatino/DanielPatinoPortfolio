@@ -4,10 +4,10 @@ import { Grow } from '@mui/material';
 import { useState } from 'react';
 import { useEffect } from 'react';
 
-const Nav = ({ toggleMenu, menuOpen, toggleMenu2b, toggleMenu3b, showOtherElemtsCountDown }) => {
+const Nav = ({ toggleMenu, menuOpen, toggleMenu2b, toggleMenu3b, showOtherElemtsCountDown, setShowNav, showNav }) => {
 
     const loadingShown = true;
-    const [showNav, setShowNav] = useState(false)
+
 
     useEffect(() => {
         setTimeout(() => {

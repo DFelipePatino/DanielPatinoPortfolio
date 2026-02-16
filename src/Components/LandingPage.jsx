@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import Typography from "@mui/material/Typography";
+import { Box } from "@mui/material";
 
 function TypingText({
     text,
@@ -24,7 +25,7 @@ function TypingText({
 }
 
 
-function LandingPage() {
+function LandingPage({ handleSkip }) {
 
     const [render, setRender] = useState(false)
 
@@ -35,28 +36,60 @@ function LandingPage() {
     })
 
     return (
-        <div
-            style={{
-                minHeight: "60vh",
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-                textAlign: "center",
-            }}
-        >
-            <Typography
-                variant="h4"
-                sx={{ whiteSpace: "pre-line", minHeight: "2.5em" }}
-            >
-                {render ? (
-                    <TypingText
-                        text={"Hi, I'm Daniel.\nWelcome to my portfolio!"}
-                        speed={60}
-                    />
-                ) : null}
-            </Typography>
-        </div>
 
+        <>
+
+
+
+            <Box
+                component="button"
+                onClick={handleSkip}
+                sx={{
+                    all: "unset",
+                    position: "fixed",
+                    top: 16,
+                    right: 16,
+                    cursor: "pointer",
+                    color: "text.secondary",
+                    fontSize: "0.9rem",
+                    opacity: 0.65,
+                    transition: "opacity 0.2s ease",
+                    "&:hover": {
+                        opacity: 1,
+                    },
+                    "&:focus-visible": {
+                        outline: "2px solid",
+                        outlineColor: "primary.main",
+                        outlineOffset: 2,
+                    },
+                }}
+            >
+                Skip
+            </Box>
+
+
+            <div
+                style={{
+                    minHeight: "60vh",
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    textAlign: "center",
+                }}
+            >
+                <Typography
+                    variant="h4"
+                    sx={{ whiteSpace: "pre-line", minHeight: "2.5em" }}
+                >
+                    {render ? (
+                        <TypingText
+                            text={"Hi, I'm Daniel.\nWelcome to my portfolio!\n🖥️📱🧩⚛️🧠🚀"}
+                            speed={60}
+                        />
+                    ) : null}
+                </Typography>
+            </div>
+        </>
 
     );
 }
