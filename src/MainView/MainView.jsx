@@ -33,7 +33,7 @@ function MainView() {
       setTimeout(() => {
         setMenuOpen2(false);
         setIsClosing2(false);
-      }, 1500); // Match this duration with your CSS transition duration
+      }, 1500);
     } else {
       setMenuOpen2(true);
     }
@@ -91,10 +91,10 @@ function MainView() {
     window.scrollTo({
       top: 0,
       left: 0,
-      behavior: "auto", // instant (use "smooth" if you want)
+      behavior: "auto",
     });
     return () => {
-      document.body.style.overflow = "auto"; // cleanup
+      document.body.style.overflow = "auto";
     };
   }, [showOtherElemts]);
 

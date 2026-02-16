@@ -44,10 +44,13 @@ function LandingPage() {
                 textAlign: "center",
             }}
         >
-            <Typography variant="h4">
+            <Typography
+                variant="h4"
+                sx={{ whiteSpace: "pre-line", minHeight: "2.5em" }}
+            >
                 {render ? (
                     <TypingText
-                        text="Get ready for an incredible experience!"
+                        text={"Hi, I'm Daniel.\nWelcome to my portfolio!"}
                         speed={60}
                     />
                 ) : null}
