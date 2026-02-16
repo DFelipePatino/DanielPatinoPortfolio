@@ -650,3 +650,38 @@ footer p {
 .section__pic-container img {
   transition: transform 0.1s ease;
 }
+
+/* SKIP BUTTON LANDINGPAGE  */
+
+.skip-button {
+  all: unset;
+  position: fixed;
+  top: 16px;
+  right: 16px;
+  cursor: pointer;
+
+  font-size: 0.9rem;
+  opacity: 0.65;
+  transition: opacity 0.2s ease;
+
+  color: var(--text-secondary);
+}
+
+.skip-button:hover {
+  opacity: 1;
+}
+
+.skip-button:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
+}
+
+:root {
+  --text-secondary: #555;
+  --primary: #1976d2;
+}
+
+.dark-mode {
+  --text-secondary: #aaa;
+  --primary: #90caf9;
+}

@@ -44,25 +44,7 @@ function LandingPage({ handleSkip }) {
             <Box
                 component="button"
                 onClick={handleSkip}
-                sx={{
-                    all: "unset",
-                    position: "fixed",
-                    top: 16,
-                    right: 16,
-                    cursor: "pointer",
-                    color: "text.secondary",
-                    fontSize: "0.9rem",
-                    opacity: 0.65,
-                    transition: "opacity 0.2s ease",
-                    "&:hover": {
-                        opacity: 1,
-                    },
-                    "&:focus-visible": {
-                        outline: "2px solid",
-                        outlineColor: "primary.main",
-                        outlineOffset: 2,
-                    },
-                }}
+                className="skip-button"
             >
                 Skip
             </Box>
