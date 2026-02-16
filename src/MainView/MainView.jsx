@@ -1,5 +1,6 @@
 import "./MainView.css";
 import { Grow } from '@mui/material';
+import { Fade } from '@mui/material';
 import { useEffect, useState } from "react";
 import "./mediaqueries.css";
 import Nav from "../Components/Nav"
@@ -111,17 +112,17 @@ function MainView() {
       />
 
       {!showOtherElemts ?
-        <Grow in={showLanding}
+        <Fade in={showLanding}
           {...(loadingShown ? { timeout: 1500 } : {})}
         >
           <div>
             <LandingPage />
           </div>
-        </Grow>
+        </Fade>
         : null}
 
 
-      <Grow in={showOtherElemts}
+      <Fade in={showOtherElemts}
         {...(loadingShown ? { timeout: 1500 } : {})}
       >
         <div>
@@ -132,7 +133,7 @@ function MainView() {
             setTiltY={setTiltY}
           />
         </div>
-      </Grow>
+      </Fade>
 
       <Grow in={showOtherElemts}
         {...(loadingShown ? { timeout: 1500 } : {})}
