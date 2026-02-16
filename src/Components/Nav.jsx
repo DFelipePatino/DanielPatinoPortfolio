@@ -12,7 +12,7 @@ const Nav = ({ toggleMenu, menuOpen, toggleMenu2b, toggleMenu3b, showOtherElemts
     useEffect(() => {
         setTimeout(() => {
             setShowNav(true);
-        }, showOtherElemtsCountDown)
+        }, showOtherElemtsCountDown + 800)
     }, [showOtherElemtsCountDown]);
 
     return (
