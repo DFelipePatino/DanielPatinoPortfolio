@@ -72,7 +72,7 @@ function MainView() {
     setShowOtherElemts(true);
     setTimeout(() => {
       setShowNav(true);
-    }, 1000);
+    }, 800);
 
   }
 
