@@ -30,10 +30,10 @@ function LandingPage({ handleSkip }) {
     const [render, setRender] = useState(false)
 
     useEffect(() => {
-        setTimeout(() => {
-            setRender(true)
-        }, 1000);
-    })
+        const timer = setTimeout(() => setRender(true), 1000);
+        return () => clearTimeout(timer);
+    }, []);
+
 
     return (
 

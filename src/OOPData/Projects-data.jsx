@@ -173,6 +173,26 @@ export const PROJECTS = [
             },
         ],
     },
+    {
+        id: 9,
+        title: "Rick & Morty API",
+        image: "/images/Rick&Morty.png",
+        imageAlt: "Project 2",
+        demoLink: "https://rick-mortypidafepa.onrender.com",
+        description: "Rick and Morty App is a responsive single-page application that consumes the public Rick and Morty API to search, filter, and display characters. The project is built with React, Redux for global state management, React Router for navigation, Axios for API requests, and Material UI + custom CSS for styling. It includes features like favorites management, filtering, ordering, and dynamic routing, following modern frontend best practices.",
+        buttons: [
+            {
+                label: "Github",
+                href: "https://github.com/DFelipePatino/Rick-MortyPIdafepa.git",
+                external: true,
+            },
+            {
+                label: "Live Demo",
+                href: "https://rick-mortypidafepa.onrender.com",
+                external: true,
+            },
+        ],
+    },
 
 ];
 
