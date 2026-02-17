@@ -10,8 +10,9 @@ export const PROFILE = {
 export const ACTIONS = [
     {
         label: "Download CV",
-        href: "https://docs.google.com/document/d/1kEUdwuEa97nrMbhBOPAnyp8hVZMjaSeKWTHqrY0yErw/edit?usp=drive_link",
+        href: "/images/DanielPatinoCVENGFullstackDeveloper.pdf",
         className: "btn btn-color-2",
+        download: true,
         external: true,
     },
     {
@@ -37,15 +38,25 @@ export const SOCIALS = [
 /* =======================
    Small Components
 ======================= */
-export const ButtonLink = ({ href, label, className, external }) => (
+export const ButtonLink = ({
+    href,
+    label,
+    className,
+    external,
+    download,
+}) => (
     <a
         href={href}
-        target={external ? "_blank" : undefined}
-        rel={external ? "noopener noreferrer" : undefined}
+        className={className}
+        download={download}
+        target={external && !download ? "_blank" : undefined}
+        rel={external && !download ? "noopener noreferrer" : undefined}
     >
-        <button className={className}>{label}</button>
+        {label}
     </a>
 );
+
+
 
 export const SocialIcon = ({ href, icon, alt }) => (
     <a href={href} target="_blank" rel="noopener noreferrer">
