@@ -28,7 +28,7 @@ export const PROJECTS = [
         ],
     },
     {
-        id: 7,
+        id: 2,
         title: "Bill Splitter",
         image: "/images/BillSplitter.png",
         imageAlt: "Project 2",
@@ -47,8 +47,95 @@ export const PROJECTS = [
             },
         ],
     },
+
+
+
     {
-        id: 6,
+        id: 5,
+        title: "Dogs API",
+        image: "/images/project-1.png",
+        imageAlt: "Project 1",
+        demoLink: "https://dogsproject-rr4u.onrender.com/",
+        description: "This web app allows you to explore a wide variety of dog breeds using an external API while also letting you create and save your own custom dogs. Built with React, Material UI, and PostgreSQL, it offers a modern and intuitive experience for dog lovers.\n\nFeatures: • Browse and discover detailed information on different dog breeds. • Create and customize your own unique dogs. • Save your favorite breeds in a PostgreSQL-powered database. • Enjoy a sleek and responsive interface powered by Material UI.\n\nWith a clean design and smooth user experience, this app makes exploring and personalizing your dog collection easy and fun!",
+        buttons: [
+            {
+                label: "Github",
+                href: "https://github.com/DFelipePatino/Dogs-Project.git",
+                external: true,
+            },
+            {
+                label: "Live Demo",
+                href: "https://dogsproject-rr4u.onrender.com/",
+                external: true,
+            },
+        ],
+    },
+
+    {
+        id: 7,
+        title: "Pokedex API",
+        image: "/images/pokedex.jpeg",
+        imageAlt: "Project 2",
+        demoLink: "https://pokedex-3a7c.onrender.com",
+        description: "Pokédex – A React Native app built with Expo that lets you browse Pokémon via an API in a fun, interactive way. View each Pokémon’s name, type, front/back sprites, and moves. Features type-based colors, smooth scrolling, and detailed Pokémon pages with dynamic routing.",
+        buttons: [
+            {
+                label: "Github",
+                href: "https://github.com/DFelipePatino/Pokedex.git",
+                external: true,
+            },
+            {
+                label: "Live Demo",
+                href: "https://pokedex-3a7c.onrender.com",
+                external: true,
+            },
+        ],
+    },
+
+    {
+        id: 10,
+        title: "Rick & Morty API",
+        image: "/images/Rick&Morty.png",
+        imageAlt: "Project 2",
+        demoLink: "https://rick-mortypidafepa.onrender.com",
+        description: "Rick and Morty App is a responsive single-page application that consumes the public Rick and Morty API to search, filter, and display characters. The project is built with React, Redux for global state management, React Router for navigation, Axios for API requests, and Material UI + custom CSS for styling. It includes features like favorites management, filtering, ordering, and dynamic routing, following modern frontend best practices.",
+        buttons: [
+            {
+                label: "Github",
+                href: "https://github.com/DFelipePatino/Rick-MortyPIdafepa.git",
+                external: true,
+            },
+            {
+                label: "Live Demo",
+                href: "https://rick-mortypidafepa.onrender.com",
+                external: true,
+            },
+        ],
+    },
+
+    {
+        id: 8,
+        title: "Sticky Notes",
+        image: "/images/StickyNotes.png",
+        imageAlt: "Sticky Notes",
+        demoLink: "https://fictional-university.onrender.com/",
+        description: "Sticky Notes App is a lightweight mobile application built with React Native that allows users to quickly create, view, and manage notes. The app features a simple and intuitive interface, persistent storage using AsyncStorage, and smooth navigation for an efficient note-taking experience.",
+        buttons: [
+            {
+                label: "Github",
+                href: "https://github.com/DFelipePatino/Notes-App",
+                external: true,
+            },
+            {
+                label: "Live Demo",
+                href: "https://fictional-university.onrender.com/",
+                external: true,
+            },
+        ],
+    },
+
+    {
+        id: 3,
         title: "Visuals App",
         image: "/images/VisualsApp.png",
         imageAlt: "Project 2",
@@ -69,47 +156,7 @@ export const PROJECTS = [
     },
 
     {
-        id: 3,
-        title: "Gym App",
-        image: "/images/project-3.png",
-        imageAlt: "Project 1",
-        demoLink: "https://www.onetrainingteam.com/",
-        description: "I developed a web app for an independent client that provides gym members with a seamless, Netflix-style experience for consuming training videos and following their workout programs. The platform allows users to browse categorized workout sessions, stream high-quality instructional videos, and track their progress—all from one intuitive interface.\n\nWith a clean UI and smooth video playback, the app enhances the gym experience by offering on-demand access to professional training content, ensuring members can follow their programs at their own pace. Built with scalability and user engagement in mind, it delivers a premium digital fitness experience.",
-        buttons: [
-            {
-                label: "Github",
-                href: "https://github.com/DFelipePatino/GymApp",
-                external: true,
-            },
-            {
-                label: "Live Demo",
-                href: "https://www.onetrainingteam.com/",
-                external: true,
-            },
-        ],
-    },
-    {
-        id: 4,
-        title: "Dogs Api",
-        image: "/images/project-1.png",
-        imageAlt: "Project 1",
-        demoLink: "https://dogsproject-rr4u.onrender.com/",
-        description: "This web app allows you to explore a wide variety of dog breeds using an external API while also letting you create and save your own custom dogs. Built with React, Material UI, and PostgreSQL, it offers a modern and intuitive experience for dog lovers.\n\nFeatures: • Browse and discover detailed information on different dog breeds. • Create and customize your own unique dogs. • Save your favorite breeds in a PostgreSQL-powered database. • Enjoy a sleek and responsive interface powered by Material UI.\n\nWith a clean design and smooth user experience, this app makes exploring and personalizing your dog collection easy and fun!",
-        buttons: [
-            {
-                label: "Github",
-                href: "https://github.com/DFelipePatino/Dogs-Project.git",
-                external: true,
-            },
-            {
-                label: "Live Demo",
-                href: "https://dogsproject-rr4u.onrender.com/",
-                external: true,
-            },
-        ],
-    },
-    {
-        id: 5,
+        id: 6,
         title: "E-Commerce Portfolio",
         image: "/images/project-4.png",
         imageAlt: "Project 2",
@@ -133,46 +180,7 @@ export const PROJECTS = [
             },
         ],
     },
-    {
-        id: 2,
-        title: "Sticky Notes",
-        image: "/images/StickyNotes.png",
-        imageAlt: "Sticky Notes",
-        demoLink: "https://fictional-university.onrender.com/",
-        description: "Sticky Notes App is a lightweight mobile application built with React Native that allows users to quickly create, view, and manage notes. The app features a simple and intuitive interface, persistent storage using AsyncStorage, and smooth navigation for an efficient note-taking experience.",
-        buttons: [
-            {
-                label: "Github",
-                href: "https://github.com/DFelipePatino/Notes-App",
-                external: true,
-            },
-            {
-                label: "Live Demo",
-                href: "https://fictional-university.onrender.com/",
-                external: true,
-            },
-        ],
-    },
-    {
-        id: 8,
-        title: "Pokedex",
-        image: "/images/pokedex.jpeg",
-        imageAlt: "Project 2",
-        demoLink: "https://pokedex-3a7c.onrender.com",
-        description: "Pokédex – A React Native app built with Expo that lets you browse Pokémon via an API in a fun, interactive way. View each Pokémon’s name, type, front/back sprites, and moves. Features type-based colors, smooth scrolling, and detailed Pokémon pages with dynamic routing.",
-        buttons: [
-            {
-                label: "Github",
-                href: "https://github.com/DFelipePatino/Pokedex.git",
-                external: true,
-            },
-            {
-                label: "Live Demo",
-                href: "https://pokedex-3a7c.onrender.com",
-                external: true,
-            },
-        ],
-    },
+
     {
         id: 9,
         title: "Charlie App",
@@ -194,25 +202,26 @@ export const PROJECTS = [
         ],
     },
     {
-        id: 10,
-        title: "Rick & Morty API",
-        image: "/images/Rick&Morty.png",
-        imageAlt: "Project 2",
-        demoLink: "https://rick-mortypidafepa.onrender.com",
-        description: "Rick and Morty App is a responsive single-page application that consumes the public Rick and Morty API to search, filter, and display characters. The project is built with React, Redux for global state management, React Router for navigation, Axios for API requests, and Material UI + custom CSS for styling. It includes features like favorites management, filtering, ordering, and dynamic routing, following modern frontend best practices.",
+        id: 4,
+        title: "Gym App",
+        image: "/images/project-3.png",
+        imageAlt: "Project 1",
+        demoLink: "https://www.onetrainingteam.com/",
+        description: "I developed a web app for an independent client that provides gym members with a seamless, Netflix-style experience for consuming training videos and following their workout programs. The platform allows users to browse categorized workout sessions, stream high-quality instructional videos, and track their progress—all from one intuitive interface.\n\nWith a clean UI and smooth video playback, the app enhances the gym experience by offering on-demand access to professional training content, ensuring members can follow their programs at their own pace. Built with scalability and user engagement in mind, it delivers a premium digital fitness experience.",
         buttons: [
             {
                 label: "Github",
-                href: "https://github.com/DFelipePatino/Rick-MortyPIdafepa.git",
+                href: "https://github.com/DFelipePatino/GymApp",
                 external: true,
             },
             {
                 label: "Live Demo",
-                href: "https://rick-mortypidafepa.onrender.com",
+                href: "https://www.onetrainingteam.com/",
                 external: true,
             },
         ],
     },
+
 
 ];
 
