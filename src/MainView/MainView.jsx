@@ -81,15 +81,16 @@ function MainView() {
   const [showNav, setShowNav] = useState(false)
 
   const showOtherElemtsCountDown = 6200
-  const showLandingCountDown = showOtherElemtsCountDown - 1400
+  const hideLandingCountDown = showOtherElemtsCountDown - 1400
 
   useEffect(() => {
+
     const timer = setTimeout(() => {
       setShowLanding(true);
     }, 800);
     setTimeout(() => {
       setShowLanding(false)
-    }, showLandingCountDown)
+    }, hideLandingCountDown)
     setTimeout(() => {
       setShowOtherElemts(true)
     }, showOtherElemtsCountDown)
@@ -99,12 +100,16 @@ function MainView() {
 
   useEffect(() => {
     dogsWakeUp()
+
+    setTimeout(() => {
+      window.scrollTo({
+        top: 0,
+        left: 0,
+        behavior: "auto",
+      });
+    }, 400);
+
     document.body.style.overflow = !showOtherElemts ? "hidden" : "auto";
-    window.scrollTo({
-      top: 0,
-      left: 0,
-      behavior: "auto",
-    });
     return () => {
       document.body.style.overflow = "auto";
     };
