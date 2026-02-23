@@ -51,7 +51,27 @@ export const PROJECTS = [
 
 
     {
-        id: 5,
+        id: 3,
+        title: "Cosmic Explorer API",
+        image: "/images/nasa-gallery.png",
+        imageAlt: "Project 1",
+        demoLink: "https://nasa-gallery.onrender.com",
+        description: "Cosmic Explorer is a high-performance, interactive image gallery web application built with React. It leverages public NASA APIs to fetch and display stunning astronomy pictures, including the Astronomy Picture of the Day (APOD) and the extensive NASA Image and Video Library. This project was built to showcase advanced React concepts, including complex state management, custom hooks, performant rendering of large datasets, and engaging UI animations.",
+        buttons: [
+            {
+                label: "Github",
+                href: "https://github.com/DFelipePatino/Nasa-Gallery.git",
+                external: true,
+            },
+            {
+                label: "Live Demo",
+                href: "https://nasa-gallery.onrender.com",
+                external: true,
+            },
+        ],
+    },
+    {
+        id: 4,
         title: "Dogs API",
         image: "/images/project-1.png",
         imageAlt: "Project 1",
@@ -72,7 +92,7 @@ export const PROJECTS = [
     },
 
     {
-        id: 7,
+        id: 5,
         title: "Pokedex API",
         image: "/images/pokedex.jpeg",
         imageAlt: "Project 2",
@@ -93,7 +113,7 @@ export const PROJECTS = [
     },
 
     {
-        id: 10,
+        id: 6,
         title: "Rick & Morty API",
         image: "/images/Rick&Morty.png",
         imageAlt: "Project 2",
@@ -114,7 +134,7 @@ export const PROJECTS = [
     },
 
     {
-        id: 8,
+        id: 7,
         title: "Sticky Notes",
         image: "/images/StickyNotes.png",
         imageAlt: "Sticky Notes",
@@ -135,7 +155,7 @@ export const PROJECTS = [
     },
 
     {
-        id: 3,
+        id: 8,
         title: "Visuals App",
         image: "/images/VisualsApp.png",
         imageAlt: "Project 2",
@@ -156,7 +176,7 @@ export const PROJECTS = [
     },
 
     {
-        id: 6,
+        id: 9,
         title: "E-Commerce Portfolio",
         image: "/images/project-4.png",
         imageAlt: "Project 2",
@@ -182,7 +202,7 @@ export const PROJECTS = [
     },
 
     {
-        id: 9,
+        id: 10,
         title: "Charlie App",
         image: "/images/project-2.png",
         imageAlt: "Project 2",
@@ -202,7 +222,7 @@ export const PROJECTS = [
         ],
     },
     {
-        id: 4,
+        id: 11,
         title: "Gym App",
         image: "/images/project-3.png",
         imageAlt: "Project 1",
