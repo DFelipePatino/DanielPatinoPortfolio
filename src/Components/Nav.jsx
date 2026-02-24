@@ -1,7 +1,6 @@
 import ThemeToggle from './ThemeToggle'
 import PropTypes from 'prop-types';
 import { Grow } from '@mui/material';
-import { useState } from 'react';
 import { useEffect } from 'react';
 
 const Nav = ({ toggleMenu, menuOpen, toggleMenu2b, toggleMenu3b, showOtherElemtsCountDown, setShowNav, showNav }) => {
@@ -51,7 +50,7 @@ const Nav = ({ toggleMenu, menuOpen, toggleMenu2b, toggleMenu3b, showOtherElemts
             </Grow>
 
             <Grow in={showNav}
-                {...(loadingShown ? { timeout: 1500 } : {})}
+                {...(loadingShown ? { timeout: 1000 } : {})}
             >
                 <div>
                     <nav id="mobile-nav">

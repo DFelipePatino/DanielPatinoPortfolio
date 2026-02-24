@@ -8,6 +8,53 @@ import PropTypes from "prop-types";
 export const PROJECTS = [
 
     {
+        id: 3,
+        title: "Cosmic Explorer API",
+        image: "/images/nasa-gallery.jpeg",
+        imageAlt: "Project 1",
+        demoLink: "https://nasa-gallery.onrender.com",
+        description: "Cosmic Explorer is a high-performance, interactive image gallery web application built with React. It leverages public NASA APIs to fetch and display stunning astronomy pictures, including the Astronomy Picture of the Day (APOD) and the extensive NASA Image and Video Library. This project was built to showcase advanced React concepts, including complex state management, custom hooks, performant rendering of large datasets, and engaging UI animations.",
+        buttons: [
+            {
+                label: "Github",
+                href: "https://github.com/DFelipePatino/Nasa-Gallery.git",
+                external: true,
+            },
+            {
+                label: "Live Demo",
+                href: "https://nasa-gallery.onrender.com",
+                external: true,
+            },
+        ],
+    },
+
+    {
+        id: 5,
+        title: "Pokedex API",
+        image: "/images/pokedex.jpeg",
+        imageAlt: "Project 2",
+        demoLink: "https://pokedex-3a7c.onrender.com",
+        description: "Pokédex – A React Native app built with Expo that lets you browse Pokémon via an API in a fun, interactive way. View each Pokémon’s name, type, front/back sprites, and moves. Features type-based colors, smooth scrolling, and detailed Pokémon pages with dynamic routing.",
+        buttons: [
+            {
+                label: "Github",
+                href: "https://github.com/DFelipePatino/Pokedex.git",
+                external: true,
+            },
+            {
+                label: "Live Demo",
+                href: "https://pokedex-3a7c.onrender.com",
+                external: true,
+            },
+            // {
+            //     label: "Video Demo",
+            //     href: "https://pokedex-3a7c.onrender.com",
+            //     external: true,
+            // },
+        ],
+    },
+
+    {
         id: 1,
         title: "Daniel P Store",
         image: "/images/project-5.png",
@@ -50,26 +97,7 @@ export const PROJECTS = [
 
 
 
-    {
-        id: 3,
-        title: "Cosmic Explorer API",
-        image: "/images/nasa-gallery.png",
-        imageAlt: "Project 1",
-        demoLink: "https://nasa-gallery.onrender.com",
-        description: "Cosmic Explorer is a high-performance, interactive image gallery web application built with React. It leverages public NASA APIs to fetch and display stunning astronomy pictures, including the Astronomy Picture of the Day (APOD) and the extensive NASA Image and Video Library. This project was built to showcase advanced React concepts, including complex state management, custom hooks, performant rendering of large datasets, and engaging UI animations.",
-        buttons: [
-            {
-                label: "Github",
-                href: "https://github.com/DFelipePatino/Nasa-Gallery.git",
-                external: true,
-            },
-            {
-                label: "Live Demo",
-                href: "https://nasa-gallery.onrender.com",
-                external: true,
-            },
-        ],
-    },
+
     {
         id: 4,
         title: "Dogs API",
@@ -91,47 +119,8 @@ export const PROJECTS = [
         ],
     },
 
-    {
-        id: 5,
-        title: "Pokedex API",
-        image: "/images/pokedex.jpeg",
-        imageAlt: "Project 2",
-        demoLink: "https://pokedex-3a7c.onrender.com",
-        description: "Pokédex – A React Native app built with Expo that lets you browse Pokémon via an API in a fun, interactive way. View each Pokémon’s name, type, front/back sprites, and moves. Features type-based colors, smooth scrolling, and detailed Pokémon pages with dynamic routing.",
-        buttons: [
-            {
-                label: "Github",
-                href: "https://github.com/DFelipePatino/Pokedex.git",
-                external: true,
-            },
-            {
-                label: "Live Demo",
-                href: "https://pokedex-3a7c.onrender.com",
-                external: true,
-            },
-        ],
-    },
 
-    {
-        id: 6,
-        title: "Rick & Morty API",
-        image: "/images/Rick&Morty.png",
-        imageAlt: "Project 2",
-        demoLink: "https://rick-mortypidafepa.onrender.com",
-        description: "Rick and Morty App is a responsive single-page application that consumes the public Rick and Morty API to search, filter, and display characters. The project is built with React, Redux for global state management, React Router for navigation, Axios for API requests, and Material UI + custom CSS for styling. It includes features like favorites management, filtering, ordering, and dynamic routing, following modern frontend best practices.",
-        buttons: [
-            {
-                label: "Github",
-                href: "https://github.com/DFelipePatino/Rick-MortyPIdafepa.git",
-                external: true,
-            },
-            {
-                label: "Live Demo",
-                href: "https://rick-mortypidafepa.onrender.com",
-                external: true,
-            },
-        ],
-    },
+
 
     {
         id: 7,
@@ -200,6 +189,28 @@ export const PROJECTS = [
             },
         ],
     },
+
+    {
+        id: 6,
+        title: "Rick & Morty API",
+        image: "/images/Rick&Morty.png",
+        imageAlt: "Project 2",
+        demoLink: "https://rick-mortypidafepa.onrender.com",
+        description: "Rick and Morty App is a responsive single-page application that consumes the public Rick and Morty API to search, filter, and display characters. The project is built with React, Redux for global state management, React Router for navigation, Axios for API requests, and Material UI + custom CSS for styling. It includes features like favorites management, filtering, ordering, and dynamic routing, following modern frontend best practices.",
+        buttons: [
+            {
+                label: "Github",
+                href: "https://github.com/DFelipePatino/Rick-MortyPIdafepa.git",
+                external: true,
+            },
+            {
+                label: "Live Demo",
+                href: "https://rick-mortypidafepa.onrender.com",
+                external: true,
+            },
+        ],
+    },
+
 
     {
         id: 10,
