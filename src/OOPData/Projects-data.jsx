@@ -7,7 +7,35 @@ import PropTypes from "prop-types";
 ======================= */
 export const PROJECTS = [
 
+ 
+
     {
+        id: 5,
+        title: "Pokedex API",
+        image: "/images/pokedex.jpeg",
+        imageAlt: "Project 2",
+        demoLink: "https://pokedex-3a7c.onrender.com",
+        description: "Pokédex – A React Native app built with Expo that lets you browse Pokémon via an API in a fun, interactive way. View each Pokémon’s name, type, front/back sprites, and moves. Features type-based colors, smooth scrolling, dynamic routing for detailed Pokémon pages, and support for both dark and light modes. The app also includes a search function to find Pokémon by name or ID, and an AI-powered image generator that allows users to create custom Pokémon. Additionally, users can save their generated Pokémon into a personal Pokédex, where all previously created entries are stored locally using SQLite (or AsyncStorage for the web version).",
+        buttons: [
+            {
+                label: "Github",
+                href: "https://github.com/DFelipePatino/Pokedex.git",
+                external: true,
+            },
+            {
+                label: "Live Demo",
+                href: "https://pokedex-3a7c.onrender.com",
+                external: true,
+            },
+            // {
+            //     label: "Video Demo",
+            //     href: "https://pokedex-3a7c.onrender.com",
+            //     external: true,
+            // },
+        ],
+    },
+
+       {
         id: 3,
         title: "Cosmic Explorer API",
         image: "/images/nasa-gallery.jpeg",
@@ -25,32 +53,6 @@ export const PROJECTS = [
                 href: "https://nasa-gallery.onrender.com",
                 external: true,
             },
-        ],
-    },
-
-    {
-        id: 5,
-        title: "Pokedex API",
-        image: "/images/pokedex.jpeg",
-        imageAlt: "Project 2",
-        demoLink: "https://pokedex-3a7c.onrender.com",
-        description: "Pokédex – A React Native app built with Expo that lets you browse Pokémon via an API in a fun, interactive way. View each Pokémon’s name, type, front/back sprites, and moves. Features type-based colors, smooth scrolling, and detailed Pokémon pages with dynamic routing.",
-        buttons: [
-            {
-                label: "Github",
-                href: "https://github.com/DFelipePatino/Pokedex.git",
-                external: true,
-            },
-            {
-                label: "Live Demo",
-                href: "https://pokedex-3a7c.onrender.com",
-                external: true,
-            },
-            // {
-            //     label: "Video Demo",
-            //     href: "https://pokedex-3a7c.onrender.com",
-            //     external: true,
-            // },
         ],
     },
 
