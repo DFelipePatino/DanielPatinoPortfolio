@@ -34,6 +34,8 @@ const Projects = ({ menuOpen3, isClosing3, toggleMenu3, dogsWakeUp }) => {
         dogsWakeUp();
     }
 
+    const [isImageSet, setIsImageSet] = useState(false);
+
     return (
         <section id="projects">
             <p className="section__text__p1">Browse My Recent</p>
@@ -55,6 +57,8 @@ const Projects = ({ menuOpen3, isClosing3, toggleMenu3, dogsWakeUp }) => {
                                         <ProjectCard
                                             key={project.id}
                                             project={project}
+                                            isImageSet={isImageSet}
+                                            setIsImageSet={setIsImageSet}
                                             showDescription={showDescriptions[project.id]}
                                             closingDescription={closingDescriptions[project.id]}
                                             onToggleDescription={() => toggleDescription(project.id)}

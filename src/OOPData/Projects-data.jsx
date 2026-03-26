@@ -7,15 +7,16 @@ import PropTypes from "prop-types";
 ======================= */
 export const PROJECTS = [
 
- 
+
 
     {
         id: 5,
         title: "Pokedex API",
         image: "/images/pokedex.jpeg",
+        image2: "/images/ExpoPokemon.png",
         imageAlt: "Project 2",
         demoLink: "https://pokedex-3a7c.onrender.com",
-        description: "Pokédex – A React Native app built with Expo that lets you browse Pokémon via an API in a fun, interactive way. View each Pokémon’s name, type, front/back sprites, and moves. Features type-based colors, smooth scrolling, dynamic routing for detailed Pokémon pages, and support for both dark and light modes. The app also includes a search function to find Pokémon by name or ID, and an AI-powered image generator that allows users to create custom Pokémon. Additionally, users can save their generated Pokémon into a personal Pokédex, where all previously created entries are stored locally using SQLite (or AsyncStorage for the web version).",
+        description: "Click the Expo Demo button to access a QR code. Scan it with your phone to run the app natively using Expo Go so you dont miss out on the full experience!\n\nPokédex – A React Native app built with Expo that lets you browse Pokémon via an API in a fun, interactive way. View each Pokémon’s name, type, front/back sprites, and moves. Features type-based colors, smooth scrolling, dynamic routing for detailed Pokémon pages, and support for both dark and light modes. The app also includes a search function to find Pokémon by name or ID, and an AI-powered image generator that allows users to create custom Pokémon. Additionally, users can save their generated Pokémon into a personal Pokédex, where all previously created entries are stored locally using SQLite (or AsyncStorage for the web version).",
         buttons: [
             {
                 label: "Github",
@@ -23,19 +24,13 @@ export const PROJECTS = [
                 external: true,
             },
             {
-                label: "Live Demo",
-                href: "https://pokedex-3a7c.onrender.com",
-                external: true,
+                label: "Expo Demo",
             },
-            // {
-            //     label: "Video Demo",
-            //     href: "https://pokedex-3a7c.onrender.com",
-            //     external: true,
-            // },
+
         ],
     },
 
-       {
+    {
         id: 3,
         title: "Cosmic Explorer API",
         image: "/images/nasa-gallery.jpeg",
@@ -266,11 +261,11 @@ export const PROJECTS_SECTION = {
 /* =======================
    Additional Components
 ======================= */
-export const ProjectCard = ({ project, showDescription, closingDescription, onToggleDescription }) => (
+export const ProjectCard = ({ project, isImageSet, setIsImageSet, showDescription, closingDescription, onToggleDescription }) => (
     <div className="details-container color-container">
         <div className="article-container">
             <a href={project.demoLink} target="_blank" rel="noopener noreferrer">
-                <img src={project.image} alt={project.imageAlt} className="project-img" />
+                <img src={isImageSet ? project.image2 ? project.image2 : project.image : project.image} alt={project.imageAlt} className="project-img" />
             </a>
         </div>
         <h2 className="experience-sub-title project-title">{project.title}</h2>
@@ -298,10 +293,14 @@ export const ProjectCard = ({ project, showDescription, closingDescription, onTo
         )}
 
         <div className="btn-container">
-            {project.buttons.map((button, index) => (
-                <a key={index} href={button.href} target="_blank" rel="noopener noreferrer">
-                    <button className="btn btn-color-2 project-btn">{button.label}</button>
-                </a>
+            {project.buttons.map((btn, index) => (
+                btn.href
+                    ? <a key={index} href={btn.href} target={btn.external ? "_blank" : undefined} rel="noopener noreferrer">
+                        <button className="btn btn-color-2">{btn.label}</button>
+                    </a>
+                    : <button key={index} className="btn btn-color-2" onClick={() => setIsImageSet(prev => !prev)}>
+                        {btn.label}
+                    </button>
             ))}
         </div>
     </div>
