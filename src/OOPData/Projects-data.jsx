@@ -119,26 +119,26 @@ export const PROJECTS = [
 
 
 
-    {
-        id: 7,
-        title: "Sticky Notes",
-        image: "/images/StickyNotes.png",
-        imageAlt: "Sticky Notes",
-        demoLink: "https://fictional-university.onrender.com/",
-        description: "Sticky Notes App is a lightweight mobile application built with React Native that allows users to quickly create, view, and manage notes. The app features a simple and intuitive interface, persistent storage using AsyncStorage, and smooth navigation for an efficient note-taking experience.",
-        buttons: [
-            {
-                label: "Github",
-                href: "https://github.com/DFelipePatino/Notes-App",
-                external: true,
-            },
-            {
-                label: "Live Demo",
-                href: "https://fictional-university.onrender.com/",
-                external: true,
-            },
-        ],
-    },
+    // {
+    //     id: 7,
+    //     title: "Sticky Notes",
+    //     image: "/images/StickyNotes.png",
+    //     imageAlt: "Sticky Notes",
+    //     demoLink: "https://fictional-university.onrender.com/",
+    //     description: "Sticky Notes App is a lightweight mobile application built with React Native that allows users to quickly create, view, and manage notes. The app features a simple and intuitive interface, persistent storage using AsyncStorage, and smooth navigation for an efficient note-taking experience.",
+    //     buttons: [
+    //         {
+    //             label: "Github",
+    //             href: "https://github.com/DFelipePatino/Notes-App",
+    //             external: true,
+    //         },
+    //         {
+    //             label: "Live Demo",
+    //             href: "https://fictional-university.onrender.com/",
+    //             external: true,
+    //         },
+    //     ],
+    // },
 
     {
         id: 8,
