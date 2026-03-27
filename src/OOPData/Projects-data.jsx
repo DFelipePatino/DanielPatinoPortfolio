@@ -16,7 +16,7 @@ export const PROJECTS = [
         image2: "/images/ExpoPokemon.png",
         imageAlt: "Project 2",
         demoLink: "https://pokedex-3a7c.onrender.com",
-        demoLink2: "exp+://expo-development-client/?url=https%3A%2F%2Fu.expo.dev%2F72614e03-8e89-4a77-a315-3e91806a3511%2Fgroup%2F594db386-342f-4343-ae1e-134e5e9c7589",
+        demoLink2: "exp://expo-development-client/?url=https%3A%2F%2Fu.expo.dev%2F72614e03-8e89-4a77-a315-3e91806a3511%2Fgroup%2F594db386-342f-4343-ae1e-134e5e9c7589",
         description: "Click the Expo Demo button to access a QR code. Scan it with your phone to run the app natively using Expo Go so you dont miss out on the full experience!\n\nPokédex – A React Native app built with Expo that lets you browse Pokémon via an API in a fun, interactive way. View each Pokémon’s name, type, front/back sprites, and moves. Features type-based colors, smooth scrolling, dynamic routing for detailed Pokémon pages, and support for both dark and light modes. The app also includes a search function to find Pokémon by name or ID, and an AI-powered image generator that allows users to create custom Pokémon. Additionally, users can save their generated Pokémon into a personal Pokédex, where all previously created entries are stored locally using SQLite (or AsyncStorage for the web version).",
         buttons: [
             {
@@ -25,8 +25,9 @@ export const PROJECTS = [
                 external: true,
             },
             {
-                label: "Expo Demo",
-            },
+                label: "Expo QR",
+                type: "expo",
+            }
 
         ],
     },
@@ -259,15 +260,46 @@ export const PROJECTS_SECTION = {
     arrowIcon: "/images/arrow.png",
 };
 
+
+const openExpoLink = (expoLink, webLink) => {
+    // Try native open (same tab = best success rate)
+    window.location.href = expoLink;
+
+    setTimeout(() => {
+        window.open(webLink, "_blank");
+    }, 1500);
+};
+
 /* =======================
    Additional Components
 ======================= */
 export const ProjectCard = ({ project, isImageSet, setIsImageSet, showDescription, closingDescription, onToggleDescription }) => (
     <div className="details-container color-container">
         <div className="article-container">
-            <a href={isImageSet && project.demoLink2 ? project.demoLink2 : project.demoLink} target="_blank" rel="noopener noreferrer">
-                <img src={isImageSet ? project.image2 ? project.image2 : project.image : project.image} alt={project.imageAlt} className="project-img" />
-            </a>
+            <div
+                onClick={(e) => {
+                    e.preventDefault();
+                    if (project.demoLink2) {
+                        openExpoLink(project.demoLink2, project.demoLink);
+                    } else {
+                        window.open(project.demoLink, "_blank");
+                    }
+
+                }}
+                style={{ cursor: "pointer" }}
+            >
+                <img
+                    src={
+                        isImageSet
+                            ? project.image2
+                                ? project.image2
+                                : project.image
+                            : project.image
+                    }
+                    alt={project.imageAlt}
+                    className="project-img"
+                />
+            </div>
         </div>
         <h2 className="experience-sub-title project-title">{project.title}</h2>
 
