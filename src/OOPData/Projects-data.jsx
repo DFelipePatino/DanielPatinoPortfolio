@@ -16,7 +16,7 @@ export const PROJECTS = [
         image2: "/images/ExpoPokemon.png",
         imageAlt: "Project 2",
         demoLink: "https://pokedex-3a7c.onrender.com",
-        demoLink2: "https://expo.dev/preview/update?message=aesthetics3&updateRuntimeVersion=1.0.0&createdAt=2026-03-27T20%3A54%3A57.170Z&slug=exp&projectId=72614e03-8e89-4a77-a315-3e91806a3511&group=594db386-342f-4343-ae1e-134e5e9c7589",
+        demoLink2: "exp+://expo-development-client/?url=https%3A%2F%2Fu.expo.dev%2F72614e03-8e89-4a77-a315-3e91806a3511%2Fgroup%2F594db386-342f-4343-ae1e-134e5e9c7589",
         description: "Click the Expo Demo button to access a QR code. Scan it with your phone to run the app natively using Expo Go so you dont miss out on the full experience!\n\nPokédex – A React Native app built with Expo that lets you browse Pokémon via an API in a fun, interactive way. View each Pokémon’s name, type, front/back sprites, and moves. Features type-based colors, smooth scrolling, dynamic routing for detailed Pokémon pages, and support for both dark and light modes. The app also includes a search function to find Pokémon by name or ID, and an AI-powered image generator that allows users to create custom Pokémon. Additionally, users can save their generated Pokémon into a personal Pokédex, where all previously created entries are stored locally using SQLite (or AsyncStorage for the web version).",
         buttons: [
             {
