@@ -13,7 +13,7 @@ export const PROJECTS = [
         id: 5,
         title: "Pokedex API",
         image: "/images/pokedex.jpeg",
-        image2: "/images/ExpoPokemon.png",
+        image2: "/images/Pokedex Web.png",
         imageAlt: "Project 2",
         demoLink: "https://pokedex-3a7c.onrender.com",
         demoLink2: "exp://u.expo.dev/72614e03-8e89-4a77-a315-3e91806a3511/group/594db386-342f-4343-ae1e-134e5e9c7589",
@@ -25,7 +25,7 @@ export const PROJECTS = [
                 external: true,
             },
             {
-                label: "Expo QR",
+                label: "Expo / Web",
                 type: "expo",
             }
 
