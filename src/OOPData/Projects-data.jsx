@@ -38,7 +38,7 @@ export const PROJECTS = [
         image2: "/images/Expense Tracker Web.jpeg",
         imageAlt: "Project 2",
         demoLink: "https://expenses-app-dere.onrender.com",
-        demoLink2: "exp://u.expo.dev/c7bc8080-3365-496c-9e02-7d2235851151/group/bc427d28-6e15-4591-9d5a-44bcd05f8c93",
+        demoLink2: "exp://u.expo.dev/c7bc8080-3365-496c-9e02-7d2235851151/group/7c7a7b23-c3b9-4bcf-871f-992e26da4752",
         description: "Expense Tracker is a React Native financial engine designed to automate complex property management by calculating a payout from gross rent to net individual profit. It features a bilingual UI, offline-first SQLite storage, and a custom Google Sheets bridge to seamlessly handle shared expenses and internal rent transfers.",
         buttons: [
             {
