@@ -31,6 +31,28 @@ export const PROJECTS = [
 
         ],
     },
+    {
+        id: 12,
+        title: "Expense Tracker",
+        image: "/images/Expense Tracker.jpeg",
+        image2: "/images/Expense Tracker.jpeg",
+        imageAlt: "Project 2",
+        demoLink: "",
+        demoLink2: "exp://u.expo.dev/c7bc8080-3365-496c-9e02-7d2235851151/group/b0692d29-bc0c-41b0-a3d6-479d50b9e3cb",
+        description: "Expense Tracker is a React Native financial engine designed to automate complex property management by calculating a payout from gross rent to net individual profit. It features a bilingual UI, offline-first SQLite storage, and a custom Google Sheets bridge to seamlessly handle shared expenses and internal rent transfers.",
+        buttons: [
+            {
+                label: "Github",
+                href: "https://github.com/DFelipePatino/Expenses-App.git",
+                external: true,
+            },
+            {
+                label: "Expo / Web",
+                type: "expo",
+            }
+
+        ],
+    },
 
     {
         id: 3,
