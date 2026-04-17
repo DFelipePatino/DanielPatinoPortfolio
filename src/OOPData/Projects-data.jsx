@@ -76,8 +76,29 @@ export const PROJECTS = [
     },
 
     {
+        id: 6,
+        title: "Rick & Morty API",
+        image: "/images/Rick&Morty.png",
+        imageAlt: "Project 2",
+        demoLink: "https://rick-mortypidafepa.onrender.com",
+        description: "Rick and Morty App is a responsive single-page application that consumes the public Rick and Morty API to search, filter, and display characters. The project is built with React, Redux for global state management, React Router for navigation, Axios for API requests, and Material UI + custom CSS for styling. It includes features like favorites management, filtering, ordering, and dynamic routing, following modern frontend best practices.",
+        buttons: [
+            {
+                label: "Github",
+                href: "https://github.com/DFelipePatino/Rick-MortyPIdafepa.git",
+                external: true,
+            },
+            {
+                label: "Live Demo",
+                href: "https://rick-mortypidafepa.onrender.com",
+                external: true,
+            },
+        ],
+    },
+
+    {
         id: 1,
-        title: "Daniel P Store",
+        title: "E-Commerce Store",
         image: "/images/project-5.png",
         imageAlt: "Project 2",
         demoLink: "https://danielstore-front.onrender.com/",
@@ -91,6 +112,28 @@ export const PROJECTS = [
             {
                 label: "Live Demo",
                 href: "https://danielstore-front.onrender.com/",
+                external: true,
+            },
+        ],
+    },
+
+
+    {
+        id: 4,
+        title: "Dogs API",
+        image: "/images/project-1.png",
+        imageAlt: "Project 1",
+        demoLink: "https://dogsproject-rr4u.onrender.com/",
+        description: "This web app allows you to explore a wide variety of dog breeds using an external API while also letting you create and save your own custom dogs. Built with React, Material UI, and PostgreSQL, it offers a modern and intuitive experience for dog lovers.\n\nFeatures: • Browse and discover detailed information on different dog breeds. • Create and customize your own unique dogs. • Save your favorite breeds in a PostgreSQL-powered database. • Enjoy a sleek and responsive interface powered by Material UI.\n\nWith a clean design and smooth user experience, this app makes exploring and personalizing your dog collection easy and fun!",
+        buttons: [
+            {
+                label: "Github",
+                href: "https://github.com/DFelipePatino/Dogs-Project.git",
+                external: true,
+            },
+            {
+                label: "Live Demo",
+                href: "https://dogsproject-rr4u.onrender.com/",
                 external: true,
             },
         ],
@@ -119,26 +162,7 @@ export const PROJECTS = [
 
 
 
-    {
-        id: 4,
-        title: "Dogs API",
-        image: "/images/project-1.png",
-        imageAlt: "Project 1",
-        demoLink: "https://dogsproject-rr4u.onrender.com/",
-        description: "This web app allows you to explore a wide variety of dog breeds using an external API while also letting you create and save your own custom dogs. Built with React, Material UI, and PostgreSQL, it offers a modern and intuitive experience for dog lovers.\n\nFeatures: • Browse and discover detailed information on different dog breeds. • Create and customize your own unique dogs. • Save your favorite breeds in a PostgreSQL-powered database. • Enjoy a sleek and responsive interface powered by Material UI.\n\nWith a clean design and smooth user experience, this app makes exploring and personalizing your dog collection easy and fun!",
-        buttons: [
-            {
-                label: "Github",
-                href: "https://github.com/DFelipePatino/Dogs-Project.git",
-                external: true,
-            },
-            {
-                label: "Live Demo",
-                href: "https://dogsproject-rr4u.onrender.com/",
-                external: true,
-            },
-        ],
-    },
+
 
 
 
@@ -211,26 +235,7 @@ export const PROJECTS = [
         ],
     },
 
-    {
-        id: 6,
-        title: "Rick & Morty API",
-        image: "/images/Rick&Morty.png",
-        imageAlt: "Project 2",
-        demoLink: "https://rick-mortypidafepa.onrender.com",
-        description: "Rick and Morty App is a responsive single-page application that consumes the public Rick and Morty API to search, filter, and display characters. The project is built with React, Redux for global state management, React Router for navigation, Axios for API requests, and Material UI + custom CSS for styling. It includes features like favorites management, filtering, ordering, and dynamic routing, following modern frontend best practices.",
-        buttons: [
-            {
-                label: "Github",
-                href: "https://github.com/DFelipePatino/Rick-MortyPIdafepa.git",
-                external: true,
-            },
-            {
-                label: "Live Demo",
-                href: "https://rick-mortypidafepa.onrender.com",
-                external: true,
-            },
-        ],
-    },
+
 
 
     {
