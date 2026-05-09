@@ -10,14 +10,37 @@ export const PROJECTS = [
 
 
     {
-        id: 5,
+        id: 1,
+        title: "Word Of The Day App",
+        image: "/images/WordOfTheDay.jpeg",
+        image2: "/images/WordOfTheDayWeb.png",
+        imageAlt: "Project 2",
+        demoLink: "https://word-of-the-day-5bt8.onrender.com",
+        demoLink2: "exp://u.expo.dev/895dd9b2-ac17-4490-beb4-95a58292a88a/group/b7051480-4b65-4c91-b9be-d61a52cafc6b",
+        description: "I encourage you to use the Expo Go app to run the app natively so you don't miss out on the full experience!\n\nWord of the Day – A high-fidelity, bilingual dictionary app built with Expo and NativeWind. It features a gamified learning system, a 'Bento Grid' interface for rich word data, and smooth micro-animations, all optimized for cross-platform performance on iOS, Android, and Web.",
+
+        buttons: [
+            {
+                label: "Github",
+                href: "https://github.com/DFelipePatino/Word-of-the-Day.git",
+                external: true,
+            },
+            {
+                label: "Expo / Web",
+                type: "expo",
+            }
+
+        ],
+    },
+    {
+        id: 2,
         title: "Pokedex API",
         image: "/images/pokedex.jpeg",
         image2: "/images/Pokedex Web.png",
         imageAlt: "Project 2",
         demoLink: "https://pokedex-3a7c.onrender.com",
         demoLink2: "exp://u.expo.dev/72614e03-8e89-4a77-a315-3e91806a3511/group/4a5f1621-d58b-4295-b647-de012d3751b8",
-        description: " I encourage you to use the Expo go app to run the app natively so you dont miss out on the full experience!\n\nPokédex – A React Native app built with Expo that lets you browse Pokémon via an API in a fun, interactive way. View each Pokémon’s name, type, front/back sprites, and moves. Features type-based colors, smooth scrolling, dynamic routing for detailed Pokémon pages, and support for both dark and light modes. The app also includes a search function to find Pokémon by name or ID, and an AI-powered image generator that allows users to create custom Pokémon. Additionally, users can save their generated Pokémon into a personal Pokédex, where all previously created entries are stored locally using SQLite (or AsyncStorage for the web version).",
+        description: "I encourage you to use the Expo go app to run the app natively so you dont miss out on the full experience!\n\nPokédex – A React Native app built with Expo that lets you browse Pokémon via an API in a fun, interactive way. View each Pokémon’s name, type, front/back sprites, and moves. Features type-based colors, smooth scrolling, dynamic routing for detailed Pokémon pages, and support for both dark and light modes. The app also includes a search function to find Pokémon by name or ID, and an AI-powered image generator that allows users to create custom Pokémon. Additionally, users can save their generated Pokémon into a personal Pokédex, where all previously created entries are stored locally using SQLite (or AsyncStorage for the web version).",
         buttons: [
             {
                 label: "Github",
@@ -32,7 +55,7 @@ export const PROJECTS = [
         ],
     },
     {
-        id: 12,
+        id: 3,
         title: "Expense Tracker",
         image: "/images/Expense Tracker Mobile.jpeg",
         image2: "/images/Expense Tracker Web.jpeg",
@@ -55,7 +78,7 @@ export const PROJECTS = [
     },
 
     {
-        id: 3,
+        id: 4,
         title: "Cosmic Explorer API",
         image: "/images/nasa-gallery.jpeg",
         imageAlt: "Project 1",
@@ -75,8 +98,117 @@ export const PROJECTS = [
         ],
     },
 
+
+    {
+        id: 5,
+        title: "Onyx-V-Mobile-Phone",
+        image: "/images/onxy.png",
+        imageAlt: "Project 2",
+        demoLink: "https://onyx-v-mobile-phone.onrender.com",
+        description: "Onyx V – A high-fidelity, industrial-themed product showcase featuring a deconstructed 3D hero view and a kinetic 'Gravity Scroll' assembly effect. Built with GSAP and Vanilla JavaScript, it emphasizes premium hardware aesthetics through monochromatic high-gloss finishes and precision-timed parallax animations optimized for a seamless mobile and web experience.",
+
+        buttons: [
+            {
+                label: "Github",
+                href: "https://github.com/DFelipePatino/Onyx-V-Mobile-Phone.git",
+                external: true,
+            },
+            {
+                label: "Live Demo",
+                href: "https://onyx-v-mobile-phone.onrender.com",
+                external: true,
+            },
+        ],
+    },
     {
         id: 6,
+        title: "Lumin Optics",
+        image: "/images/Lummina.png",
+        imageAlt: "Project 2",
+        demoLink: "https://lumina-optics.onrender.com",
+        description: "Lumina Optics: See the Light — An immersive digital experience for a luxury eyewear brand. This project explores the intersection of fashion and technology through interactive 3D modeling, spectral shadow effects, and a minimalist, 'tech-noir' aesthetic.",
+
+
+        buttons: [
+            {
+                label: "Github",
+                href: "https://github.com/DFelipePatino/Lumina-Optics.git",
+                external: true,
+            },
+            {
+                label: "Live Demo",
+                href: "https://lumina-optics.onrender.com",
+                external: true,
+            },
+        ],
+    },
+    {
+        id: 7,
+        title: "Zero-G-Sneaker",
+        image: "/images/Zero G Snickers.png",
+        imageAlt: "Project 2",
+        demoLink: "https://zero-g-sneaker.onrender.com",
+        description: "Zero-G-Sneaker: High-Fidelity Kinetic Landing Page – A tech-noir, immersive landing page for a futuristic zero-gravity sneaker. Built with Vite and Vanilla JS, it features interactive parallax depth, glassmorphism UI elements, and smooth micro-animations to create a premium, state-of-the-art brand experience.",
+
+        buttons: [
+            {
+                label: "Github",
+                href: "https://github.com/DFelipePatino/Zero-G-Sneaker.git",
+                external: true,
+            },
+            {
+                label: "Live Demo",
+                href: "https://zero-g-sneaker.onrender.com",
+                external: true,
+            },
+        ],
+    },
+
+    {
+        id: 8,
+        title: "Dogs API",
+        image: "/images/project-1.png",
+        imageAlt: "Project 1",
+        demoLink: "https://dogsproject-rr4u.onrender.com/",
+        description: "This web app allows you to explore a wide variety of dog breeds using an external API while also letting you create and save your own custom dogs. Built with React, Material UI, and PostgreSQL, it offers a modern and intuitive experience for dog lovers.\n\nFeatures: • Browse and discover detailed information on different dog breeds. • Create and customize your own unique dogs. • Save your favorite breeds in a PostgreSQL-powered database. • Enjoy a sleek and responsive interface powered by Material UI.\n\nWith a clean design and smooth user experience, this app makes exploring and personalizing your dog collection easy and fun!",
+        buttons: [
+            {
+                label: "Github",
+                href: "https://github.com/DFelipePatino/Dogs-Project.git",
+                external: true,
+            },
+            {
+                label: "Live Demo",
+                href: "https://dogsproject-rr4u.onrender.com/",
+                external: true,
+            },
+        ],
+    },
+
+
+    {
+        id: 9,
+        title: "E-Commerce Store",
+        image: "/images/project-5.png",
+        imageAlt: "Project 2",
+        demoLink: "https://danielstore-front.onrender.com/",
+        description: "I built an online store using React for the frontend, Django for the backend, and PostgreSQL as the database, hosted on AWS RDS. This project allows users to simulate the entire purchasing process, from browsing products to adding items to the cart and completing a mock checkout.\n\nThe platform also features a full CRUD implementation, enabling users to add, update, and delete their own products, making it an interactive marketplace.",
+        buttons: [
+            {
+                label: "Github",
+                href: "https://github.com/DFelipePatino/DanielStore-Front.git",
+                external: true,
+            },
+            {
+                label: "Live Demo",
+                href: "https://danielstore-front.onrender.com/",
+                external: true,
+            },
+        ],
+    },
+
+    {
+        id: 10,
         title: "Rick & Morty API",
         image: "/images/Rick&Morty.png",
         imageAlt: "Project 2",
@@ -97,49 +229,7 @@ export const PROJECTS = [
     },
 
     {
-        id: 1,
-        title: "E-Commerce Store",
-        image: "/images/project-5.png",
-        imageAlt: "Project 2",
-        demoLink: "https://danielstore-front.onrender.com/",
-        description: "I built an online store using React for the frontend, Django for the backend, and PostgreSQL as the database, hosted on AWS RDS. This project allows users to simulate the entire purchasing process, from browsing products to adding items to the cart and completing a mock checkout.\n\nThe platform also features a full CRUD implementation, enabling users to add, update, and delete their own products, making it an interactive marketplace.",
-        buttons: [
-            {
-                label: "Github",
-                href: "https://github.com/DFelipePatino/DanielStore-Front.git",
-                external: true,
-            },
-            {
-                label: "Live Demo",
-                href: "https://danielstore-front.onrender.com/",
-                external: true,
-            },
-        ],
-    },
-
-
-    {
-        id: 4,
-        title: "Dogs API",
-        image: "/images/project-1.png",
-        imageAlt: "Project 1",
-        demoLink: "https://dogsproject-rr4u.onrender.com/",
-        description: "This web app allows you to explore a wide variety of dog breeds using an external API while also letting you create and save your own custom dogs. Built with React, Material UI, and PostgreSQL, it offers a modern and intuitive experience for dog lovers.\n\nFeatures: • Browse and discover detailed information on different dog breeds. • Create and customize your own unique dogs. • Save your favorite breeds in a PostgreSQL-powered database. • Enjoy a sleek and responsive interface powered by Material UI.\n\nWith a clean design and smooth user experience, this app makes exploring and personalizing your dog collection easy and fun!",
-        buttons: [
-            {
-                label: "Github",
-                href: "https://github.com/DFelipePatino/Dogs-Project.git",
-                external: true,
-            },
-            {
-                label: "Live Demo",
-                href: "https://dogsproject-rr4u.onrender.com/",
-                external: true,
-            },
-        ],
-    },
-    {
-        id: 2,
+        id: 11,
         title: "Bill Splitter",
         image: "/images/BillSplitter.png",
         imageAlt: "Project 2",
@@ -189,7 +279,7 @@ export const PROJECTS = [
     // },
 
     {
-        id: 8,
+        id: 12,
         title: "Visuals App",
         image: "/images/VisualsApp.png",
         imageAlt: "Project 2",
@@ -210,7 +300,7 @@ export const PROJECTS = [
     },
 
     {
-        id: 9,
+        id: 13,
         title: "E-Commerce Portfolio",
         image: "/images/project-4.png",
         imageAlt: "Project 2",
@@ -239,7 +329,7 @@ export const PROJECTS = [
 
 
     {
-        id: 10,
+        id: 14,
         title: "Charlie App",
         image: "/images/project-2.png",
         imageAlt: "Project 2",
@@ -259,7 +349,7 @@ export const PROJECTS = [
         ],
     },
     {
-        id: 11,
+        id: 15,
         title: "Gym App",
         image: "/images/project-3.png",
         imageAlt: "Project 1",
