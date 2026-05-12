@@ -23,7 +23,12 @@ const Nav = ({ toggleMenu, menuOpen, toggleMenu2b, toggleMenu3b, showOtherElemts
             >
                 <div>
                     <nav id="desktop-nav">
-                        <div className="logo">Daniel Patino</div>
+                        <div
+                            className="logo"
+                            onClick={() => window.location.href = 'https://daniel-patino.onrender.com/'}
+                        >
+                            Daniel Patino
+                        </div>
                         <div style={{ display: 'flex', alignItems: 'center', gap: '2rem' }}>
                             <ul className="nav-links">
                                 <li>
@@ -54,7 +59,9 @@ const Nav = ({ toggleMenu, menuOpen, toggleMenu2b, toggleMenu3b, showOtherElemts
             >
                 <div>
                     <nav id="mobile-nav">
-                        <div className="logo">Daniel Patino</div>
+                        <div className="logo"
+                            onClick={() => window.location.href = 'https://daniel-patino.onrender.com/'}
+                        >Daniel Patino</div>
                         <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
 
                             <div className="hamburger-menu">
