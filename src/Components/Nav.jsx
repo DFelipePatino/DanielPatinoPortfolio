@@ -44,7 +44,7 @@ const Nav = ({ toggleMenu, menuOpen, toggleMenu2b, toggleMenu3b, showOtherElemts
                                     <a href="#projects" onClick={toggleMenu3b}> {isDarkMode ? "Highlighted Roles" : "Projects"}</a>
                                 </li>
                                 <li>
-                                    <a href="#experience" onClick={toggleMenu2b}>{"Experience"}</a>
+                                    <a href="#experience" onClick={toggleMenu2b}>Experience</a>
                                 </li>
 
                                 <li>
@@ -92,7 +92,7 @@ const Nav = ({ toggleMenu, menuOpen, toggleMenu2b, toggleMenu3b, showOtherElemts
                                     </li>
                                     <li>
                                         <a href="#experience" onClick={() => { toggleMenu(); toggleMenu2b(); }}>
-                                            "Experience"
+                                            Experience
                                         </a>
                                     </li>
                                     <li>
