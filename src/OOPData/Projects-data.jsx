@@ -1,14 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import PropTypes from "prop-types";
 
-
-/* =======================
-   Projects Section Data
-======================= */
-export const PROJECTS = [
-
-
-
+/* ==========================================
+   1. DEVELOPER PROJECTS (isSwitched = false)
+   ========================================== */
+export const DEV_PROJECTS = [
     {
         id: 1,
         title: "Word Of The Day App",
@@ -18,20 +14,21 @@ export const PROJECTS = [
         demoLink: "https://word-of-the-day-5bt8.onrender.com",
         demoLink2: "exp://u.expo.dev/895dd9b2-ac17-4490-beb4-95a58292a88a/group/b7051480-4b65-4c91-b9be-d61a52cafc6b",
         description: "I encourage you to use the Expo Go app to run the app natively so you don't miss out on the full experience!\n\nWord of the Day – A high-fidelity, bilingual dictionary app built with Expo and NativeWind. It features a gamified learning system, a 'Bento Grid' interface for rich word data, and smooth micro-animations, all optimized for cross-platform performance on iOS, Android, and Web.",
-
         buttons: [
             {
                 label: "Github",
                 href: "https://github.com/DFelipePatino/Word-of-the-Day.git",
                 external: true,
             },
+
             {
                 label: "Expo / Web",
                 type: "expo",
             }
-
         ],
+
     },
+
     {
         id: 2,
         title: "Pokedex API",
@@ -47,13 +44,15 @@ export const PROJECTS = [
                 href: "https://github.com/DFelipePatino/Pokedex.git",
                 external: true,
             },
+
             {
                 label: "Expo / Web",
                 type: "expo",
             }
-
         ],
+
     },
+
     {
         id: 3,
         title: "Expense Tracker",
@@ -73,10 +72,8 @@ export const PROJECTS = [
                 label: "Expo / Web",
                 type: "expo",
             }
-
         ],
     },
-
     {
         id: 4,
         title: "Cosmic Explorer API",
@@ -97,8 +94,6 @@ export const PROJECTS = [
             },
         ],
     },
-
-
     {
         id: 5,
         title: "Onyx-V-Mobile-Phone",
@@ -106,7 +101,6 @@ export const PROJECTS = [
         imageAlt: "Project 2",
         demoLink: "https://onyx-v-mobile-phone.onrender.com",
         description: "Onyx V – A high-fidelity, industrial-themed product showcase featuring a deconstructed 3D hero view and a kinetic 'Gravity Scroll' assembly effect. Built with GSAP and Vanilla JavaScript, it emphasizes premium hardware aesthetics through monochromatic high-gloss finishes and precision-timed parallax animations optimized for a seamless mobile and web experience.",
-
         buttons: [
             {
                 label: "Github",
@@ -127,8 +121,6 @@ export const PROJECTS = [
         imageAlt: "Project 2",
         demoLink: "https://lumina-optics.onrender.com",
         description: "Lumina Optics: See the Light — An immersive digital experience for a luxury eyewear brand. This project explores the intersection of fashion and technology through interactive 3D modeling, spectral shadow effects, and a minimalist, 'tech-noir' aesthetic.",
-
-
         buttons: [
             {
                 label: "Github",
@@ -149,7 +141,6 @@ export const PROJECTS = [
         imageAlt: "Project 2",
         demoLink: "https://zero-g-sneaker.onrender.com",
         description: "Zero-G-Sneaker: High-Fidelity Kinetic Landing Page – A tech-noir, immersive landing page for a futuristic zero-gravity sneaker. Built with Vite and Vanilla JS, it features interactive parallax depth, glassmorphism UI elements, and smooth micro-animations to create a premium, state-of-the-art brand experience.",
-
         buttons: [
             {
                 label: "Github",
@@ -163,7 +154,6 @@ export const PROJECTS = [
             },
         ],
     },
-
     {
         id: 8,
         title: "Dogs API",
@@ -184,8 +174,6 @@ export const PROJECTS = [
             },
         ],
     },
-
-
     {
         id: 9,
         title: "E-Commerce Store",
@@ -206,7 +194,6 @@ export const PROJECTS = [
             },
         ],
     },
-
     {
         id: 10,
         title: "Rick & Morty API",
@@ -227,7 +214,6 @@ export const PROJECTS = [
             },
         ],
     },
-
     {
         id: 11,
         title: "Bill Splitter",
@@ -248,15 +234,6 @@ export const PROJECTS = [
             },
         ],
     },
-
-
-
-
-
-
-
-
-
     // {
     //     id: 7,
     //     title: "Sticky Notes",
@@ -277,7 +254,6 @@ export const PROJECTS = [
     //         },
     //     ],
     // },
-
     {
         id: 12,
         title: "Visuals App",
@@ -298,7 +274,6 @@ export const PROJECTS = [
             },
         ],
     },
-
     {
         id: 13,
         title: "E-Commerce Portfolio",
@@ -324,10 +299,6 @@ export const PROJECTS = [
             },
         ],
     },
-
-
-
-
     {
         id: 14,
         title: "Charlie App",
@@ -370,99 +341,145 @@ export const PROJECTS = [
     },
 
 
+
+
 ];
 
+/* ==========================================
+   2. CUSTOMER SUCCESS PROJECTS (isSwitched = true)
+   ========================================== */
+export const CX_PROJECTS = [
+    {
+        id: 101, // Keep IDs unique across arrays if possible
+        title: "Alonso&Alonso Attorneys at Law",
+        image: "/images/Alonso&Alonso.png", // Replace with your CX asset image
+        imageAlt: "Alonso&Alonso Attorneys at Law",
+        demoLink: "none",
+        description: "I helped assess and guide individuals through legal options for immigration relief while using Salesforce CRM systems to manage case information, track client communications, and coordinate with attorneys. This experience strengthened my client support, case management, and communication skills.",
+        buttons: [
+
+        ],
+    },
+    {
+        id: 102,
+        title: "Assure Health",
+        image: "/images/AssureHealth.jpeg",
+        imageAlt: "Assure Health",
+        demoLink: "https://www.myassurehealth.com/",
+        description: "In my role as a Patient Educator, I used Salesforce CRM to manage patient interactions, track outreach efforts, and support enrollment processes for our health monitoring program. I conducted outreach calls to potential patients, educating them about the program while combining customer service and sales responsibilities to guide individuals through enrollment. This experience strengthened my CRM, customer service, and sales skills within a healthcare environment.",
+        buttons: [
+            {
+                label: "Verification Letter",
+                href: "/images/Emplyment-verification-letter-Assure-Health.pdf",
+                external: true, // This flag controls the window targeting
+            },
+        ],
+    },
+    {
+        id: 103,
+        title: "Equally AI",
+        image: "/images/Equally-AI-Logo.jpg",
+        imageAlt: "Assure Health",
+        demoLink: "https://www.equally.ai/",
+        description: "I was responsible for driving sales of our software platform, managing client relationships, and providing technical support to clients throughout the onboarding and usage process. My duties included conducting product demonstrations, identifying customer needs, guiding potential clients through the sales process, and working with HubSpot CRM to manage customer interactions.",
+        buttons: [
+            {
+                label: "Verification Letter",
+                href: "/images/Emplyment verification letter Equally AI.pdf",
+                external: true, // This flag controls the window targeting
+            },
+        ],
+    },
+
+    // ... Cut and paste your marketing automation/CRM projects here
+];
+
+/* =======================
+   Shared Section Data & Tools
+======================= */
 export const PROJECTS_SECTION = {
     arrowLink: "/#experience",
     arrowIcon: "/images/arrow.png",
 };
 
-
 const openExpoLink = (expoLink, webLink) => {
-    // Try native open (same tab = best success rate)
     window.location.href = expoLink;
-
     setTimeout(() => {
         window.open(webLink, "_blank");
     }, 1500);
 };
 
 /* =======================
-   Additional Components
+   Components
 ======================= */
-export const ProjectCard = ({ project, isImageSet, setIsImageSet, showDescription, closingDescription, onToggleDescription }) => (
-    <div className="details-container color-container">
-        <div className="article-container">
-            <div
-                onClick={(e) => {
-                    e.preventDefault();
-                    if (project.demoLink2) {
-                        openExpoLink(project.demoLink2, project.demoLink);
-                    } else {
-                        window.open(project.demoLink, "_blank");
-                    }
+export const ProjectCard = ({ project, showDescription, closingDescription, onToggleDescription }) => {
+    const [isImageSet, setIsImageSet] = useState(false);
+    const currentDisplayedImage = isImageSet && project.image2 ? project.image2 : project.image;
 
-                }}
-                style={{ cursor: "pointer" }}
-            >
-                <img
-                    src={
-                        isImageSet
-                            ? project.image2
-                                ? project.image2
-                                : project.image
-                            : project.image
-                    }
-                    alt={project.imageAlt}
-                    className="project-img"
-                />
+    return (
+        <div className="details-container color-container">
+            <div className="article-container">
+                <div
+                    onClick={(e) => {
+                        e.preventDefault();
+                        if (project.demoLink2) {
+                            openExpoLink(project.demoLink2, project.demoLink);
+                        } else if (project.demoLink && project.demoLink !== "none") {
+                            window.open(project.demoLink, "_blank");
+                        }
+                    }}
+                    style={{ cursor: "pointer" }}
+                >
+                    <img src={currentDisplayedImage} alt={project.imageAlt} className="project-img" />
+                </div>
+            </div>
+            <h2 className="experience-sub-title project-title">{project.title}</h2>
+
+            {project.description && (
+                <>
+                    <button className="btn3 btn-color-2" onClick={onToggleDescription}>Read me!</button>
+                    <div className={`dropdown3-menu ${showDescription ? "open" : ""} ${closingDescription ? "closing" : ""}`}>
+                        {showDescription && (
+                            <div className="dropdown2-content">
+                                <p className={`descriptionBox ${showDescription ? 'show' : ''}`}>
+                                    {project.description.split('\n').map((line, index) => (
+                                        <React.Fragment key={index}>
+                                            {line}
+                                            {index < project.description.split('\n').length - 1 && <br />}
+                                        </React.Fragment>
+                                    ))}
+                                </p>
+                            </div>
+                        )}
+                    </div>
+                </>
+            )}
+
+            <div className="btn-container">
+                {project.buttons.map((btn, index) => (
+                    btn.href
+                        ? <a key={index} href={btn.href} target={btn.external ? "_blank" : undefined} rel="noopener noreferrer">
+                            <button className="btn btn-color-2">{btn.label}</button>
+                        </a>
+                        : <button
+                            key={index}
+                            className="btn btn-color-2"
+                            onClick={() => setIsImageSet(prev => !prev)}
+                            style={{ opacity: project.image2 ? 1 : 0.5 }}
+                        >
+                            {btn.label}
+                        </button>
+                ))}
             </div>
         </div>
-        <h2 className="experience-sub-title project-title">{project.title}</h2>
-
-        {project.description && (
-            <>
-                <button className="btn3 btn-color-2" onClick={onToggleDescription}>
-                    Read me!
-                </button>
-                <div className={`dropdown3-menu ${showDescription ? "open" : ""} ${closingDescription ? "closing" : ""}`}>
-                    {showDescription && (
-                        <div className="dropdown2-content">
-                            <p className={`descriptionBox ${showDescription ? 'show' : ''}`}>
-                                {project.description.split('\n').map((line, index) => (
-                                    <React.Fragment key={index}>
-                                        {line}
-                                        {index < project.description.split('\n').length - 1 && <br />}
-                                    </React.Fragment>
-                                ))}
-                            </p>
-                        </div>
-                    )}
-                </div>
-            </>
-        )}
-
-        <div className="btn-container">
-            {project.buttons.map((btn, index) => (
-                btn.href
-                    ? <a key={index} href={btn.href} target={btn.external ? "_blank" : undefined} rel="noopener noreferrer">
-                        <button className="btn btn-color-2">{btn.label}</button>
-                    </a>
-                    : <button key={index} className="btn btn-color-2" onClick={() => setIsImageSet(prev => !prev)}>
-                        {btn.label}
-                    </button>
-            ))}
-        </div>
-    </div>
-);
-
+    );
+};
 
 export const ArrowLink = ({ href, icon, alt, className }) => (
     <a href={href}>
         <img src={icon} alt={alt} className={className} />
     </a>
 );
-
 
 ProjectCard.propTypes = {
     project: PropTypes.object.isRequired,

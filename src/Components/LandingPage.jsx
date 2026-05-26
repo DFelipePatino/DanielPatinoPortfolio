@@ -65,7 +65,7 @@ function LandingPage({ handleSkip }) {
                 >
                     {render ? (
                         <TypingText
-                            text={"Hi, I'm Daniel.\nWelcome to my portfolio!\n🖥️📱🧩⚛️🧠🚀"}
+                            text={"Hi, I'm Daniel.\nWelcome to my portfolio!\n💻🎧📈🧠📱🧩⚛️"}
                             speed={60}
                         />
                     ) : null}

@@ -1,7 +1,19 @@
 /* =======================
    About Section Data
 ======================= */
-export const ABOUT = {
+export const CXABOUT = {
+    image: "/images/about-pic.png",
+    experience: {
+        icon: "/images/experience.png",
+        title: "Experience",
+        description: "10+ year\nCustomer Success",
+    },
+    description: "I am a customer success professional with 10+ years of experience in Customer Success (CS) and Customer Experience (CX), helping businesses retain clients, protect revenue, and build lasting partnerships. I've worked blending my account management strengths with hands-on experience in tech support, customer service, and sales. This diverse background lets me adapt quickly to new business models and look at the client journey from every angle. I listen to what a user actually needs, translate that into clear technical results, and bring internal teams together to keep clients happy for the long run.",
+    arrowLink: "./#projects",
+    arrowIcon: "/images/arrow.png",
+};
+
+export const DEVABOUT = {
     image: "/images/about-pic.png",
     experience: {
         icon: "/images/experience.png",

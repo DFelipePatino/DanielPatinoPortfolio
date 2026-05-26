@@ -1,6 +1,14 @@
-import { SOCIALS, PROFILE, ButtonLink, ACTIONS, SocialIcon } from "../OOPData/MyNameIs-data"
+import React from "react";
+import { DEV_DATA, CX_DATA, ButtonLink, SocialIcon } from "../OOPData/MyNameIs-data";
+import { useTheme } from "../Context/ThemeContext";
 
 const MyNameIs = ({ tiltX, tiltY, setTiltX, setTiltY }) => {
+    // 1. Destructure the theme mode state
+    const { isDarkMode } = useTheme();
+
+    // 2. Select the active configuration mapping dynamically
+    const currentData = isDarkMode ? CX_DATA : DEV_DATA;
+
     const handleMouseMove = (event) => {
         const rect = event.currentTarget.getBoundingClientRect();
         const mouseX = event.clientX - rect.left;
@@ -22,25 +30,25 @@ const MyNameIs = ({ tiltX, tiltY, setTiltX, setTiltY }) => {
         <section id="profile" onMouseMove={handleMouseMove} onMouseLeave={handleMouseLeave}>
             <div className="section__pic-container">
                 <img
-                    src={PROFILE.image}
-                    alt={`${PROFILE.name} profile picture`}
+                    src={currentData.PROFILE.image}
+                    alt={`${currentData.PROFILE.name} profile picture`}
                     style={{ transform: `rotateY(${tiltX}deg) rotateX(${tiltY}deg)` }}
                 />
             </div>
 
             <div className="section__text">
                 <p className="section__text__p1">Hello, I&apos;m</p>
-                <h1 className="title">{PROFILE.name}</h1>
-                <p className="section__text__p2">{PROFILE.title}</p>
+                <h1 className="title">{currentData.PROFILE.name}</h1>
+                <p className="section__text__p2">{currentData.PROFILE.title}</p>
 
                 <div className="btn-container">
-                    {ACTIONS.map((action) => (
+                    {currentData.ACTIONS.map((action) => (
                         <ButtonLink key={action.label} {...action} />
                     ))}
                 </div>
 
                 <div id="socials-container">
-                    {SOCIALS.map((social) => (
+                    {currentData.SOCIALS.map((social) => (
                         <SocialIcon key={social.href} {...social} />
                     ))}
                 </div>

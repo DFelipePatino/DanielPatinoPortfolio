@@ -12,8 +12,12 @@ import Contact from "../Components/Contact"
 import Footer from "../Components/Footer"
 import LandingPage from "../Components/LandingPage"
 import { dogsWakeUp } from "../ProjectsWakeUp/GetRequests"
+import ThemeToggle from "../Components/ThemeToggle";
+import { useTheme } from "../Context/ThemeContext";
 
 function MainView() {
+
+  const { isDarkMode } = useTheme();
 
 
   const [menuOpen, setMenuOpen] = useState(false);
@@ -73,12 +77,16 @@ function MainView() {
     setTimeout(() => {
       setShowNav(true);
     }, 800);
+    setTimeout(() => {
+      setShowSwitch(true);
+    }, 1200);
 
   }
 
   const [showLanding, setShowLanding] = useState(false);
   const [showOtherElemts, setShowOtherElemts] = useState(false);
   const [showNav, setShowNav] = useState(false)
+  const [showSwitch, setShowSwitch] = useState(false)
 
   const showOtherElemtsCountDown = 6200
   const hideLandingCountDown = showOtherElemtsCountDown - 1400
@@ -126,8 +134,20 @@ function MainView() {
         toggleMenu2b={toggleMenu2b}
         toggleMenu3b={toggleMenu3b}
         showNav={showNav}
+        setShowSwitch={setShowSwitch}
         setShowNav={setShowNav}
       />
+
+      {showOtherElemts && (
+        <Grow in={showSwitch} {...(loadingShown ? { timeout: 1500 } : {})}>
+          <div className="floating-theme-toggle tooltip-wrapper">
+            {/* Tooltip Content Elements */}
+            <span className="tooltip-text">{isDarkMode ? "Developer" : "CS/CX"}</span>
+
+            <ThemeToggle />
+          </div>
+        </Grow>
+      )}
 
       {!showOtherElemts ?
         <Fade in={showLanding}

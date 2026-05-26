@@ -1,12 +1,18 @@
 import { useState } from "react";
-import { PROJECTS, PROJECTS_SECTION, ProjectCard, ArrowLink } from "../OOPData/Projects-data";
+import { DEV_PROJECTS, CX_PROJECTS, PROJECTS_SECTION, ProjectCard, ArrowLink } from "../OOPData/Projects-data";
+import { useTheme } from "../Context/ThemeContext";
 import PropTypes from "prop-types";
-
-
 
 const Projects = ({ menuOpen3, isClosing3, toggleMenu3, dogsWakeUp }) => {
     const [showDescriptions, setShowDescriptions] = useState({});
     const [closingDescriptions, setClosingDescriptions] = useState({});
+
+    // Using the global theme context as the single source of truth
+    const { isDarkMode } = useTheme();
+
+    // Conditionally select the project array based on the context state
+    // (e.g., true displays CX_PROJECTS, false displays DEV_PROJECTS)
+    const currentProjects = isDarkMode ? CX_PROJECTS : DEV_PROJECTS;
 
     const toggleDescription = (projectId) => {
         const isOpen = showDescriptions[projectId];
@@ -34,18 +40,14 @@ const Projects = ({ menuOpen3, isClosing3, toggleMenu3, dogsWakeUp }) => {
         dogsWakeUp();
     }
 
-    const [isImageSet, setIsImageSet] = useState(false);
-
     return (
         <section id="projects">
             <p className="section__text__p1">Browse My Recent</p>
-            <h1 className="title">Projects</h1>
+            <h1 className="title">{isDarkMode ? "Highligted Roles" : "Projects"}</h1>
 
             <div className="dropdown2">
-                <button className="btn btn-color-2" onClick={() => {
-                    handleClick();
-                }}>
-                    {menuOpen3 ? "Hide Projects" : "View Projects"}
+                <button className="btn btn-color-2" onClick={handleClick}>
+                    {menuOpen3 ? `Hide ${isDarkMode ? "Roles" : "Projects"}` : `View ${isDarkMode ? "Roles" : "Projects"}`}
                 </button>
 
                 <div className={`dropdown2-menu ${menuOpen3 ? "open" : ""} ${isClosing3 ? "closing" : ""}`}>
@@ -53,12 +55,11 @@ const Projects = ({ menuOpen3, isClosing3, toggleMenu3, dogsWakeUp }) => {
                         <div className="dropdown2-content">
                             <div className="experience-details-container">
                                 <div className="about-containers">
-                                    {PROJECTS.map((project) => (
+                                    {/* Maps over the dataset dynamically linked to the theme mode */}
+                                    {currentProjects.map((project) => (
                                         <ProjectCard
                                             key={project.id}
                                             project={project}
-                                            isImageSet={isImageSet}
-                                            setIsImageSet={setIsImageSet}
                                             showDescription={showDescriptions[project.id]}
                                             closingDescription={closingDescriptions[project.id]}
                                             onToggleDescription={() => toggleDescription(project.id)}
@@ -72,7 +73,12 @@ const Projects = ({ menuOpen3, isClosing3, toggleMenu3, dogsWakeUp }) => {
                 </div>
             </div>
 
-            <ArrowLink href={PROJECTS_SECTION.arrowLink} icon={PROJECTS_SECTION.arrowIcon} alt="Arrow icon" className="icon arrow" />
+            <ArrowLink
+                href={PROJECTS_SECTION.arrowLink}
+                icon={PROJECTS_SECTION.arrowIcon}
+                alt="Arrow icon"
+                className="icon arrow"
+            />
         </section>
     );
 };

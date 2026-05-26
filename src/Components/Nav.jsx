@@ -2,16 +2,21 @@ import ThemeToggle from './ThemeToggle'
 import PropTypes from 'prop-types';
 import { Grow } from '@mui/material';
 import { useEffect } from 'react';
+import { useTheme } from '../Context/ThemeContext';
 
-const Nav = ({ toggleMenu, menuOpen, toggleMenu2b, toggleMenu3b, showOtherElemtsCountDown, setShowNav, showNav }) => {
+const Nav = ({ toggleMenu, menuOpen, toggleMenu2b, toggleMenu3b, showOtherElemtsCountDown, setShowNav, setShowSwitch, showNav }) => {
 
     const loadingShown = true;
+    const { isDarkMode } = useTheme();
 
 
     useEffect(() => {
         setTimeout(() => {
             setShowNav(true);
         }, showOtherElemtsCountDown + 800)
+        setTimeout(() => {
+            setShowSwitch(true);
+        }, showOtherElemtsCountDown + 1200)
     }, [showOtherElemtsCountDown]);
 
     return (
@@ -26,6 +31,7 @@ const Nav = ({ toggleMenu, menuOpen, toggleMenu2b, toggleMenu3b, showOtherElemts
                         <div
                             className="logo"
                             onClick={() => window.location.href = 'https://daniel-patino.onrender.com/'}
+                            style={{ cursor: 'pointer' }} /* Forces the pointer hand icon on hover */
                         >
                             Daniel Patino
                         </div>
@@ -35,18 +41,18 @@ const Nav = ({ toggleMenu, menuOpen, toggleMenu2b, toggleMenu3b, showOtherElemts
                                     <a href="#about">About</a>
                                 </li>
                                 <li>
-                                    <a href="#projects" onClick={toggleMenu3b}>Projects</a>
+                                    <a href="#projects" onClick={toggleMenu3b}> {isDarkMode ? "Highlighted Roles" : "Projects"}</a>
                                 </li>
                                 <li>
-                                    <a href="#experience" onClick={toggleMenu2b}>Experience</a>
+                                    <a href="#experience" onClick={toggleMenu2b}>{"Experience"}</a>
                                 </li>
 
                                 <li>
                                     <a href="#contact">Contact</a>
                                 </li>
-                                <li>
+                                {/* <li>
                                     <ThemeToggle />
-                                </li>
+                                </li> */}
                             </ul>
 
                         </div>
@@ -81,12 +87,12 @@ const Nav = ({ toggleMenu, menuOpen, toggleMenu2b, toggleMenu3b, showOtherElemts
                                     </li>
                                     <li>
                                         <a href="#projects" onClick={() => { toggleMenu(); toggleMenu3b(); }}>
-                                            Projects
+                                            {isDarkMode ? "Highlighted Roles" : "Projects"}
                                         </a>
                                     </li>
                                     <li>
                                         <a href="#experience" onClick={() => { toggleMenu(); toggleMenu2b(); }}>
-                                            Experience
+                                            "Experience"
                                         </a>
                                     </li>
                                     <li>
@@ -94,11 +100,11 @@ const Nav = ({ toggleMenu, menuOpen, toggleMenu2b, toggleMenu3b, showOtherElemts
                                             Contact
                                         </a>
                                     </li>
-                                    <li className="centered-item">
+                                    {/* <li className="centered-item">
                                         <a href="#ThemeToggle" onClick={toggleMenu}>
                                             <ThemeToggle />
                                         </a>
-                                    </li>
+                                    </li> */}
                                 </div>
                             </div>
                         </div>

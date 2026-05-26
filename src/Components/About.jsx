@@ -1,7 +1,12 @@
 import React from "react";
-import { ABOUT, ArrowLink } from "../OOPData/About-data";
+import { useTheme } from '../Context/ThemeContext';
+import { CXABOUT, DEVABOUT, ArrowLink } from "../OOPData/About-data";
 
 const About = () => {
+    const { isDarkMode } = useTheme();
+    // Dynamically select the correct data object based on the navbar switch state
+    const currentAbout = isDarkMode ? CXABOUT : DEVABOUT;
+
     return (
         <section id="about">
             <p className="section__text__p1">Get To Know More</p>
@@ -9,7 +14,7 @@ const About = () => {
             <div className="section-container">
                 <div className="section__pic-container">
                     <img
-                        src={ABOUT.image}
+                        src={currentAbout.image}
                         alt="Profile picture"
                         className="about-pic"
                     />
@@ -18,34 +23,43 @@ const About = () => {
                     <div className="about-containers">
                         <div className="details-container">
                             <img
-                                src={ABOUT.experience.icon}
+                                src={currentAbout.experience.icon}
                                 alt="Experience icon"
                                 className="icon"
                             />
-                            <h3>{ABOUT.experience.title}</h3>
+                            <h3>{currentAbout.experience.title}</h3>
                             <p>
-                                {ABOUT.experience.description.split('\n').map((line, index) => (
-                                    <React.Fragment key={index}>
-                                        {line}
-                                        {index < ABOUT.experience.description.split('\n').length - 1 && <br />}
-                                    </React.Fragment>
-                                ))}
+                                {currentAbout.experience.description
+                                    .split("\n")
+                                    .map((line, index, array) => (
+                                        <React.Fragment key={index}>
+                                            {line}
+                                            {index < array.length - 1 && <br />}
+                                        </React.Fragment>
+                                    ))}
                             </p>
                         </div>
                     </div>
                     <div className="text-container">
                         <p>
-                            {ABOUT.description.split('\n').map((line, index) => (
-                                <React.Fragment key={index}>
-                                    {line}
-                                    {index < ABOUT.description.split('\n').length - 1 && <br />}
-                                </React.Fragment>
-                            ))}
+                            {currentAbout.description
+                                .split("\n")
+                                .map((line, index, array) => (
+                                    <React.Fragment key={index}>
+                                        {line}
+                                        {index < array.length - 1 && <br />}
+                                    </React.Fragment>
+                                ))}
                         </p>
                     </div>
                 </div>
             </div>
-            <ArrowLink href={ABOUT.arrowLink} icon={ABOUT.arrowIcon} alt="Arrow icon" className="icon arrow" />
+            <ArrowLink
+                href={currentAbout.arrowLink}
+                icon={currentAbout.arrowIcon}
+                alt="Arrow icon"
+                className="icon arrow"
+            />
         </section>
     );
 };

@@ -1,6 +1,13 @@
-import { CONTACT_INFO, CONTACT, ContactInfoItem, ArrowLink } from "../OOPData/Contact-data";
+import { useTheme } from "../Context/ThemeContext";
+import { DEV_CONTACT_INFO, CX_CONTACT_INFO, CONTACT, ContactInfoItem, ArrowLink } from "../OOPData/Contact-data";
 
 const Contact = () => {
+    // Single source of truth context tracking
+    const { isDarkMode } = useTheme();
+
+    // Select Upwork stack or standard LinkedIn stack based on persona choice
+    const currentContactInfo = isDarkMode ? CX_CONTACT_INFO : DEV_CONTACT_INFO;
+
     return (
         <>
             <section id="contact">
@@ -8,7 +15,7 @@ const Contact = () => {
                 <h1 className="title">Contact Me</h1>
 
                 <div className="contact-info-upper-container">
-                    {CONTACT_INFO.map((contact, index) => (
+                    {currentContactInfo.map((contact, index) => (
                         <ContactInfoItem key={index} {...contact} />
                     ))}
                 </div>

@@ -1,10 +1,19 @@
-import { FRONTEND_SKILLS, BACKEND_SKILLS, PROGRAMMING_LANGUAGES, EXPERIENCE, SkillItem, ArrowLink } from "../OOPData/Experience-data";
+import React from "react";
+import { useTheme } from "../Context/ThemeContext";
+import { DEV_SKILLS, CX_SKILLS, EXPERIENCE, SkillItem, ArrowLink } from "../OOPData/Experience-data";
+import PropTypes from "prop-types";
 
 const Experience = ({ menuOpen2, isClosing2, toggleMenu2 }) => {
+    // Single source of truth for portfolio profile segmentation
+    const { isDarkMode } = useTheme();
+
+    // Select skill data block dynamically
+    const skills = isDarkMode ? CX_SKILLS : DEV_SKILLS;
+
     return (
         <section id="experience">
             <p className="section__text__p1">Explore My</p>
-            <h1 className="title">Experience</h1>
+            <h1 className="title">Experience & Certs</h1>
 
             <div className="dropdown2">
                 <button className="btn2 btn-color-2" onClick={toggleMenu2}>
@@ -15,32 +24,46 @@ const Experience = ({ menuOpen2, isClosing2, toggleMenu2 }) => {
                         <div className="dropdown2-content">
                             <div className="experience-details-container">
                                 <div className="about-containers">
+
+                                    {/* Card 1: Frontend or CRM Platforms */}
                                     <div className="details-container">
-                                        <h2 className="experience-sub-title">Frontend Development</h2>
+                                        <h2 className="experience-sub-title">
+                                            {isDarkMode ? "CRM & Marketing Platforms" : "Frontend Development"}
+                                        </h2>
                                         <div className="article-container">
-                                            {FRONTEND_SKILLS.map((skill, index) => (
-                                                <SkillItem key={index} name={skill.name} level={skill.level} />
+                                            {(isDarkMode ? skills.platforms : skills.frontend).map((skill, index) => (
+                                                /* Fixed: Passed the link prop */
+                                                <SkillItem key={index} name={skill.name} level={skill.level} link={skill.link} />
                                             ))}
                                         </div>
                                     </div>
 
+                                    {/* Card 2: Backend or Automation Engine Logic */}
                                     <div className="details-container">
-                                        <h2 className="experience-sub-title">Backend Development</h2>
+                                        <h2 className="experience-sub-title">
+                                            {isDarkMode ? "Automation & Operations" : "Backend Development"}
+                                        </h2>
                                         <div className="article-container">
-                                            {BACKEND_SKILLS.map((skill, index) => (
-                                                <SkillItem key={index} name={skill.name} level={skill.level} />
+                                            {(isDarkMode ? skills.automation : skills.backend).map((skill, index) => (
+                                                /* Fixed: Passed the link prop */
+                                                <SkillItem key={index} name={skill.name} level={skill.level} link={skill.link} />
                                             ))}
                                         </div>
                                     </div>
 
+                                    {/* Card 3: Core Coding Languages or Multilingual Skills */}
                                     <div className="details-container">
-                                        <h2 className="experience-sub-title">Programming Languages</h2>
+                                        <h2 className="experience-sub-title">
+                                            {isDarkMode ? "Languages & Communication" : "Programming Languages"}
+                                        </h2>
                                         <div className="article-container">
-                                            {PROGRAMMING_LANGUAGES.map((skill, index) => (
-                                                <SkillItem key={index} name={skill.name} level={skill.level} />
+                                            {skills.languages.map((skill, index) => (
+                                                /* Fixed: Passed the link prop */
+                                                <SkillItem key={index} name={skill.name} level={skill.level} link={skill.link} />
                                             ))}
                                         </div>
                                     </div>
+
                                 </div>
                             </div>
                         </div>
@@ -54,3 +77,9 @@ const Experience = ({ menuOpen2, isClosing2, toggleMenu2 }) => {
 };
 
 export default Experience;
+
+Experience.propTypes = {
+    menuOpen2: PropTypes.bool.isRequired,
+    isClosing2: PropTypes.bool.isRequired,
+    toggleMenu2: PropTypes.func.isRequired,
+};

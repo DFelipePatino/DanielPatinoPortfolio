@@ -122,10 +122,148 @@ a:hover {
   justify-content: center;
   align-items: center;
   flex-wrap: nowrap;
+
 }
 
 .logo:hover {
-  cursor: default;
+  cursor: pointer;
+}
+
+.nav-switch-btn {
+  /* 1. Necessary so the scale transform applies correctly */
+  display: inline-block;
+
+  /* 2. Sets the default, smaller starting size (e.g., 75% of original) */
+  transform: scale(0.40);
+
+  /* 3. Smooths out the transition over 0.2 seconds */
+  transition: transform 0.2s ease-in-out;
+
+  /* Optional: If the scaling makes it shift weirdly, uncomment this to keep it anchored left */
+  /* transform-origin: left center; */
+}
+
+.nav-switch-btn:hover {
+  /* 4. Scales it back up to its full, native 100% size on hover */
+  transform: scale(1);
+}
+
+/* ==========================================================================
+   1. FLOATING OUTER CONTAINER
+   Manages screen placement, the relaxed infinite pulse, and mobile scaling.
+   ========================================================================== */
+.floating-theme-toggle {
+  position: fixed;
+  right: 2rem;
+  bottom: 2.5rem;
+  z-index: 9999;
+  background-color: var(--bg-color, #ffffff);
+  padding: 0.6rem;
+  border-radius: 50%;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+
+  /* Smooth scaling when the user hovers over the button */
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+  /* Infinite pulse effect: 4 seconds cycle (30% pulsing, 70% resting state) */
+  animation: pulse-effect 4s infinite ease-in-out;
+}
+
+/* Hover state on the button container */
+.floating-theme-toggle:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+  animation-play-state: paused;
+  /* Freezes the pulse wave instantly on hover */
+}
+
+/* Pulsing Keyframe Logic using a clean spreading ring shadow */
+@keyframes pulse-effect {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15), 0 0 0 0 rgba(0, 0, 0, 0.25);
+  }
+
+  25% {
+    transform: scale(1.04);
+    /* Kept a subtle element scale so it doesn't distort text/icons */
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15), 0 0 0 14px rgba(0, 0, 0, 0);
+  }
+
+  100% {
+    transform: scale(1);
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15), 0 0 0 0 rgba(0, 0, 0, 0);
+  }
+}
+
+/* Responsive updates for mobile devices */
+@media screen and (max-width: 600px) {
+  .floating-theme-toggle {
+    right: 1.5rem;
+    bottom: 2rem;
+  }
+}
+
+/* ==========================================================================
+   2. ISOLATED TOOLTIP LAYER
+   Handles standalone positioning without breaking the container transform grid.
+   ========================================================================== */
+.theme-toggle-container.tooltip-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Tooltip floating text bubble */
+.tooltip-wrapper .tooltip-text {
+  position: absolute;
+  bottom: calc(100% + 16px);
+  /* Elevates it comfortably above the pulsing radius */
+  left: 50%;
+  transform: translateX(-50%) translateY(6px);
+  /* Starts slightly lower for a smooth pop-up */
+
+  /* Styling & Typography */
+  background-color: #111111;
+  color: #ffffff;
+  font-family: inherit;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  white-space: nowrap;
+  padding: 6px 12px;
+  border-radius: 6px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+
+  /* Hidden state defaults */
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s cubic-bezier(0.4, 0, 0.2, 1), transform 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Tooltip Pointer Indicator (Triangle pointing straight down) */
+.tooltip-wrapper .tooltip-text::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  /* Locks right to the bottom edge of the bubble */
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 5px;
+  border-style: solid;
+  border-color: #111111 transparent transparent transparent;
+}
+
+/* Triggers tooltip presentation when hovering anywhere on the button layout */
+.floating-theme-toggle:hover .tooltip-text {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
 }
 
 /* HAMBURGER MENU */
