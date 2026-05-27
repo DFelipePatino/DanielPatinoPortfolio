@@ -374,7 +374,7 @@ export const CX_PROJECTS = [
         buttons: [
             {
                 label: "Verification Letter",
-                href: "/images/Emplyment-verification-letter-Assure-Health.pdf",
+                href: "/images/Emplyment verification letter Assure Health.pdf",
                 external: true, // This flag controls the window targeting
             },
         ],
