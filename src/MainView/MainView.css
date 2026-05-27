@@ -189,7 +189,7 @@ a:hover {
   }
 
   25% {
-    transform: scale(1.04);
+    transform: scale(1.25);
     /* Kept a subtle element scale so it doesn't distort text/icons */
     box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15), 0 0 0 14px rgba(0, 0, 0, 0);
   }
