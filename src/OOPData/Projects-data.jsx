@@ -354,10 +354,14 @@ export const CX_PROJECTS = [
         title: "Alonso&Alonso Attorneys at Law",
         image: "/images/Alonso&Alonso.png", // Replace with your CX asset image
         imageAlt: "Alonso&Alonso Attorneys at Law",
-        demoLink: "none",
-        description: "I helped assess and guide individuals through legal options for immigration relief while using Salesforce CRM systems to manage case information, track client communications, and coordinate with attorneys. This experience strengthened my client support, case management, and communication skills.",
+        demoLink: "https://alonsoandalonsolaw.com/en/",
+        description: "Role: Bilingual Sales Specialist.\nI helped assess and guide individuals through legal options for immigration relief while using Salesforce CRM systems to manage case information, track client communications, and coordinate with attorneys. This experience strengthened my client support, case management, and communication skills.",
         buttons: [
-
+            {
+                label: "Verification Letter",
+                href: "/images/EmplymentVerificationAlonso.png",
+                external: true, // This flag controls the window targeting
+            },
         ],
     },
     {
@@ -366,7 +370,7 @@ export const CX_PROJECTS = [
         image: "/images/AssureHealth.jpeg",
         imageAlt: "Assure Health",
         demoLink: "https://www.myassurehealth.com/",
-        description: "In my role as a Patient Educator, I used Salesforce CRM to manage patient interactions, track outreach efforts, and support enrollment processes for our health monitoring program. I conducted outreach calls to potential patients, educating them about the program while combining customer service and sales responsibilities to guide individuals through enrollment. This experience strengthened my CRM, customer service, and sales skills within a healthcare environment.",
+        description: "Role: Patient Educator.\nI used Salesforce CRM to manage patient interactions, track outreach efforts, and support enrollment processes for our health monitoring program. I conducted outreach calls to potential patients, educating them about the program while combining customer service and sales responsibilities to guide individuals through enrollment. This experience strengthened my CRM, customer service, and sales skills within a healthcare environment.",
         buttons: [
             {
                 label: "Verification Letter",
@@ -381,7 +385,7 @@ export const CX_PROJECTS = [
         image: "/images/Equally-AI-Logo.jpg",
         imageAlt: "Assure Health",
         demoLink: "https://www.equally.ai/",
-        description: "I was responsible for driving sales of our software platform, managing client relationships, and providing technical support to clients throughout the onboarding and usage process. My duties included conducting product demonstrations, identifying customer needs, guiding potential clients through the sales process, and working with HubSpot CRM to manage customer interactions.",
+        description: "Role: Account Manager.\nI was responsible for driving sales of our software platform, managing client relationships, and providing technical support to clients throughout the onboarding and usage process. My duties included conducting product demonstrations, identifying customer needs, guiding potential clients through the sales process, and working with HubSpot CRM to manage customer interactions.",
         buttons: [
             {
                 label: "Verification Letter",
