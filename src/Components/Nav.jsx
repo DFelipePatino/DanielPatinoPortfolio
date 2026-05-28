@@ -16,7 +16,7 @@ const Nav = ({ toggleMenu, menuOpen, toggleMenu2b, toggleMenu3b, showOtherElemts
         }, showOtherElemtsCountDown + 800)
         setTimeout(() => {
             setShowSwitch(true);
-        }, showOtherElemtsCountDown + 1200)
+        }, showOtherElemtsCountDown + 2500)
     }, [showOtherElemtsCountDown]);
 
     return (
@@ -44,7 +44,7 @@ const Nav = ({ toggleMenu, menuOpen, toggleMenu2b, toggleMenu3b, showOtherElemts
                                     <a href="#projects" onClick={toggleMenu3b}> {isDarkMode ? "Highlighted Roles" : "Projects"}</a>
                                 </li>
                                 <li>
-                                    <a href="#experience" onClick={toggleMenu2b}>Experience</a>
+                                    <a href="#experience" onClick={toggleMenu2b}>Exp & Certs</a>
                                 </li>
 
                                 <li>
@@ -92,7 +92,7 @@ const Nav = ({ toggleMenu, menuOpen, toggleMenu2b, toggleMenu3b, showOtherElemts
                                     </li>
                                     <li>
                                         <a href="#experience" onClick={() => { toggleMenu(); toggleMenu2b(); }}>
-                                            Experience
+                                            Exp & Certs
                                         </a>
                                     </li>
                                     <li>

@@ -242,7 +242,7 @@ a:hover {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 
   /* Hidden state defaults */
-  opacity: 0;
+  opacity: 0.5;
   pointer-events: none;
   transition: opacity 0.2s cubic-bezier(0.4, 0, 0.2, 1), transform 0.2s cubic-bezier(0.4, 0, 0.2, 1);
 }

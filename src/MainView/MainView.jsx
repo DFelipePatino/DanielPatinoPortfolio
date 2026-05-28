@@ -17,7 +17,7 @@ import { useTheme } from "../Context/ThemeContext";
 
 function MainView() {
 
-  const { isDarkMode } = useTheme();
+  const { isDarkMode, toggleTheme } = useTheme();
 
 
   const [menuOpen, setMenuOpen] = useState(false);
@@ -79,7 +79,7 @@ function MainView() {
     }, 800);
     setTimeout(() => {
       setShowSwitch(true);
-    }, 1200);
+    }, 2500);
 
   }
 
@@ -87,12 +87,13 @@ function MainView() {
   const [showOtherElemts, setShowOtherElemts] = useState(false);
   const [showNav, setShowNav] = useState(false)
   const [showSwitch, setShowSwitch] = useState(false)
+  const [showTooltip, setShowTooltip] = useState(false)
+  const [showTooltipFade, setShowTooltipFade] = useState(true)
 
   const showOtherElemtsCountDown = 6200
   const hideLandingCountDown = showOtherElemtsCountDown - 1400
 
   useEffect(() => {
-
     const timer = setTimeout(() => {
       setShowLanding(true);
     }, 800);
@@ -105,6 +106,19 @@ function MainView() {
 
     return () => clearTimeout(timer);
   }, []);
+
+
+  useEffect(() => {
+    setTimeout(() => {
+      toggleTheme()
+    }, 2000)
+    setTimeout(() => {
+      setShowTooltip(true)
+    }, showOtherElemtsCountDown + 4000)
+    setTimeout(() => {
+      setShowTooltipFade(false)
+    }, showOtherElemtsCountDown + 4400)
+  }, [showOtherElemts])
 
   useEffect(() => {
     dogsWakeUp()
@@ -139,11 +153,15 @@ function MainView() {
       />
 
       {showOtherElemts && (
-        <Grow in={showSwitch} {...(loadingShown ? { timeout: 1500 } : {})}>
+        <Grow in={showSwitch} {...(loadingShown ? { timeout: 1000 } : {})}>
           <div className="floating-theme-toggle tooltip-wrapper">
             {/* Tooltip Content Elements */}
-            <span className="tooltip-text">{isDarkMode ? "Developer" : "CS/CX"}</span>
-
+            {showTooltipFade ?
+              <Fade in={showTooltip} {...(loadingShown ? { timeout: 1000 } : {})}>
+                <span className="tooltip-text">{isDarkMode ? "Developer" : "CS/CX"}</span>
+              </Fade> :
+              <span className="tooltip-text">{isDarkMode ? "Developer" : "CS/CX"}</span>
+            }
             <ThemeToggle />
           </div>
         </Grow>
