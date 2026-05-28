@@ -27,12 +27,13 @@ const MyNameIs = ({ tiltX, tiltY, setTiltX, setTiltY }) => {
     };
 
     return (
-        <section id="profile" onMouseMove={handleMouseMove} onMouseLeave={handleMouseLeave} onClick={() => window.location.href = 'https://daniel-patino.onrender.com/'} style={{ cursor: 'pointer' }}>
+        <section id="profile" onMouseMove={handleMouseMove} onMouseLeave={handleMouseLeave}>
             <div className="section__pic-container">
                 <img
                     src={currentData.PROFILE.image}
                     alt={`${currentData.PROFILE.name} profile picture`}
-                    style={{ transform: `rotateY(${tiltX}deg) rotateX(${tiltY}deg)` }}
+                    style={{ transform: `rotateY(${tiltX}deg) rotateX(${tiltY}deg)`, cursor: 'pointer' }}
+                    onClick={() => window.location.href = 'https://daniel-patino.onrender.com/'}
                 />
             </div>
 
