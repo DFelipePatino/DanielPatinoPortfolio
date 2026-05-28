@@ -7,7 +7,7 @@ import PropTypes from "prop-types";
 export const DEV_SKILLS = {
     frontend: [
         { name: "React / React Native", level: "Experienced", link: "" },
-        { name: "UI UX", level: "Experienced", link: "images/Certs/Complete Web and Mobile Designer UI UX" },
+        { name: "UI UX", level: "Experienced", link: "images/Certs/Complete Web and Mobile Designer UI UX.pdf" },
         { name: "WordPress", level: "Experienced", link: "images/Certs/Become a WordPress.pdf" },
         { name: "HTML / CSS", level: "Intermediate", link: "" },
         { name: "Material UI / Tailwind", level: "Experienced", link: "" },
