@@ -109,9 +109,11 @@ function MainView() {
 
 
   useEffect(() => {
-    setTimeout(() => {
-      toggleTheme()
-    }, 2000)
+    if (showOtherElemts) {
+      setTimeout(() => {
+        toggleTheme()
+      }, 2000)
+    }
     setTimeout(() => {
       setShowTooltip(true)
     }, showOtherElemtsCountDown + 4000)
