@@ -359,7 +359,7 @@ export const CX_PROJECTS = [
         buttons: [
             {
                 label: "Verification Letter",
-                href: "/images/EmplymentVerificationAlonso.png",
+                href: "/images/Certs/EmplymentVerificationAlonso.png",
                 external: true, // This flag controls the window targeting
             },
         ],
@@ -374,7 +374,7 @@ export const CX_PROJECTS = [
         buttons: [
             {
                 label: "Verification Letter",
-                href: "/images/Emplyment verification letter Assure Health.pdf",
+                href: "/images/Certs/Emplyment verification letter Assure Health.pdf",
                 external: true, // This flag controls the window targeting
             },
         ],
@@ -389,7 +389,7 @@ export const CX_PROJECTS = [
         buttons: [
             {
                 label: "Verification Letter",
-                href: "/images/Emplyment verification letter Equally AI.pdf",
+                href: "/images/Certs/Emplyment verification letter Equally AI.pdf",
                 external: true, // This flag controls the window targeting
             },
         ],

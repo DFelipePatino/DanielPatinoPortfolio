@@ -266,6 +266,64 @@ a:hover {
   transform: translateX(-50%) translateY(0);
 }
 
+
+/* Container to isolate the new tooltip logic */
+.tooltip-container-v2 {
+  position: fixed;
+  right: 4rem;
+  bottom: 11rem;
+  z-index: 9999;
+  display: inline-block;
+}
+
+/* The custom text box floating ABOVE the target */
+.tooltip-box-v2 {
+  position: absolute;
+  bottom: 125%;
+  /* Places it safely right above the target element */
+  left: 50%;
+  transform: translateX(-50%);
+  /* Centers it horizontally */
+
+  /* Styling */
+  background-color: #333;
+  color: #fff;
+  padding: 8px 12px;
+  border-radius: 6px;
+  font-size: 14px;
+  /* white-space: nowrap; */
+  /* Keeps text on one line */
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
+  pointer-events: none;
+  /* Stops it from blocking clicks on elements behind it */
+}
+
+/* The downward-pointing arrow at the bottom of the v2 box */
+.tooltip-box-v2::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  /* Positions the arrow perfectly on the bottom edge */
+  left: 50%;
+  transform: translateX(-50%);
+
+  /* The Arrow Shape */
+  border-width: 6px;
+  border-style: solid;
+  border-color: #333 transparent transparent transparent;
+  /* Matches the box color, points down */
+}
+
+/* Optional: Target element styling if you need a quick placeholder */
+.tooltip-target-v2 {
+  padding: 10px 20px;
+  background-color: #0070f3;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
 /* HAMBURGER MENU */
 
 #hamburger-nav {

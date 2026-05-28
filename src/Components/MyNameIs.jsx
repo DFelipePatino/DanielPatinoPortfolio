@@ -27,7 +27,7 @@ const MyNameIs = ({ tiltX, tiltY, setTiltX, setTiltY }) => {
     };
 
     return (
-        <section id="profile" onMouseMove={handleMouseMove} onMouseLeave={handleMouseLeave}>
+        <section id="profile" onMouseMove={handleMouseMove} onMouseLeave={handleMouseLeave} onClick={() => window.location.href = 'https://daniel-patino.onrender.com/'} style={{ cursor: 'pointer' }}>
             <div className="section__pic-container">
                 <img
                     src={currentData.PROFILE.image}

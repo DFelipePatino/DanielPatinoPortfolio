@@ -1,5 +1,5 @@
 import "./MainView.css";
-import { Grow } from '@mui/material';
+import { Grow, Slide } from '@mui/material';
 import { Fade } from '@mui/material';
 import { useEffect, useState } from "react";
 import "./mediaqueries.css";
@@ -80,7 +80,6 @@ function MainView() {
     setTimeout(() => {
       setShowSwitch(true);
     }, 2500);
-
   }
 
   const [showLanding, setShowLanding] = useState(false);
@@ -89,6 +88,7 @@ function MainView() {
   const [showSwitch, setShowSwitch] = useState(false)
   const [showTooltip, setShowTooltip] = useState(false)
   const [showTooltipFade, setShowTooltipFade] = useState(true)
+  const [showSwitchTip, setShowSwitchTip] = useState(false)
 
   const showOtherElemtsCountDown = 6200
   const hideLandingCountDown = showOtherElemtsCountDown - 1400
@@ -120,7 +120,20 @@ function MainView() {
     setTimeout(() => {
       setShowTooltipFade(false)
     }, showOtherElemtsCountDown + 4400)
+
   }, [showOtherElemts])
+
+
+  useEffect(() => {
+
+    setTimeout(() => {
+      setShowSwitchTip(true);
+    }, showOtherElemtsCountDown + 4000);
+    setTimeout(() => {
+      setShowSwitchTip(false);
+    }, showOtherElemtsCountDown + 8000);
+
+  }, [])
 
   useEffect(() => {
     dogsWakeUp()
@@ -155,18 +168,51 @@ function MainView() {
       />
 
       {showOtherElemts && (
-        <Grow in={showSwitch} {...(loadingShown ? { timeout: 1000 } : {})}>
-          <div className="floating-theme-toggle tooltip-wrapper">
-            {/* Tooltip Content Elements */}
-            {showTooltipFade ?
-              <Fade in={showTooltip} {...(loadingShown ? { timeout: 1000 } : {})}>
+        <>
+
+          <Slide direction="left" in={showSwitchTip} out={!showSwitchTip} timeout={200}
+            style={{
+              position: "fixed",
+              right: "0rem",
+              bottom: "0rem",
+              zIndex: "9999",
+              display: "inline-block",
+              padding: "40px",
+              justifyContent: "center"
+            }}
+          >
+            <div style={{ padding: "40px", display: "flex", justifyContent: "center" }}>
+
+              {/* UNIQUE TOOLTIP CONTAINER */}
+              <div className="tooltip-container-v2">
+
+                {/* Custom Text Inside the Tooltip Box */}
+                <div className="tooltip-box-v2">
+                  Switch profiles
+                </div>
+
+
+
+              </div>
+
+            </div>
+          </Slide>
+
+
+
+          <Grow in={showSwitch} {...(loadingShown ? { timeout: 1000 } : {})}>
+            <div className="floating-theme-toggle tooltip-wrapper">
+              {/* Tooltip Content Elements */}
+              {showTooltipFade ?
+                <Fade in={showTooltip} {...(loadingShown ? { timeout: 1000 } : {})}>
+                  <span className="tooltip-text">{isDarkMode ? "Developer" : "CS/CX"}</span>
+                </Fade> :
                 <span className="tooltip-text">{isDarkMode ? "Developer" : "CS/CX"}</span>
-              </Fade> :
-              <span className="tooltip-text">{isDarkMode ? "Developer" : "CS/CX"}</span>
-            }
-            <ThemeToggle />
-          </div>
-        </Grow>
+              }
+              <ThemeToggle />
+            </div>
+          </Grow>
+        </>
       )}
 
       {!showOtherElemts ?

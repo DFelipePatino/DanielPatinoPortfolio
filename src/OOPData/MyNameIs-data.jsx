@@ -11,7 +11,7 @@ export const DEV_DATA = {
     ACTIONS: [
         {
             label: "Download CV",
-            href: "/images/DanielPatinoCVENGFullstackDeveloper.pdf",
+            href: "/images/Certs/DanielPatinoCVENGFullstackDeveloper.pdf",
             className: "btn btn-color-2",
             download: true,
             external: true,
@@ -45,7 +45,7 @@ export const CX_DATA = {
     ACTIONS: [
         {
             label: "Download CV",
-            href: "/images/Daniel Patiño CS CV.pdf",
+            href: "/images/Certs/Daniel Patiño CS CV.pdf",
             className: "btn btn-color-2",
             download: true,
             external: true,

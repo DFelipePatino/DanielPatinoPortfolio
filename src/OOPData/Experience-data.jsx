@@ -7,20 +7,20 @@ import PropTypes from "prop-types";
 export const DEV_SKILLS = {
     frontend: [
         { name: "React / React Native", level: "Experienced", link: "" },
-        { name: "WordPress", level: "Experienced", link: "images/Become a WordPress.pdf" },
+        { name: "UI UX", level: "Experienced", link: "images/Certs/Complete Web and Mobile Designer UI UX" },
+        { name: "WordPress", level: "Experienced", link: "images/Certs/Become a WordPress.pdf" },
         { name: "HTML / CSS", level: "Intermediate", link: "" },
-        { name: "Redux", level: "Experienced", link: "" },
         { name: "Material UI / Tailwind", level: "Experienced", link: "" },
     ],
     backend: [
-        { name: "Node JS / Express", level: "Intermediate", link: "images/JavaScript Pro Mastering.pdf" },
+        { name: "Node JS / Express", level: "Intermediate", link: "" },
         { name: "PostgreSQL / SQLite", level: "Intermediate", link: "" },
         { name: "Sequelize", level: "Experienced", link: "" },
         { name: "Git / GitHub", level: "Intermediate", link: "" },
         { name: "AWS RDS", level: "Essentials", link: "" },
     ],
     languages: [
-        { name: "JavaScript / ES6", level: "Intermediate", link: "" },
+        { name: "JavaScript / ES6", level: "Intermediate", link: "images/Certs/JavaScript Pro Mastering.pdf" },
         { name: "Python", level: "Intermediate", link: "" },
         { name: "PHP", level: "Intermediate", link: "" },
     ]
@@ -31,7 +31,7 @@ export const DEV_SKILLS = {
    ========================================== */
 export const CX_SKILLS = {
     platforms: [
-        { name: "Marketing Automation", level: "Intermediate", link: "/images/Emplyment-verification-letter-Assure-Health.pdf" },
+        { name: "Marketing Automation", level: "Intermediate", link: "" },
         { name: "HubSpot CRM", level: "Intermediate", link: "" },
         { name: "Salesforce Essentials", level: "Intermediate", link: "" },
         { name: "Google Apps Script", level: "Intermediate", link: "" },
@@ -63,30 +63,23 @@ export const EXPERIENCE = {
 export const SkillItem = ({ name, level, link }) => {
     const hasLink = link && link.trim() !== "";
 
-    // Safely forces the browser to open the PDF directly
-    const handleFileOpen = (e) => {
-        e.stopPropagation(); // Prevents any parent CSS/JS from hijacking this click
-        if (hasLink) {
-            window.open(link, "_blank", "noopener,noreferrer");
-        }
-    };
-
     return (
         <article>
-            <img src="/images/checkmark.png" alt="Experience icon" className="icon" />
+            {hasLink ? <img src="/images/experience.png" alt="Experience icon" className="icon" /> : <img src="/images/checkmark.png" alt="Experience icon" className="icon" />}
+
 
             {hasLink ? (
                 <a
                     href={link}
                     target="_blank"
                     rel="noopener noreferrer"
-                    onClick={handleFileOpen} /* Manually forces execution */
+                    /* onClick removed entirely to prevent the second open */
                     style={{
                         position: "relative",
                         zIndex: 9999,
                         pointerEvents: "auto",
                         display: "inline-block",
-                        textDecoration: "underline", /* Adds underline so you can visually verify it is active */
+                        textDecoration: "underline",
                         color: "inherit",
                         cursor: "pointer"
                     }}
