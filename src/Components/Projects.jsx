@@ -42,7 +42,8 @@ const Projects = ({ menuOpen3, isClosing3, toggleMenu3, dogsWakeUp }) => {
 
     return (
         <section id="projects">
-            <p className="section__text__p1">Browse My Recent</p>
+            {/* <p className="section__text__p1">Browse My Recent</p> */}
+            <br />
             <h1 className="title">{isDarkMode ? "Highligted Roles" : "Projects"}</h1>
 
             <div className="dropdown2">

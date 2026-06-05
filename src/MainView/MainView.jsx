@@ -1,7 +1,7 @@
 import "./MainView.css";
 import { Grow, Slide } from '@mui/material';
 import { Fade } from '@mui/material';
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import "./mediaqueries.css";
 import Nav from "../Components/Nav"
 import MyNameIs from "../Components/MyNameIs"
@@ -77,9 +77,9 @@ function MainView() {
     setTimeout(() => {
       setShowNav(true);
     }, 800);
-    setTimeout(() => {
-      setShowSwitch(true);
-    }, 2500);
+    // setTimeout(() => {
+    //   setShowSwitch(true);
+    // }, 2500);
   }
 
   const [showLanding, setShowLanding] = useState(false);
@@ -92,6 +92,45 @@ function MainView() {
 
   const showOtherElemtsCountDown = 6200
   const hideLandingCountDown = showOtherElemtsCountDown - 1400
+
+  // Use a ref to keep track of the timeout ID so we can clean it up
+  const timeoutRef = useRef(null);
+
+  useEffect(() => {
+    let lastScrollY = window.scrollY;
+
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+
+      // Check if current position is greater than last position 
+      // AND ensure they aren't just bouncing at the very top (0)
+      if (currentScrollY > lastScrollY && currentScrollY > 80) {
+        setShowSwitchTip(true);
+
+        // 1. Immediately remove the scroll listener so this only triggers once
+        window.removeEventListener('scroll', handleScroll);
+
+        // 2. Start the 20-second countdown to turn it off
+        timeoutRef.current = setTimeout(() => {
+          setShowSwitchTip(false);
+        }, 20000); // 20000 ms = 20 seconds
+      }
+
+      // Update the last scroll position
+      lastScrollY = currentScrollY;
+    };
+
+    // Add the scroll listener when the component mounts
+    window.addEventListener('scroll', handleScroll);
+
+    // Cleanup: remove listener and clear timeout if the component unmounts early
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+      if (timeoutRef.current) {
+        clearTimeout(timeoutRef.current);
+      }
+    };
+  }, []); // Empty dependency array ensures this setup only runs once on mount
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -124,16 +163,14 @@ function MainView() {
   }, [showOtherElemts])
 
 
-  useEffect(() => {
-
-    setTimeout(() => {
-      setShowSwitchTip(true);
-    }, showOtherElemtsCountDown + 4000);
-    setTimeout(() => {
-      setShowSwitchTip(false);
-    }, showOtherElemtsCountDown + 8000);
-
-  }, [])
+  // useEffect(() => {
+  //   setTimeout(() => {
+  //     setShowSwitchTip(true);
+  //   }, showOtherElemtsCountDown + 4000);
+  //   setTimeout(() => {
+  //     setShowSwitchTip(false);
+  //   }, showOtherElemtsCountDown + 8000);
+  // }, [])
 
   useEffect(() => {
     dogsWakeUp()

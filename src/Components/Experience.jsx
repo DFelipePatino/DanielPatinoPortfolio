@@ -12,7 +12,8 @@ const Experience = ({ menuOpen2, isClosing2, toggleMenu2 }) => {
 
     return (
         <section id="experience">
-            <p className="section__text__p1">Explore My</p>
+            {/* <p className="section__text__p1">Explore My</p> */}
+            <br />
             <h1 className="title">Experience & Certs</h1>
 
             <div className="dropdown2">
