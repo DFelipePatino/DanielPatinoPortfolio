@@ -33,7 +33,8 @@ const ThemeToggle = () => {
             <path d="M12 20v-3"></path>
           </svg>
         ) : (
-          /* Light Mode: Displays a Support Agent Icon representing CS/CX */
+          /* Light Mode: Displays a Success and Growth Icon representing upward movement and data. */
+          /* Light Mode: Displays a rising chart arrow reaching a star, symbolizing upward growth and success. */
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="20"
@@ -46,16 +47,16 @@ const ThemeToggle = () => {
             strokeLinejoin="round"
             className="theme-toggle-icon"
           >
-            {/* Headset Band across the upper head */}
-            <path d="M3 11a9 9 0 0 1 18 0"></path>
-            {/* Left Ear Cup */}
-            <rect x="2" y="11" width="2" height="4" rx="1"></rect>
-            {/* Right Ear Cup */}
-            <rect x="20" y="11" width="2" height="4" rx="1"></rect>
-            {/* Microphone Boom Arm */}
-            <path d="M21 15a4 4 0 0 1-4 4h-3"></path>
-            {/* Microphone Tip */}
-            <circle cx="13" cy="19" r="1" fill="currentColor"></circle>
+            {/* Horizontal Axis (X-axis) */}
+            <path d="M3 21h18"></path>
+            {/* Vertical Axis (Y-axis) */}
+            <path d="M3 21v-18"></path>
+            {/* The rising, jagged path/chart line */}
+            <path d="M3 17l6-6 4 4 8-8"></path>
+            {/* The arrow tip indicating continued growth */}
+            <path d="M17 7h4v4"></path>
+            {/* The star at the peak, representing the goal or success */}
+            {/* <path d="M21 16a2 2 0 1 1-2 2h-1a2 2 0 1 1-2-2"></path> */}
           </svg>
         )}
       </div>

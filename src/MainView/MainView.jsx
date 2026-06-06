@@ -77,9 +77,15 @@ function MainView() {
     setTimeout(() => {
       setShowNav(true);
     }, 800);
-    // setTimeout(() => {
-    //   setShowSwitch(true);
-    // }, 2500);
+    setTimeout(() => {
+      setShowSwitch(true);
+    }, 2500);
+    setTimeout(() => {
+      setShowTooltip(true)
+    }, 3500)
+    setTimeout(() => {
+      setShowTooltipFade(false)
+    }, 3900)
   }
 
   const [showLanding, setShowLanding] = useState(false);
@@ -105,7 +111,9 @@ function MainView() {
       // Check if current position is greater than last position 
       // AND ensure they aren't just bouncing at the very top (0)
       if (currentScrollY > lastScrollY && currentScrollY > 80) {
-        setShowSwitchTip(true);
+        timeoutRef.current = setTimeout(() => {
+          setShowSwitchTip(true);
+        }, 500);
 
         // 1. Immediately remove the scroll listener so this only triggers once
         window.removeEventListener('scroll', handleScroll);
