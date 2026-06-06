@@ -44,11 +44,11 @@ const Projects = ({ menuOpen3, isClosing3, toggleMenu3, dogsWakeUp }) => {
         <section id="projects">
             {/* <p className="section__text__p1">Browse My Recent</p> */}
             <br />
-            <h1 className="title">{isDarkMode ? "Highligted Roles" : "Projects"}</h1>
+            <h1 className="title">{isDarkMode ? "Featured" : "Projects"}</h1>
 
             <div className="dropdown2">
                 <button className="btn btn-color-2" onClick={handleClick}>
-                    {menuOpen3 ? `Hide ${isDarkMode ? "Roles" : "Projects"}` : `View ${isDarkMode ? "Roles" : "Projects"}`}
+                    {menuOpen3 ? `Hide ${isDarkMode ? "Featured" : "Projects"}` : `View ${isDarkMode ? "Featured" : "Projects"}`}
                 </button>
 
                 <div className={`dropdown2-menu ${menuOpen3 ? "open" : ""} ${isClosing3 ? "closing" : ""}`}>

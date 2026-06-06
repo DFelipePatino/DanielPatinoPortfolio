@@ -43,7 +43,11 @@ const MyNameIs = ({ tiltX, tiltY, setTiltX, setTiltY }) => {
             <div className="section__text">
                 <p className="section__text__p1">Hello, I&apos;m</p>
                 <h1 className="title">{currentData.PROFILE.name}</h1>
-                <p className="section__text__p2">{currentData.PROFILE.title}</p>
+                {currentData.PROFILE.title === "Full Stack Developer" ? (
+                    <p className="section__text__p2 wide">{currentData.PROFILE.title}</p>
+                ) : (
+                    <p className="section__text__p2">{currentData.PROFILE.title}</p>
+                )}
 
                 <div className="btn-container">
                     {currentData.ACTIONS.map((action) => (

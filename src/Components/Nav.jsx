@@ -41,7 +41,7 @@ const Nav = ({ toggleMenu, menuOpen, toggleMenu2b, toggleMenu3b, showOtherElemts
                                     <a href="#about">About</a>
                                 </li>
                                 <li>
-                                    <a href="#projects" onClick={toggleMenu3b}> {isDarkMode ? "Highlighted Roles" : "Projects"}</a>
+                                    <a href="#projects" onClick={toggleMenu3b}> {isDarkMode ? "Featured" : "Projects"}</a>
                                 </li>
                                 <li>
                                     <a href="#experience" onClick={toggleMenu2b}>Exp & Certs</a>
@@ -87,7 +87,7 @@ const Nav = ({ toggleMenu, menuOpen, toggleMenu2b, toggleMenu3b, showOtherElemts
                                     </li>
                                     <li>
                                         <a href="#projects" onClick={() => { toggleMenu(); toggleMenu3b(); }}>
-                                            {isDarkMode ? "Highlighted Roles" : "Projects"}
+                                            {isDarkMode ? "Featured" : "Projects"}
                                         </a>
                                     </li>
                                     <li>

@@ -113,7 +113,7 @@ function MainView() {
       if (currentScrollY > lastScrollY && currentScrollY > 80) {
         timeoutRef.current = setTimeout(() => {
           setShowSwitchTip(true);
-        }, 500);
+        }, 2000);
 
         // 1. Immediately remove the scroll listener so this only triggers once
         window.removeEventListener('scroll', handleScroll);
@@ -121,7 +121,7 @@ function MainView() {
         // 2. Start the 20-second countdown to turn it off
         timeoutRef.current = setTimeout(() => {
           setShowSwitchTip(false);
-        }, 20000); // 20000 ms = 20 seconds
+        }, 15000); // 20000 ms = 20 seconds
       }
 
       // Update the last scroll position
@@ -215,7 +215,7 @@ function MainView() {
       {showOtherElemts && (
         <>
 
-          <Slide direction="left" in={showSwitchTip} out={!showSwitchTip} timeout={200}
+          <Slide direction="top" in={showSwitchTip} out={!showSwitchTip} timeout={600}
             style={{
               position: "fixed",
               right: "0rem",

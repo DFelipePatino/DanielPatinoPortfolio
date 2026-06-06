@@ -469,6 +469,12 @@ section {
   margin-bottom: 1rem;
 }
 
+.section__text__p2.wide {
+  font-size: 1.75rem;
+  margin-bottom: 1rem;
+  letter-spacing: 0.4rem;
+}
+
 .title {
   font-size: 3rem;
   text-align: center;

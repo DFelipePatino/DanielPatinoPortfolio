@@ -61,7 +61,14 @@ function LandingPage({ handleSkip }) {
             >
                 <Typography
                     variant="h4"
-                    sx={{ whiteSpace: "pre-line", minHeight: "2.5em" }}
+                    sx={{
+                        whiteSpace: "pre-line",
+                        minHeight: "2.5em",
+                        fontFamily: "'Poppins', sans-serif",
+                        display: "inline-block",
+                        borderColor: "text.primary",
+                        pr: "4px",
+                    }}
                 >
                     {render ? (
                         <TypingText
