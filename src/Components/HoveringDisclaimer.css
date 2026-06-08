@@ -1,0 +1,137 @@
+/* ==========================================
+   BASE MOBILE STYLES (Default / Tiny Screens)
+   ========================================== */
+.hover-container {
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    top: 5vh;
+    /* Lifted higher on small screens to fit all the text */
+    left: 50vw;
+    transform: translateX(-50%);
+    z-index: 300;
+    width: 90%;
+    max-width: 450px;
+}
+
+.hover-card {
+    position: relative;
+    width: 100%;
+    height: auto;
+    /* CRITICAL: Lets card expand organically to prevent text overflow */
+    background-color: #f0f0f0;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    padding: 35px 20px 20px 20px;
+    /* Space on top to clear the red badge */
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    color: black;
+    opacity: 0.95;
+}
+
+.hover-content {
+    position: relative;
+    z-index: 1;
+}
+
+.hover-content h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 1.3rem;
+}
+
+.hover-content p {
+    margin: 5px 0;
+    font-size: 0.9rem;
+    line-height: 1.4;
+}
+
+.profile-item {
+    font-weight: 500;
+    padding-left: 5px;
+}
+
+.hover-description {
+    color: #444;
+}
+
+.hover-badge {
+    position: absolute;
+    top: -15px;
+    left: 15px;
+    background-color: #ff4757;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 11px;
+    font-weight: bold;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+}
+
+.hover-close-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    background: none;
+    border: none;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+    color: #666;
+    padding: 0;
+    line-height: 1;
+    z-index: 11;
+}
+
+.checkbox-container {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.checkbox-input {
+    cursor: pointer;
+    width: 16px;
+    height: 16px;
+}
+
+.checkbox-label {
+    margin-left: 8px;
+    font-size: 13px;
+    color: #555;
+    cursor: pointer;
+    user-select: none;
+}
+
+/* ==========================================
+   DESKTOP STYLES (Screens 769px and wider)
+   ========================================== */
+@media (min-width: 769px) {
+    .hover-container {
+        padding: 50px;
+        top: 15vh;
+        width: auto;
+        max-width: none;
+    }
+
+    .hover-card {
+        width: 600px;
+        height: auto;
+        /* Changed to auto because your new descriptive text block needs extra room */
+        padding: 30px 25px;
+    }
+
+    .hover-content h3 {
+        font-size: 1.5rem;
+    }
+
+    .hover-content p {
+        font-size: 0.95rem;
+    }
+
+    .hover-badge {
+        font-size: 12px;
+    }
+}
