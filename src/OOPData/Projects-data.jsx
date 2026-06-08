@@ -29,10 +29,10 @@ export const DEV_PROJECTS = [
 
     },
     {
-        id: 1.5,
+        id: 33,
         title: "FinApp",
         image: "/images/FinApp.jpeg",
-        image2: "/images/FinApp.png",
+        image2: "/images/FinApp.jpeg",
         imageAlt: "Project 2",
         demoLink: "",
         demoLink2: "exp://u.expo.dev/c7bc8080-3365-496c-9e02-7d2235851151/group/dffe7164-ec6f-48f6-bcae-f6dc6280fb28",
