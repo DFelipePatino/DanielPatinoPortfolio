@@ -4,6 +4,7 @@ import { Fade } from '@mui/material';
 import { useEffect, useState, useRef } from "react";
 import "./mediaqueries.css";
 import Nav from "../Components/Nav"
+import HoveringDisclaimer from "../Components/HoveringDisclaimer";
 import MyNameIs from "../Components/MyNameIs"
 import About from "../Components/About"
 import Experience from "../Components/Experience"
@@ -156,11 +157,11 @@ function MainView() {
 
 
   useEffect(() => {
-    if (showOtherElemts) {
-      setTimeout(() => {
-        toggleTheme()
-      }, 2000)
-    }
+    // if (showOtherElemts) {
+    //   setTimeout(() => {
+    //     toggleTheme()
+    //   }, 2000)
+    // }
     setTimeout(() => {
       setShowTooltip(true)
     }, showOtherElemtsCountDown + 4000)
@@ -201,6 +202,9 @@ function MainView() {
 
   return (
     <div id="top">
+
+      <HoveringDisclaimer showSwitch={showSwitch} />
+
       <Nav
         showOtherElemtsCountDown={showOtherElemtsCountDown}
         toggleMenu={toggleMenu}
@@ -211,6 +215,7 @@ function MainView() {
         setShowSwitch={setShowSwitch}
         setShowNav={setShowNav}
       />
+
 
       {showOtherElemts && (
         <>

@@ -464,15 +464,20 @@ section {
   text-align: center;
 }
 
+/* Base styles applied to all screen sizes */
 .section__text__p2 {
   font-size: 1.75rem;
   margin-bottom: 1rem;
 }
 
-.section__text__p2.wide {
-  font-size: 1.75rem;
-  margin-bottom: 1rem;
-  letter-spacing: 0.4rem;
+/* Desktop & Tablet Styles:
+  This media query kicks in ONLY when the screen width is 769px or wider.
+  The extra letter spacing will be completely ignored on mobile screens.
+*/
+@media (min-width: 769px) {
+  .section__text__p2.wide {
+    letter-spacing: 0.4rem;
+  }
 }
 
 .title {
