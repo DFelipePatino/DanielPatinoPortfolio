@@ -28,6 +28,29 @@ export const DEV_PROJECTS = [
         ],
 
     },
+    {
+        id: 1.5,
+        title: "FinApp",
+        image: "/images/FinApp.jpeg",
+        image2: "/images/FinApp.png",
+        imageAlt: "Project 2",
+        demoLink: "",
+        demoLink2: "exp://u.expo.dev/c7bc8080-3365-496c-9e02-7d2235851151/group/dffe7164-ec6f-48f6-bcae-f6dc6280fb28",
+        description: "I encourage you to use the Expo Go app to run the app natively so you don't miss out on the full experience!\n\nWord of the Day – A high-fidelity, bilingual dictionary app built with Expo and NativeWind. It features a gamified learning system, a 'Bento Grid' interface for rich word data, and smooth micro-animations, all optimized for cross-platform performance on iOS, Android, and Web.",
+        buttons: [
+            {
+                label: "Github",
+                href: "https://github.com/DFelipePatino/Word-of-the-Day.git",
+                external: true,
+            },
+
+            {
+                label: "Expo / Web",
+                type: "expo",
+            }
+        ],
+
+    },
 
     {
         id: 2,
