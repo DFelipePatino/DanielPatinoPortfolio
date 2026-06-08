@@ -5,6 +5,9 @@ import PropTypes from "prop-types";
    1. DEVELOPER STACK (isDarkMode = false)
    ========================================== */
 export const DEV_SKILLS = {
+    fullStack: [
+        { name: "Full-Stack Development", level: "Experienced", link: "images/Certs/Henry Diploma.pdf" },
+    ],
     frontend: [
         { name: "React / React Native", level: "Experienced", link: "" },
         { name: "UI UX", level: "Experienced", link: "images/Certs/Complete Web and Mobile Designer UI UX.pdf" },
@@ -76,7 +79,7 @@ export const SkillItem = ({ name, level, link }) => {
                     /* onClick removed entirely to prevent the second open */
                     style={{
                         position: "relative",
-                        zIndex: 9999,
+                        zIndex: 1, // lowered from 9999 so it stays behind fixed overlays
                         pointerEvents: "auto",
                         display: "inline-block",
                         textDecoration: "underline",

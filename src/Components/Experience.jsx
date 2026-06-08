@@ -26,7 +26,23 @@ const Experience = ({ menuOpen2, isClosing2, toggleMenu2 }) => {
                             <div className="experience-details-container">
                                 <div className="about-containers">
 
-                                    {/* Card 1: Frontend or CRM Platforms */}
+                                    {/* Card 1: Full Stack Development */}
+                                    {!isDarkMode && (
+                                        <div className="details-container">
+                                            <h2 className="experience-sub-title">
+                                                {!isDarkMode && "Full Stack Development"}
+                                            </h2>
+                                            <div className="article-container">
+                                                {!isDarkMode && skills.fullStack.map((skill, index) => (
+                                                    /* Fixed: Passed the link prop */
+                                                    <SkillItem key={index} name={skill.name} level={skill.level} link={skill.link} />
+                                                ))}
+                                            </div>
+                                        </div>
+                                    )}
+
+
+                                    {/* Card 2: Frontend or CRM Platforms */}
                                     <div className="details-container">
                                         <h2 className="experience-sub-title">
                                             {isDarkMode ? "CRM & Marketing Platforms" : "Frontend Development"}
@@ -39,7 +55,7 @@ const Experience = ({ menuOpen2, isClosing2, toggleMenu2 }) => {
                                         </div>
                                     </div>
 
-                                    {/* Card 2: Backend or Automation Engine Logic */}
+                                    {/* Card 3: Backend or Automation Engine Logic */}
                                     <div className="details-container">
                                         <h2 className="experience-sub-title">
                                             {isDarkMode ? "Automation & Operations" : "Backend Development"}
@@ -52,7 +68,7 @@ const Experience = ({ menuOpen2, isClosing2, toggleMenu2 }) => {
                                         </div>
                                     </div>
 
-                                    {/* Card 3: Core Coding Languages or Multilingual Skills */}
+                                    {/* Card 4: Core Coding Languages or Multilingual Skills */}
                                     <div className="details-container">
                                         <h2 className="experience-sub-title">
                                             {isDarkMode ? "Languages & Communication" : "Programming Languages"}
