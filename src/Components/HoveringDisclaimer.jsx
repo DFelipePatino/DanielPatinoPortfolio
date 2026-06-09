@@ -50,7 +50,7 @@ export default function HoveringOverlay({ showSwitch }) {
                     <p className="profile-item"> - Full Stack Developer </p>
                     <br />
                     <p className="hover-description">
-                        This will change the profile content and will show you my different skill sets, experience, projects, and more based on the profile you select.
+                        This will change the profile content and will show you my different skill sets, experience, projects, certifications and more based on the profile you select.
                     </p>
 
                     <div className="checkbox-container">
@@ -68,7 +68,7 @@ export default function HoveringOverlay({ showSwitch }) {
                 </div>
 
                 <div className="hover-badge">
-                    Multi-Profile Website
+                    Multi-Profile Portfolio
                 </div>
             </div>
         </div>
